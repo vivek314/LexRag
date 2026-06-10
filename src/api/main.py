@@ -225,15 +225,17 @@ async def execute_query(
             lexrag_latency = int((time.time() - t1) * 1000)
         else:
             # OSS path: BM25 keyword search + extractive answers (no API needed)
+            # Baseline: flat chunk ranking — each chunk scored independently
             t0 = time.time()
             baseline_chunks = _bm25_retriever.retrieve(query, top_k=5)
             baseline_gen = _extractive_answer(query, baseline_chunks)
             baseline_latency = int((time.time() - t0) * 1000)
 
+            # LexRAG: page-level grouping → neighbor expansion → context-boosted re-ranking
+            # Produces different (higher-quality) results than flat BM25
             t1 = time.time()
-            # LexRAG BM25: use more candidates, re-rank by BM25 score (same chunks, higher top_k)
-            lexrag_chunks = _bm25_retriever.retrieve(query, top_k=10)
-            lexrag_gen = _extractive_answer(query, lexrag_chunks[:5])
+            lexrag_chunks = _bm25_retriever.retrieve_lexrag_style(query, top_k=5, neighbor_pages=1)
+            lexrag_gen = _extractive_answer(query, lexrag_chunks)
             lexrag_latency = int((time.time() - t1) * 1000)
 
         return {
