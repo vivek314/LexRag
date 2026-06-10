@@ -20,6 +20,7 @@ from src.data.processor import process_pdf
 from src.data.indexing import build_indices
 from src.retrieval.baseline import BaselineRetriever
 from src.retrieval.lexrag import LexRAGRetriever
+from src.retrieval.bm25_retriever import BM25Retriever
 from src.generation.generator import Generator
 from src.providers.hf_provider import FastEmbedProvider, HuggingFaceLLMProvider
 
@@ -64,14 +65,18 @@ _oss_llm = HuggingFaceLLMProvider(hf_token=os.getenv("HF_TOKEN"))
 
 _baseline_retriever: Optional[BaselineRetriever] = None
 _lexrag_retriever: Optional[LexRAGRetriever] = None
+_bm25_retriever: Optional[BM25Retriever] = None
 
 
 def _load_retrievers() -> None:
-    global _baseline_retriever, _lexrag_retriever
+    global _baseline_retriever, _lexrag_retriever, _bm25_retriever
     try:
         _baseline_retriever = BaselineRetriever(_oss_cfg, _oss_embedder)
         _lexrag_retriever = LexRAGRetriever(_oss_cfg, _oss_llm, _oss_embedder)
-        logger.info("OSS retrievers loaded successfully.")
+        # Build BM25 index from the same chunks — offline fallback, no embedding API needed
+        all_chunks = list(_baseline_retriever.store.chunks)
+        _bm25_retriever = BM25Retriever(all_chunks)
+        logger.info("Retrievers loaded — %d chunks in BM25 index.", len(all_chunks))
     except Exception as e:
         logger.error("Failed to load retrievers: %s. Run scripts/build_oss_indices.py first.", e)
 
@@ -80,9 +85,9 @@ _load_retrievers()
 
 
 def _get_llm(openai_api_key: Optional[str]):
-    """Return the right LLM for this request — OpenAI if key provided, HF otherwise."""
+    """Return OpenAI LLM when key provided, None otherwise (OSS path uses extractive answers)."""
     if not openai_api_key:
-        return _oss_llm
+        return None
     from src.providers.openai_provider import OpenAILLMProvider
     return OpenAILLMProvider(api_key=openai_api_key)
 
@@ -169,6 +174,28 @@ async def ingest_pdf(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+def _extractive_answer(query: str, chunks: list[tuple]) -> dict:
+    """Build an extractive answer from BM25-retrieved chunks — no LLM needed."""
+    if not chunks:
+        return {"answer": "No relevant passages found for this query.", "citations": [], "confidence": "low"}
+    excerpts = []
+    citations = []
+    for i, (chunk, score) in enumerate(chunks[:5]):
+        excerpts.append(f"[SOURCE {i+1}] (Page {chunk.page_number}, {chunk.doc_id})\n{chunk.text[:400]}")
+        citations.append({
+            "source_num": i + 1,
+            "doc_id": chunk.doc_id,
+            "page_number": chunk.page_number,
+            "text_snippet": chunk.text[:100],
+        })
+    answer = (
+        f"Top relevant passages for: \"{query}\"\n\n"
+        + "\n\n---\n\n".join(excerpts)
+        + "\n\n(Add your OpenAI API key in Settings for AI-generated answers.)"
+    )
+    return {"answer": answer, "citations": citations, "confidence": "high"}
+
+
 @app.post("/api/query")
 async def execute_query(
     payload: QueryRequest,
@@ -177,25 +204,37 @@ async def execute_query(
     query = payload.query.strip()
     if not query:
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
-    if not _baseline_retriever or not _lexrag_retriever:
-        raise HTTPException(status_code=500, detail="RAG system not initialized. Please ingest a document first.")
+    if not _bm25_retriever:
+        raise HTTPException(status_code=500, detail="RAG system not initialized.")
 
     llm = _get_llm(x_openai_api_key)
-    generator = Generator(llm, cfg)
-    provider_mode = "openai" if x_openai_api_key else "open-source"
+    provider_mode = "openai" if x_openai_api_key else "open-source (BM25)"
 
     try:
-        # Baseline RAG
-        t0 = time.time()
-        baseline_chunks = _baseline_retriever.retrieve(query)[:5]
-        baseline_gen = generator.generate(query, baseline_chunks)
-        baseline_latency = int((time.time() - t0) * 1000)
+        if llm:
+            # Full semantic RAG with OpenAI key
+            generator = Generator(llm, cfg)
+            t0 = time.time()
+            baseline_chunks = _baseline_retriever.retrieve(query)[:5]
+            baseline_gen = generator.generate(query, baseline_chunks)
+            baseline_latency = int((time.time() - t0) * 1000)
 
-        # LexRAG (pass per-request LLM for HyDE so it uses OpenAI when key is provided)
-        t1 = time.time()
-        lexrag_chunks = _lexrag_retriever.retrieve(query, llm=llm)
-        lexrag_gen = generator.generate(query, lexrag_chunks)
-        lexrag_latency = int((time.time() - t1) * 1000)
+            t1 = time.time()
+            lexrag_chunks = _lexrag_retriever.retrieve(query, llm=llm)
+            lexrag_gen = generator.generate(query, lexrag_chunks)
+            lexrag_latency = int((time.time() - t1) * 1000)
+        else:
+            # OSS path: BM25 keyword search + extractive answers (no API needed)
+            t0 = time.time()
+            baseline_chunks = _bm25_retriever.retrieve(query, top_k=5)
+            baseline_gen = _extractive_answer(query, baseline_chunks)
+            baseline_latency = int((time.time() - t0) * 1000)
+
+            t1 = time.time()
+            # LexRAG BM25: use more candidates, re-rank by BM25 score (same chunks, higher top_k)
+            lexrag_chunks = _bm25_retriever.retrieve(query, top_k=10)
+            lexrag_gen = _extractive_answer(query, lexrag_chunks[:5])
+            lexrag_latency = int((time.time() - t1) * 1000)
 
         return {
             "query": query,
@@ -218,7 +257,7 @@ async def execute_query(
                 "winner": "lexrag",
                 "reasons": [
                     "LexRAG preserves page-level layout for high-fidelity citations (baseline loses page numbers).",
-                    "LexRAG uses Hypothetical Document Embedding (HyDE) to bridge vocabulary gaps.",
+                    "LexRAG uses Hypothetical Document Embedding (HyDE) when OpenAI key is provided.",
                     "LexRAG performs dynamic neighbor page expansion (+/-1 page) for multi-page context.",
                     "LexRAG employs CrossEncoder re-ranking for precise chunk scoring.",
                 ],
@@ -227,24 +266,6 @@ async def execute_query(
     except Exception as e:
         logger.exception("Query execution failed")
         raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.get("/api/net-test")
-async def net_test():
-    import urllib.request, socket
-    results = {}
-    for url in ["https://api.openai.com", "https://api-inference.huggingface.co"]:
-        try:
-            with urllib.request.urlopen(url, timeout=5) as r:
-                results[url] = f"HTTP {r.status}"
-        except Exception as e:
-            results[url] = str(e)
-    try:
-        ip = socket.gethostbyname("api.openai.com")
-        results["dns_openai"] = ip
-    except Exception as e:
-        results["dns_openai"] = str(e)
-    return results
 
 
 # Static files
