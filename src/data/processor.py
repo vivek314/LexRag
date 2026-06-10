@@ -1,4 +1,5 @@
 # processor.py — Extract and clean text from PDFs, preserving page boundaries.
+from __future__ import annotations
 
 import argparse
 import json
