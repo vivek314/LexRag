@@ -1,0 +1,135 @@
+# =============================================================================
+# LexRAG Configuration
+# INTERVIEW NOTE: All hyperparameters live here — zero magic numbers in code.
+# This lets you tune the system without touching logic files.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Data Pipeline
+# ---------------------------------------------------------------------------
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  indices_dir: "data/indices"
+  manifest_file: "data/raw/manifest.json"
+
+  # Downloader settings
+  download:
+    max_docs: 30              # How many PDFs to download
+    timeout_seconds: 30       # Per-request timeout
+    max_retries: 3            # Retry attempts on failure
+    retry_backoff: 2.0        # Exponential backoff multiplier
+    min_pages: 2              # Skip PDFs shorter than this
+    max_pages: 200            # Skip PDFs longer than this (avoid huge docs)
+
+  # Text cleaning
+  cleaning:
+    min_line_length: 20       # Lines shorter than this are likely headers/footers
+    max_header_lines: 3       # Lines at top of page to consider as header
+    max_footer_lines: 3       # Lines at bottom of page to consider as footer
+
+# ---------------------------------------------------------------------------
+# Chunking
+# INTERVIEW NOTE: chunk_size=512 tokens ≈ 400 words — fits comfortably in
+# a 4K context window alongside system prompt + answer.
+# overlap=50 prevents cutting a sentence mid-thought at chunk boundaries.
+# ---------------------------------------------------------------------------
+chunking:
+  chunk_size: 512             # Target chunk size in characters
+  overlap: 50                 # Overlap between consecutive chunks
+  min_chunk_size: 100         # Discard chunks smaller than this
+  section_patterns:           # Regex patterns to detect section headers
+    - '^\s*\d+\.\s+[A-Z]'    # "1. INTRODUCTION"
+    - '^\s*[A-Z]{2,}[\s:]+$' # "HELD:" / "FACTS:"
+    - '^\s*Section\s+\d+'     # "Section 3"
+
+# ---------------------------------------------------------------------------
+# Embedding
+# INTERVIEW NOTE: text-embedding-3-small @ 1536 dims vs ada-002 @ 1536 dims:
+# 3-small is 5x cheaper, ~5% worse on MTEB — fine for legal retrieval where
+# lexical overlap is high. Switch to text-embedding-3-large (3072 dims) if
+# precision matters more than cost.
+# ---------------------------------------------------------------------------
+embedding:
+  model: "text-embedding-3-small"
+  dimensions: 1536
+  batch_size: 100             # Embeddings per API call (max 2048 for OpenAI)
+  cache_dir: "data/processed/embedding_cache"
+  max_tokens_per_chunk: 8000  # OpenAI hard limit is 8191
+
+# ---------------------------------------------------------------------------
+# FAISS Vector Store
+# INTERVIEW NOTE: IndexFlatIP = exact inner product search (cosine after
+# L2-normalization). Use IVFFlat when docs > 100K, HNSW when latency < 10ms
+# is required. Flat is fine for ≤50K chunks.
+# ---------------------------------------------------------------------------
+faiss:
+  index_type: "IndexFlatIP"   # Options: IndexFlatIP, IndexIVFFlat, IndexHNSWFlat
+  nlist: 100                  # IVF clusters (only used if index_type=IndexIVFFlat)
+  nprobe: 10                  # IVF probe count at query time
+  hnsw_m: 16                  # HNSW connections per node
+  normalize_vectors: true     # Required for cosine similarity with IndexFlatIP
+
+# ---------------------------------------------------------------------------
+# Retrieval
+# ---------------------------------------------------------------------------
+retrieval:
+  top_k: 20                   # Candidates from FAISS before re-ranking
+  rerank_top_k: 5             # Final chunks after cross-encoder re-ranking
+  hyde_enabled: true          # Use Hypothetical Document Embedding
+  neighbor_pages: 1           # Pages to expand left/right after retrieval
+
+  # Cross-encoder re-ranker
+  reranker:
+    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    max_length: 512            # Token limit for (query, passage) pair
+    batch_size: 32
+
+# ---------------------------------------------------------------------------
+# Generation
+# INTERVIEW NOTE: temperature=0 for legal Q&A — we want deterministic,
+# grounded answers, not creative ones. Higher temp → more hallucination risk.
+# ---------------------------------------------------------------------------
+generation:
+  model: "gpt-4o-mini"        # Switch to gpt-4o for production
+  temperature: 0.0
+  max_tokens: 1500
+  streaming: true
+  confidence_threshold: 0.7   # Below this → flag answer as uncertain
+
+# ---------------------------------------------------------------------------
+# Caching (Redis)
+# ---------------------------------------------------------------------------
+cache:
+  enabled: true
+  host: "localhost"
+  port: 6379
+  db: 0
+  embedding_ttl: 86400        # 24 hours — embeddings rarely change
+  response_ttl: 3600          # 1 hour — answers may become stale
+
+# ---------------------------------------------------------------------------
+# Evaluation
+# ---------------------------------------------------------------------------
+evaluation:
+  top_k_values: [1, 3, 5, 10] # Precision/Recall@K values to evaluate
+  llm_judge_model: "gpt-4o-mini"
+  benchmark_queries_file: "docs/benchmark_queries.json"
+  results_dir: "docs/benchmark_results"
+
+# ---------------------------------------------------------------------------
+# API
+# ---------------------------------------------------------------------------
+api:
+  host: "127.0.0.1"
+  port: 8000
+  rate_limit: 60              # Requests per minute per IP
+  max_concurrent: 10
+
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
