@@ -33,6 +33,11 @@ _HERE = Path(__file__).resolve().parent
 _ROOT = _HERE.parent.parent
 CONFIG_PATH = _ROOT / "configs" / "config.yaml"
 
+# On Vercel (and any read-only Lambda), /var/task is read-only — use /tmp for
+# anything we need to write at runtime (embedding cache, ingested files, etc.)
+_IS_SERVERLESS = bool(os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME"))
+_WRITABLE_ROOT = Path("/tmp") if _IS_SERVERLESS else _ROOT
+
 with open(CONFIG_PATH, encoding="utf-8") as f:
     cfg = yaml.safe_load(f)
 
@@ -42,13 +47,13 @@ _oss_cfg = {
     "data": {
         **cfg["data"],
         "indices_dir": str(_ROOT / "data" / "indices" / "oss"),
-        "raw_dir": str(_ROOT / "data" / "raw"),
-        "processed_dir": str(_ROOT / "data" / "processed"),
+        "raw_dir": str(_WRITABLE_ROOT / "data" / "raw"),
+        "processed_dir": str(_WRITABLE_ROOT / "data" / "processed"),
         "manifest_file": str(_ROOT / "data" / "raw" / "manifest.json"),
     },
     "embedding": {
         **cfg["embedding"],
-        "cache_dir": str(_ROOT / "data" / "processed" / "embedding_cache_oss"),
+        "cache_dir": str(_WRITABLE_ROOT / "data" / "embedding_cache_oss"),
         "dimensions": 384,
     },
 }
