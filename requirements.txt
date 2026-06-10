@@ -9,3 +9,4 @@ faiss-cpu==1.8.0
 openai==1.30.5
 python-multipart
 httpx<0.28.0
+packaging
