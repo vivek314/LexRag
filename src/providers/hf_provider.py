@@ -19,37 +19,60 @@ class FastEmbedProvider(EmbeddingProvider):
 
     MODEL_NAME = "BAAI/bge-small-en-v1.5"
 
-    def __init__(self):
+    def __init__(self, hf_token: str | None = None):
         self._dims = 384
         self._backend = None
         self._st_model = None
         self._fe_model = None
+        self._hf_token = hf_token
         self._init_backend()
 
     def _init_backend(self):
-        # Try fastembed first (lightweight, works on Vercel without torch)
+        # Try fastembed first (ONNX, works without torch)
         try:
             from fastembed import TextEmbedding
-            # Use a local cache dir to avoid Windows symlink permission errors
             cache_dir = os.path.join(os.path.dirname(__file__), "..", "..", "data", "models", "fastembed")
             cache_dir = os.path.abspath(cache_dir)
             os.makedirs(cache_dir, exist_ok=True)
             self._fe_model = TextEmbedding(self.MODEL_NAME, cache_dir=cache_dir)
             self._backend = "fastembed"
             logger.info("FastEmbedProvider using fastembed backend")
+            return
         except Exception as fe_err:
             logger.warning("fastembed unavailable (%s), trying sentence_transformers", fe_err)
-            # Fall back to sentence_transformers (needs torch, but works locally)
-            try:
-                from sentence_transformers import SentenceTransformer
-                self._st_model = SentenceTransformer(self.MODEL_NAME)
-                self._backend = "sentence_transformers"
-                logger.info("FastEmbedProvider using sentence_transformers backend")
-            except Exception as st_err:
-                raise RuntimeError(
-                    f"No embedding backend available. fastembed error: {fe_err}. "
-                    f"sentence_transformers error: {st_err}"
-                )
+
+        # Fall back to sentence_transformers (needs torch)
+        try:
+            from sentence_transformers import SentenceTransformer
+            self._st_model = SentenceTransformer(self.MODEL_NAME)
+            self._backend = "sentence_transformers"
+            logger.info("FastEmbedProvider using sentence_transformers backend")
+            return
+        except Exception as st_err:
+            logger.warning("sentence_transformers unavailable (%s), using HF Inference API", st_err)
+
+        # Final fallback: HuggingFace Inference API (no local model needed — Vercel-safe)
+        self._backend = "hf_api"
+        logger.info("FastEmbedProvider using HuggingFace Inference API backend")
+
+    def _embed_via_hf_api(self, texts: list[str]) -> np.ndarray:
+        headers = {"Content-Type": "application/json"}
+        if self._hf_token:
+            headers["Authorization"] = f"Bearer {self._hf_token}"
+        resp = httpx.post(
+            f"https://api-inference.huggingface.co/models/{self.MODEL_NAME}",
+            headers=headers,
+            json={"inputs": texts, "options": {"wait_for_model": True}},
+            timeout=30.0,
+        )
+        resp.raise_for_status()
+        arr = np.array(resp.json(), dtype=np.float32)
+        # HF feature-extraction may return [batch, seq_len, dim]; mean-pool if so
+        if arr.ndim == 3:
+            arr = arr.mean(axis=1)
+        # L2 normalize to match fastembed / sentence_transformers output
+        norms = np.linalg.norm(arr, axis=1, keepdims=True)
+        return arr / np.maximum(norms, 1e-12)
 
     @property
     def dimensions(self) -> int:
@@ -57,11 +80,10 @@ class FastEmbedProvider(EmbeddingProvider):
 
     def embed(self, texts: list[str]) -> np.ndarray:
         if self._backend == "fastembed":
-            vectors = list(self._fe_model.embed(texts))
-            return np.array(vectors, dtype=np.float32)
-        else:
-            vectors = self._st_model.encode(texts, normalize_embeddings=True)
-            return np.array(vectors, dtype=np.float32)
+            return np.array(list(self._fe_model.embed(texts)), dtype=np.float32)
+        if self._backend == "sentence_transformers":
+            return np.array(self._st_model.encode(texts, normalize_embeddings=True), dtype=np.float32)
+        return self._embed_via_hf_api(texts)
 
 
 class HuggingFaceLLMProvider(LLMProvider):

@@ -54,7 +54,7 @@ _oss_cfg = {
 }
 
 # Initialize OSS provider once at startup (always available, no key needed)
-_oss_embedder = FastEmbedProvider()
+_oss_embedder = FastEmbedProvider(hf_token=os.getenv("HF_TOKEN"))
 _oss_llm = HuggingFaceLLMProvider(hf_token=os.getenv("HF_TOKEN"))
 
 _baseline_retriever: Optional[BaselineRetriever] = None

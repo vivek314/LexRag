@@ -29,5 +29,5 @@ def get_providers(
     from src.providers.hf_provider import HuggingFaceLLMProvider, FastEmbedProvider
     return (
         HuggingFaceLLMProvider(hf_token=hf_token or os.getenv("HF_TOKEN")),
-        FastEmbedProvider(),
+        FastEmbedProvider(hf_token=hf_token or os.getenv("HF_TOKEN")),
     )
