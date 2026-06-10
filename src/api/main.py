@@ -65,18 +65,27 @@ _oss_llm = HuggingFaceLLMProvider(hf_token=os.getenv("HF_TOKEN"))
 
 _baseline_retriever: Optional[BaselineRetriever] = None
 _lexrag_retriever: Optional[LexRAGRetriever] = None
-_bm25_retriever: Optional[BM25Retriever] = None
+# Two BM25 indices — each mirrors its FAISS counterpart's chunking strategy:
+#   _bm25_baseline → NaiveChunker chunks (page_number=-1, no page context) — flat retrieval
+#   _bm25_lexrag   → HierarchicalChunker sub-chunks (real page numbers) — page-aware retrieval
+_bm25_baseline: Optional[BM25Retriever] = None
+_bm25_lexrag: Optional[BM25Retriever] = None
 
 
 def _load_retrievers() -> None:
-    global _baseline_retriever, _lexrag_retriever, _bm25_retriever
+    global _baseline_retriever, _lexrag_retriever, _bm25_baseline, _bm25_lexrag
     try:
         _baseline_retriever = BaselineRetriever(_oss_cfg, _oss_embedder)
         _lexrag_retriever = LexRAGRetriever(_oss_cfg, _oss_llm, _oss_embedder)
-        # Build BM25 index from the same chunks — offline fallback, no embedding API needed
-        all_chunks = list(_baseline_retriever.store.chunks)
-        _bm25_retriever = BM25Retriever(all_chunks)
-        logger.info("Retrievers loaded — %d chunks in BM25 index.", len(all_chunks))
+        # Baseline BM25: NaiveChunker chunks — flat text, no page info (page=-1)
+        _bm25_baseline = BM25Retriever(list(_baseline_retriever.store.chunks))
+        # LexRAG BM25: HierarchicalChunker sub-chunks — have real page numbers,
+        # enabling page-level grouping and neighbor expansion in retrieve_lexrag_style()
+        _bm25_lexrag = BM25Retriever(list(_lexrag_retriever.chunk_store.chunks))
+        logger.info(
+            "BM25 indices ready — baseline: %d chunks, lexrag: %d chunks",
+            len(_bm25_baseline.chunks), len(_bm25_lexrag.chunks),
+        )
     except Exception as e:
         logger.error("Failed to load retrievers: %s. Run scripts/build_oss_indices.py first.", e)
 
@@ -204,7 +213,7 @@ async def execute_query(
     query = payload.query.strip()
     if not query:
         raise HTTPException(status_code=400, detail="Query cannot be empty.")
-    if not _bm25_retriever:
+    if not _bm25_baseline or not _bm25_lexrag:
         raise HTTPException(status_code=500, detail="RAG system not initialized.")
 
     llm = _get_llm(x_openai_api_key)
@@ -225,16 +234,16 @@ async def execute_query(
             lexrag_latency = int((time.time() - t1) * 1000)
         else:
             # OSS path: BM25 keyword search + extractive answers (no API needed)
-            # Baseline: flat chunk ranking — each chunk scored independently
+            # Baseline: NaiveChunker chunks (page=-1) — flat BM25, no page context
             t0 = time.time()
-            baseline_chunks = _bm25_retriever.retrieve(query, top_k=5)
+            baseline_chunks = _bm25_baseline.retrieve(query, top_k=5)
             baseline_gen = _extractive_answer(query, baseline_chunks)
             baseline_latency = int((time.time() - t0) * 1000)
 
-            # LexRAG: page-level grouping → neighbor expansion → context-boosted re-ranking
-            # Produces different (higher-quality) results than flat BM25
+            # LexRAG: HierarchicalChunker chunks (real page numbers) — page-grouped BM25
+            # + ±1 neighbor expansion + context-boosted re-ranking
             t1 = time.time()
-            lexrag_chunks = _bm25_retriever.retrieve_lexrag_style(query, top_k=5, neighbor_pages=1)
+            lexrag_chunks = _bm25_lexrag.retrieve_lexrag_style(query, top_k=5, neighbor_pages=1)
             lexrag_gen = _extractive_answer(query, lexrag_chunks)
             lexrag_latency = int((time.time() - t1) * 1000)
 
