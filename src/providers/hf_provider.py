@@ -1,7 +1,7 @@
 import logging
 import os
 import numpy as np
-import httpx
+import requests as _requests
 from src.providers.base import EmbeddingProvider, LLMProvider
 
 logger = logging.getLogger(__name__)
@@ -59,7 +59,7 @@ class FastEmbedProvider(EmbeddingProvider):
         headers = {"Content-Type": "application/json"}
         if self._hf_token:
             headers["Authorization"] = f"Bearer {self._hf_token}"
-        resp = httpx.post(
+        resp = _requests.post(
             f"https://api-inference.huggingface.co/models/{self.MODEL_NAME}",
             headers=headers,
             json={"inputs": texts, "options": {"wait_for_model": True}},
@@ -110,7 +110,7 @@ class HuggingFaceLLMProvider(LLMProvider):
             },
         }
         try:
-            response = httpx.post(
+            response = _requests.post(
                 _HF_API_URL,
                 headers=self._headers,
                 json=payload,
