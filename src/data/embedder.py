@@ -14,7 +14,12 @@ class Embedder:
     def __init__(self, provider: EmbeddingProvider, cache_dir: str = "data/processed/embedding_cache"):
         self.provider = provider
         self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._cache_writable = False
+        try:
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+            self._cache_writable = True
+        except OSError:
+            logger.warning("Embedding cache dir not writable (%s); caching disabled", cache_dir)
 
     def _cache_path(self, text: str) -> Path:
         # Provider type is part of cache key so OpenAI and fastembed vectors don't collide.
@@ -23,11 +28,19 @@ class Embedder:
         return self.cache_dir / f"{key}.npy"
 
     def _load(self, text: str) -> np.ndarray | None:
+        if not self._cache_writable:
+            return None
         p = self._cache_path(text)
         return np.load(str(p)) if p.exists() else None
 
     def _save(self, text: str, vec: np.ndarray) -> None:
-        np.save(str(self._cache_path(text)), vec)
+        if not self._cache_writable:
+            return
+        try:
+            np.save(str(self._cache_path(text)), vec)
+        except OSError as e:
+            logger.warning("Cache write failed (%s); skipping", e)
+            self._cache_writable = False
 
     def embed_chunks(self, chunks: list[Chunk]) -> np.ndarray:
         vectors: list[np.ndarray | None] = []
