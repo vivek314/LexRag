@@ -1,4 +1,5 @@
 import logging
+import os
 import numpy as np
 import httpx
 from src.providers.base import EmbeddingProvider, LLMProvider
@@ -10,20 +11,57 @@ _HF_API_URL = f"https://api-inference.huggingface.co/models/{_HF_MODEL}"
 
 
 class FastEmbedProvider(EmbeddingProvider):
-    """Local ONNX-based text embeddings — no API key required."""
+    """
+    ONNX-based text embeddings — no API key required.
+    Uses fastembed when available (Vercel), falls back to sentence_transformers locally.
+    Both use BAAI/bge-small-en-v1.5, producing compatible 384-dim vectors.
+    """
 
-    def __init__(self, model_name: str = "BAAI/bge-small-en-v1.5"):
-        from fastembed import TextEmbedding
-        self._model = TextEmbedding(model_name)
+    MODEL_NAME = "BAAI/bge-small-en-v1.5"
+
+    def __init__(self):
         self._dims = 384
+        self._backend = None
+        self._st_model = None
+        self._fe_model = None
+        self._init_backend()
+
+    def _init_backend(self):
+        # Try fastembed first (lightweight, works on Vercel without torch)
+        try:
+            from fastembed import TextEmbedding
+            # Use a local cache dir to avoid Windows symlink permission errors
+            cache_dir = os.path.join(os.path.dirname(__file__), "..", "..", "data", "models", "fastembed")
+            cache_dir = os.path.abspath(cache_dir)
+            os.makedirs(cache_dir, exist_ok=True)
+            self._fe_model = TextEmbedding(self.MODEL_NAME, cache_dir=cache_dir)
+            self._backend = "fastembed"
+            logger.info("FastEmbedProvider using fastembed backend")
+        except Exception as fe_err:
+            logger.warning("fastembed unavailable (%s), trying sentence_transformers", fe_err)
+            # Fall back to sentence_transformers (needs torch, but works locally)
+            try:
+                from sentence_transformers import SentenceTransformer
+                self._st_model = SentenceTransformer(self.MODEL_NAME)
+                self._backend = "sentence_transformers"
+                logger.info("FastEmbedProvider using sentence_transformers backend")
+            except Exception as st_err:
+                raise RuntimeError(
+                    f"No embedding backend available. fastembed error: {fe_err}. "
+                    f"sentence_transformers error: {st_err}"
+                )
 
     @property
     def dimensions(self) -> int:
         return self._dims
 
     def embed(self, texts: list[str]) -> np.ndarray:
-        vectors = list(self._model.embed(texts))
-        return np.array(vectors, dtype=np.float32)
+        if self._backend == "fastembed":
+            vectors = list(self._fe_model.embed(texts))
+            return np.array(vectors, dtype=np.float32)
+        else:
+            vectors = self._st_model.encode(texts, normalize_embeddings=True)
+            return np.array(vectors, dtype=np.float32)
 
 
 class HuggingFaceLLMProvider(LLMProvider):

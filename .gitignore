@@ -6,8 +6,8 @@ __pycache__/
 data/raw/
 data/processed/embedding_cache/
 data/processed/embedding_cache_oss/
-data/indices/
-!data/indices/oss/
+data/indices/*
+!data/indices/oss
 !data/indices/oss/**
 *.npy
 logs/
