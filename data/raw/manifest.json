@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Copyright_Office_Circular_01",
+    "domain": "copyright_law",
+    "source": "",
+    "doc_id": "Copyright_Office_Circular_01",
+    "local_path": "data\\raw\\Copyright_Office_Circular_01.pdf",
+    "date": "unknown",
+    "num_pages": 10
+  },
+  {
+    "title": "IRS_Circular_E_2024",
+    "domain": "tax_law",
+    "source": "",
+    "doc_id": "IRS_Circular_E_2024",
+    "local_path": "data\\raw\\IRS_Circular_E_2024.pdf",
+    "date": "unknown",
+    "num_pages": 59
+  },
+  {
+    "title": "The Information Technology Act, 2000",
+    "domain": "legal",
+    "source": "Ministry of Law and Justice, India",
+    "doc_id": "it_act_2000",
+    "local_path": "data\\raw\\it_act_2000_updated.pdf",
+    "date": "2000",
+    "num_pages": 36
+  }
+]
