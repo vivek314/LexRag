@@ -229,6 +229,24 @@ async def execute_query(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/api/net-test")
+async def net_test():
+    import urllib.request, socket
+    results = {}
+    for url in ["https://api.openai.com", "https://api-inference.huggingface.co"]:
+        try:
+            with urllib.request.urlopen(url, timeout=5) as r:
+                results[url] = f"HTTP {r.status}"
+        except Exception as e:
+            results[url] = str(e)
+    try:
+        ip = socket.gethostbyname("api.openai.com")
+        results["dns_openai"] = ip
+    except Exception as e:
+        results["dns_openai"] = str(e)
+    return results
+
+
 # Static files
 _static_dir = _HERE / "static"
 _static_dir.mkdir(parents=True, exist_ok=True)
