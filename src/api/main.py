@@ -225,10 +225,8 @@ async def execute_query(
             },
         }
     except Exception as e:
-        import traceback
-        tb = traceback.format_exc()
         logger.exception("Query execution failed")
-        raise HTTPException(status_code=500, detail=f"{e}\n---TRACEBACK---\n{tb}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # Static files
