@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Python processing backend running FastAPI & FAISS indices
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: lexrag-backend
+    environment:
+      # Inject the API Key dynamically from the local host's .env file
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      # Persistent host volume to ensure processed JSONs, FAISS indexes, 
+      # and text embeddings cache survive container rebuilds
+      - ./data:/app/data
+      # Cache HuggingFace models (sentence-transformers / cross-encoders)
+      # to avoid duplicate downloads on container startup
+      - hf-cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/static/index.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Nginx frontend serving HTML assets and reverse proxying API requests
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: lexrag-frontend
+    ports:
+      # Map container port 80 (HTTP) to port 8080 on the host machine
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_started
+    restart: unless-stopped
+
+# Named volume for caching HuggingFace models across runs
+volumes:
+  hf-cache:

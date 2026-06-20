@@ -17,3 +17,22 @@ logs/
 dist/
 build/
 .pytest_cache/
+
+.vercel
+
+# logs (root-level, not just logs/)
+*.log
+
+# browser/session artifacts — never publish
+.playwright-mcp/
+
+# heavy / non-source data
+data/models/
+data/_archive_old_corpus/
+
+# source PDFs are heavy; the processed JSON + .jsonl sets are what's needed
+input data/*.pdf
+
+# personal / non-project files
+Vivek_*.pdf
+*AlphaSense*.pdf

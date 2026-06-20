@@ -13,9 +13,30 @@ class OpenAIEmbeddingProvider(EmbeddingProvider):
     def dimensions(self) -> int:
         return self._dims
 
+    # OpenAI limits each embeddings request to 300K tokens / 2048 inputs.
+    # Batch by a conservative token budget (≈ chars/4) so large corpora don't 400.
+    _MAX_TOKENS_PER_REQUEST = 250_000
+    _MAX_INPUTS_PER_REQUEST = 2048
+
     def embed(self, texts: list[str]) -> np.ndarray:
-        response = self._client.embeddings.create(model=self._model, input=texts)
-        return np.array([r.embedding for r in response.data], dtype=np.float32)
+        out: list[list[float]] = []
+        batch: list[str] = []
+        batch_tokens = 0
+        for t in texts:
+            est = max(1, len(t) // 4)
+            if batch and (
+                batch_tokens + est > self._MAX_TOKENS_PER_REQUEST
+                or len(batch) >= self._MAX_INPUTS_PER_REQUEST
+            ):
+                resp = self._client.embeddings.create(model=self._model, input=batch)
+                out.extend(r.embedding for r in resp.data)
+                batch, batch_tokens = [], 0
+            batch.append(t)
+            batch_tokens += est
+        if batch:
+            resp = self._client.embeddings.create(model=self._model, input=batch)
+            out.extend(r.embedding for r in resp.data)
+        return np.array(out, dtype=np.float32)
 
 
 class OpenAILLMProvider(LLMProvider):

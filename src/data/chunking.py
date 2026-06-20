@@ -318,12 +318,120 @@ class StatuteChunker(ChunkingStrategy):
         return page_starts[0][1]
 
 
+class Statute2025Chunker(StatuteChunker):
+    """
+    StatuteChunker tuned for the Income-tax Act, 2025 layout, which the 2000-Act
+    SECTION_RE cannot parse:
+      - Marginal heading on the line ABOVE the number:
+            Deduction in respect of health insurance premia.
+            126.  (1) An assessee, being an individual ...
+      - Most sections open with sub-section "(1)"; single-clause sections (e.g. 123)
+        open with a capitalised word instead.
+      - Editor's amendment footnotes ("3. Substituted by the Finance Act, 2026 ...")
+        and dates ("...Act, 2026.") must NOT be read as section starts.
+
+    Reuses StatuteChunker's reference extraction (_extract_references) and
+    _char_to_page; only the section-boundary detection differs.
+    """
+
+    # A section starts at line-start: <num>. then either "(1)" (a sub-section) or a
+    # capitalised word (single-clause sections). 1–3 digits only (excludes years).
+    _SEC_START_RE = re.compile(r'^(\d{1,3})\.[ \t]+(\(1\)|[A-Z])', re.MULTILINE)
+    # Bodies that are actually editor annotations, not section text.
+    _ANNOTATION_RE = re.compile(
+        r'^(Substituted|Omitted|Inserted|Subs\.|Ins\.|Omit\.|ibid)', re.IGNORECASE)
+    _MAX_SECTION_NO = 536   # the Act has 536 sections; higher = schedule/table noise
+
+    def chunk(self, doc: Document) -> list[Chunk]:
+        page_starts: list[tuple[int, int]] = []
+        full_text = ""
+        for page in doc.pages:
+            page_starts.append((len(full_text), page.page_number))
+            full_text += page.text + "\n"
+
+        matches = list(self._SEC_START_RE.finditer(full_text))
+        if not matches:
+            return PageAwareChunker(self.chunk_size, self.overlap).chunk(doc)
+
+        # Slice candidate sections (start → next start), filtering noise.
+        raw: list[tuple[str, int, str]] = []   # (section_id, pos, text)
+        for i, m in enumerate(matches):
+            sec_id = m.group(1)
+            if int(sec_id) > self._MAX_SECTION_NO:
+                continue
+            sec_start = m.start()
+            body_start = m.end() - 1            # include the "(1)" / first capital
+            if self._ANNOTATION_RE.match(full_text[body_start:body_start + 30].lstrip()):
+                continue                        # amendment footnote, not a section
+            sec_end = matches[i + 1].start() if i + 1 < len(matches) else len(full_text)
+            text = full_text[sec_start:sec_end].strip()
+            if text:
+                raw.append((sec_id, sec_start, text))
+
+        # Dedupe by section_id by EARLIEST position: the main sections (1..536) appear
+        # before the schedules, which restart numbering and would otherwise hijack low
+        # ids (e.g. a schedule's "3." overwriting the main s.3 "tax year" definition).
+        # `raw` is already in document order, so the first non-stub occurrence wins.
+        best: dict[str, tuple[int, str]] = {}
+        best_is_stub: dict[str, bool] = {}
+        for sec_id, pos, text in raw:
+            is_stub = len(text) < 150
+            if sec_id not in best:
+                best[sec_id] = (pos, text)
+                best_is_stub[sec_id] = is_stub
+            elif best_is_stub[sec_id] and not is_stub:
+                best[sec_id] = (pos, text)   # upgrade an earlier stub to the real body
+                best_is_stub[sec_id] = False
+
+        all_chunks: list[Chunk] = []
+        index = 0
+        for sec_id, (sec_start, section_text) in sorted(best.items(), key=lambda x: x[1][0]):
+            start_page = self._char_to_page(sec_start, page_starts)
+            heading = self._heading_before(full_text, sec_start)
+            references = self._extract_references(section_text, sec_id)
+
+            section_chunk_id = f"{doc.doc_id}_sec_{sec_id}"
+            all_chunks.append(Chunk(
+                chunk_id=section_chunk_id, doc_id=doc.doc_id, text=section_text,
+                page_number=start_page, chunk_index=index, char_count=len(section_text),
+                parent_chunk_id=None, references=references, section_id=sec_id,
+                metadata={"level": "section", "heading": heading},
+            ))
+            index += 1
+
+            start = 0
+            while start < len(section_text):
+                chunk_text = section_text[start:start + self.chunk_size].strip()
+                if chunk_text:
+                    all_chunks.append(Chunk(
+                        chunk_id=f"{doc.doc_id}_sec_{sec_id}_c{index}", doc_id=doc.doc_id,
+                        text=chunk_text, page_number=start_page, chunk_index=index,
+                        char_count=len(chunk_text), parent_chunk_id=section_chunk_id,
+                        references=references, section_id=sec_id,
+                        metadata={"level": "clause", "heading": heading},
+                    ))
+                    index += 1
+                start += self.chunk_size - self.overlap
+        return all_chunks
+
+    @staticmethod
+    def _heading_before(full_text: str, pos: int) -> str:
+        """The marginal heading is the non-empty line immediately above the number."""
+        prefix = full_text[:pos].rstrip("\n")
+        prev_line = prefix.rsplit("\n", 1)[-1].strip()
+        # headings are short Title-case phrases; ignore if it looks like body text
+        if 3 <= len(prev_line) <= 90 and not prev_line[0].islower():
+            return prev_line.rstrip(".")
+        return ""
+
+
 def get_chunker(strategy: str, chunk_size: int = 512, overlap: int = 50) -> ChunkingStrategy:
     strategies = {
         "naive": NaiveChunker(chunk_size, overlap),
         "page_aware": PageAwareChunker(chunk_size, overlap),
         "hierarchical": HierarchicalChunker(chunk_size, overlap),
         "statute": StatuteChunker(chunk_size, overlap),
+        "statute_2025": Statute2025Chunker(chunk_size, overlap),
     }
     if strategy not in strategies:
         raise ValueError(f"Unknown strategy: {strategy}. Choose from {list(strategies.keys())}")

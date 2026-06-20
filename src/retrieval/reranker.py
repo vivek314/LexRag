@@ -23,13 +23,15 @@ class Reranker:
             self.model = None
             logger.warning("sentence-transformers not installed — reranker disabled, using score passthrough")
 
-    def rerank(self, query: str, candidates: list[tuple[Chunk, float]]) -> list[tuple[Chunk, float]]:
+    def rerank(self, query: str, candidates: list[tuple[Chunk, float]],
+               top_n: int | None = None) -> list[tuple[Chunk, float]]:
         if not candidates:
             return []
+        n = top_n or self.top_k
 
         if not self.model:
-            # Degrade gracefully: sort by existing FAISS score and truncate
-            return sorted(candidates, key=lambda x: x[1], reverse=True)[:self.top_k]
+            # Degrade gracefully: sort by existing (RRF/fused) score and truncate
+            return sorted(candidates, key=lambda x: x[1], reverse=True)[:n]
 
         pairs = [(query, chunk.text) for chunk, _ in candidates]
         scores = self.model.predict(pairs)
@@ -38,6 +40,6 @@ class Reranker:
             key=lambda x: x[1],
             reverse=True,
         )
-        results = [(chunk, float(score)) for chunk, score in scored[:self.top_k]]
+        results = [(chunk, float(score)) for chunk, score in scored[:n]]
         logger.info("Reranked %d → %d chunks", len(candidates), len(results))
         return results

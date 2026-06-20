@@ -1,0 +1,828 @@
+{
+  "config": {
+    "generator": "gpt-4o-mini",
+    "gate_judge": "gpt-4o",
+    "ragas_judge": "gpt-4o-mini"
+  },
+  "results": [
+    {
+      "id": "ha-01",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Under which section of current Indian income-tax law can an individual claim a deduction for donations to charitable institutions?",
+      "ground_truth": "Under section 133 of the Income-tax Act, 2025 (deduction in respect of donations to certain funds and charitable institutions). It is NOT section 80G — that belonged to the repealed Income-tax Act, 1961.",
+      "baseline": {
+        "answer": "An individual can claim a deduction for donations to charitable institutions under Section 80G of the Income Tax Act [SOURCE 2].",
+        "contexts": [
+          "ction is claimed and allowed for any tax year in\nrespect of any sum specified in sub-section (1), the sum in respect of which deduc­\ntion is so allowed shall not qualify for deduction under any other provision of this\nAct for the same or any other tax year.\n(4) The deduction under this section shall be allowed only for donation made as a\nsum of money.\n(5) Any deduction for a donation over  `  2000 shall be allowed only if the payment\nis made by a mode other than cash.\n(6) Any claim of deduction by the asses",
+          "under\nSection 80C of IT Act.\nSection 80D\n   Individuals are eligible to claim deductions for medical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings b",
+          "than cash.\n(6) Any claim of deduction by the assessee in his return of income filed for any tax\nyear in case of a donation made to an institution or fund referred in sub-section\n(1)( b )( ii ), shall be allowed—\n( a )\t   only on the basis of the information relating to such donation furnished\nby such institution or fund to the prescribed authority or person author­\nised by such authority; and\n( b )\t   subject to verification as per the risk management strategy formulated\n(7) For the purposes of this section",
+          "be deter­\nmined under section 21(6) or (7)( a ); or\n( b )\t   the assessee has any income falling in Schedule III (Table: Sl. No. 11).\n(5) For the purposes of this section, the expressions “10% of his total income” and\n“25% of his total income” shall mean 10% or 25%, as the case may be, of the total\nincome of the assessee before allowing deduction for any expenditure under this\nsection.\nDeduction in respect of certain donations for scientific research or rural\ndevelopment.\n135.\t \t (1) In computing the total",
+          "ar income for such tax year as reduced\nby its application for charitable or religious purposes as per provisions\nof section 341 or accumulation thereof under section 342 in such tax\nyear as per the provisions of this Part.\nSpecified income.\n337. \t \tThe specified income of a registered non-profit organisation shall mean the\nincome as specified in column B of the Table below and shall be taxable in the\nyear provided in the column C thereof:—\nTABLE\nSl.\nNo.\nSpecified income\nTax year\nA\nB\nC\n1.\nAny anonymous donat"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer cites Section 80G of the Income Tax Act as the current basis for claiming deductions for donations, which triggers the fail condition as it is outdated and belongs to the repealed Income-tax Act, 1961."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8450591695666323,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "An individual can claim a deduction for donations to charitable institutions under Section 133 of the current Indian income-tax law, as per the provisions of the Income Tax Act, 2025 [SOURCE 1].",
+        "contexts": [
+          "banking insti­\ntution referred to in section 51 of that Act and includes a non-banking\nfinancial company.\nDeduction in respect of donations to certain funds, charitable institutions, etc.\n133.\t \t   \t (1) In computing the total income of an assessee, there shall be deducted,\nas per and subject to the provisions of this section,—\n( a )\t   the whole of the aggregate of the sum or the sums paid by the assessee,\nin the tax year as donations to—\n( i )\t   the National Defence Fund set up by the Central Government",
+          "uction under any other provision of this\nAct for the same or any other tax year.\n(4) The deduction under this section shall be allowed only for donation made as a\nsum of money.\n(5) Any deduction for a donation over  `  2000 shall be allowed only if the payment\nis made by a mode other than cash.\n(6) Any claim of deduction by the assessee in his return of income filed for any tax\nyear in case of a donation made to an institution or fund referred in sub-section\n(1)( b )( ii ), shall be allowed—\n( a )\t   only o",
+          "sum referred to in clause ( b ), applied by it for\ncharitable or religious purpose in India for which it is registered where\nsuch sum is paid during the tax year provided that the provisions of\nsection 35( b )( i )   and section 36(4), (5), (6) and (7)   shall apply in respect\nof such sum; and\n( b )\t   85% of the sum paid by way of donation made to any other registered\nnon-profit organisation.\n(2) The application of income under sub-section (1) shall include the following:—\n( a )\t   the amount invested or d",
+          "341. \t \t(1) The following sums shall be allowed as application of income to a\nregistered non-profit organisation:—\n( a )\t    any sum, other than the sum referred to in clause ( b ), applied by it for\ncharitable or religious purpose in India for which it is registered where\nsuch sum is paid during the tax year provided that the provisions of\nsection 35( b )( i )   and section 36(4), (5), (6) and (7)   shall apply in respect\nof such sum; and\n( b )\t   85% of the sum paid by way of donation made to any other registered\nnon-profit organisation.\n(2) The application of income under sub-section (1) shall include the following:—\n( a )\t   the amount invested or deposited back during the tax year, in the modes\npermitted under section 350 maintained specifically for such corpus, if—\n( i )\t   such investment or depositing back is made within five years from\nthe end of the tax year in which such application of income was\nmade from the corpus; and\n( ii )\t   the application of income from the corpus is made after the 31st\nMarch, 2021 and there was no violation of any provision of this\nPart, or any corresponding provision of the Income-tax Act, 1961\n(43 of 1961) with respect to such application;\n( b )\t   the amount repaid, during the tax year, towards any loan or borrowing\nwhere,—\n( i )\t   such repayment is within five years from the end of the tax year\nin which such application of income was made from the loan or\nborrowing; and\n( ii )\t   the application of income from the loan or borrowing is made after\nthe 31st March, 2021 and there was no violation of any provision\nof this Part, or any corresponding provision of the Income-tax Act,\n1961 (43 of 1961) with respect to such application.\n(3) The following claims shall not be allowed as application of income under\nsub-sections (1) and (2):—\n( a )\t   the deduction or allowance by way of depreciation or otherwise   claimed\nin respect of an asset acquisition of which has been claimed as an ap­\nplication of income in the same or any other tax year under this Part or\nunder any corresponding provision of the Income-tax Act, 1961 (43 of\n1961); or\n( b )\t   a claim of set off or deduction or allowance of any excess application of\nany of the years preceding the tax year; or\n( c )\t   any sum paid as a corpus donation to any other registered non-profit\norganisation.\n(4) An application from corpus, loan or borrowing, accumulated income, specified\nincome or deemed accumulated income shall not be considered as application for\nthe purpose of sub-sections (1) and (2).\n(5) Where, in a tax year, the regular income applied by a registered non-profit\norganisation towards charitable or religious purposes in India, as per the provisions\nof sub-sections (1) to (4), is less than 85% of regular income, the shortfall, or any\npart thereof, at the option of the registered non-profit organisation, may be treated\nas deemed application.\n(6) Any deemed application under sub-section (5) shall be applied by the registered\nnon-profit organisation for its objects in India,—\n( a )\t   during the tax year in which the income is received or in the tax year\nimmediately succeeding such tax year, where such shortfall is for the\nreason that the whole or any part of the income has not been received\nduring that tax year;\n( b )\t   in the tax year immediately succeeding the tax year in which the income\nwas derived, where such shortfall is for any other reason.\n(7) The option under sub-section (5) shall be exercised on or before the due date\nspecified in section 263(1)   for furnishing the return of income for such tax year, in\nsuch form and manner, as may be prescribed.\n(8) The application of income under sub-section (1) shall include deemed applica­\ntion under sub-section (5).\n(9) Following income from capital gains shall be deemed as application of income—\n( a )\t   the capital gain from transfer of a capital asset, being property held un­\nder trust wholly for charitable or religious purposes, where the whole or\nany part of the net consideration is utilised for acquiring another capital\nasset to be so held,—\n( i )\t   if the whole of the net consideration is utilised in acquiring the new\ncapital asset, the whole of such capital gain;\n( ii )\t   if only a part of the net consideration is utilised for acquiring the\nnew capital asset, so much of such capital gain as is equal to the\namount, if any, by which the amount so utilised exceeds the cost\nof the transferred asset;\n( b )\t   the appropriate fraction of the capital gain arising from the transfer of\na capital asset, being property held under trust in part for charitable or\nreligious purposes, where the whole or any part of the net consideration\nis utilised for acquiring another capital asset to be so held,—\n( i )\t   if the cost of acquisition of the new capital asset acquired is not less\nthan the net consideration in respect of the capital asset transferred,\nthe whole of appropriate fraction of such capital gain;\n( ii )\t   in any other case, so much of the appropriate fraction of the capital\ngain as is equal to the amount, if any, by which the appropriate\nfraction of the amount utilised for acquiring the new asset exceeds\nthe appropriate fraction of the cost of the transferred asset.\n(10) For the purposes of sub-section (9),—\n( a )\t   “appropriate fraction” means the fraction which represents the extent to\nwhich the income derived from the capital asset transferred was imme­\ndiately before such transfer applicable to charitable or religious purpose;\n( b )\t    “cost of transferred asset” means the aggregate of the cost of acquisition\n(as ascertained for the purposes of sections 72 and 73) of the capital\nasset which is subject of the transfer and the cost of any improvement\nthereto within the meaning assigned to that expression in section\n90(1)( b );\n( c )\t   “net consideration” means the full value of the consideration received\nor accruing as a result of the transfer of the capital asset as reduced by\nany expenditure incurred wholly and exclusively in connection with such\ntransfer.\nAccumulated income.",
+          "edical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings bank account is eligible to be claimed\nas a deduction under section 80TTA, subject to limits on"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model correctly cites Section 133 of the Income-tax Act, 2025, and does not mention Section 80G or the 1961 Act as the current basis."
+        },
+        "ragas": {
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.8317041727731506,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "ha-02",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Which section currently allows a deduction for interest earned on bank/savings deposits?",
+      "ground_truth": "Section 153 of the Income-tax Act, 2025 ('Deduction for interest on deposits'). It is NOT section 80TTA — that was in the repealed 1961 Act.",
+      "baseline": {
+        "answer": "The deduction for interest earned on savings bank accounts is allowed under section 80TTA, which is applicable to individuals or Hindu Undivided Families (HUF) and is subject to certain limits and conditions [SOURCE 1]. Additionally, under the Income Tax Act, the whole of the interest up to a maximum amount of ₹10,000 on deposits in a savings account is also deductible [SOURCE 2].",
+        "contexts": [
+          "wever, tax charged on\ninterest earned on savings bank account is eligible to be claimed\nas a deduction under section 80TTA, subject to limits on the\namount claimed as deduction and other conditions specified\nfrom time to time.\n   Available only to individual or HUF.\n   Applicable for savings bank account, post office or cooperative\nbanks.\nSection 24\n   Interest paid on housing loan availed for purposes of acquisition\nof property, construction of property or repair of property.\n   Applicable on housing l",
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "ion under section 200.\n6 .\nInterest on securities\nreferred to in section\n393(1) [Table: Sl. No.\n5( i )].\n( a )\t   Interest payable on—\n( i )\t   National Development Bonds;\n( ii )\t   such debentures, issued by such insti­\ntution or authority or any other person\nas the Central Government may, by\nnotification, specify in this behalf;\n( iii )\t   any security of the Central Government\nor a State Government, other than—\n( A )\t   8% Savings (Taxable) Bonds,\n2003; or\n( B )\t   7.75% Savings (Taxable) Bonds,\n2018; or",
+          "ferred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(5) For the purposes of this section,—\n( a )\t   “financial institution” means a banking company to which the Banking\nRegulation Act, 1949 (10 of 1949) applies, or any bank or banking insti­\ntution referred to in section 51 of that Act or a housing finance company;\n( b )\t   “housing finance company” means a public company formed or registered\nin In",
+          "who is—\n( a )\t   an individual, not being a senior citizen; or\n( b )\t   an individual, being a senior citizen; or\n( c )\t   a Hindu undivided family,\nshall be allowed a deduction from the gross total income, subject to conditions\nspecified in sub-section (2), where it includes income by way of interest on deposits\nwith—\n( i )\t   a banking company to which the Banking Regulation Act, 1949 (10 of\n1949), applies (including any bank or banking institution referred to in\nsection 51 of that Act); or\n( ii )\t   a c"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly cites section 80TTA as the current provision for deduction on interest earned on savings deposits, which is not the current law according to the ground truth."
+        },
+        "ragas": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.7160521747406415,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The current section that allows a deduction for interest earned on bank/savings deposits is Section 153 of the Income Tax Act, 2025. This section specifies the deductions allowed for different categories of assessees based on their status and the type of deposits [SOURCE 1].",
+        "contexts": [
+          "153. \t \t(1) An assessee who is—\n( a )\t   an individual, not being a senior citizen; or\n( b )\t   an individual, being a senior citizen; or\n( c )\t   a Hindu undivided family,\nshall be allowed a deduction from the gross total income, subject to conditions\nspecified in sub-section (2), where it includes income by way of interest on deposits\nwith—\n( i )\t   a banking company to which the Banking Regulation Act, 1949 (10 of\n1949), applies (including any bank or banking institution referred to in\nsection 51 of that Act); or\n( ii )\t   a co-operative society engaged in carrying on the business of banking\n(including a co-operative land mortgage bank or a co-operative land\ndevelopment bank); or\n( iii )\t   a Post Office as defined in section 2( d ) of the Post Office Act, 2023\n(43 of 2023).\n(2) The deduction under sub-section (1) shall be allowed for a tax year as follows:—\n( a )\t   in case of an assessee mentioned in sub-section (1)( a ) or ( c ), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction shall be allowed under this section in respect\nof such income in computing the total income of any partner of the firm or any\nmember of such association or any individual of such body of individuals.\n(4) Where the income referred to in sub-section (2)( b ) is derived from any deposit\nheld by, or on behalf of, a firm, an association of persons or a body of individuals, no\ndeduction shall be allowed under this section in respect of such income in computing\nthe total income of any partner of the firm or any member of such association or\nany individual of such body of individuals.\nE.—Other deductions\nDeduction in case of a person with disability.",
+          "who is—\n( a )\t   an individual, not being a senior citizen; or\n( b )\t   an individual, being a senior citizen; or\n( c )\t   a Hindu undivided family,\nshall be allowed a deduction from the gross total income, subject to conditions\nspecified in sub-section (2), where it includes income by way of interest on deposits\nwith—\n( i )\t   a banking company to which the Banking Regulation Act, 1949 (10 of\n1949), applies (including any bank or banking institution referred to in\nsection 51 of that Act); or\n( ii )\t   a c",
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "132.\t \t (1) An assessee, being an individual, shall be allowed a deduction of interest\npayable on loan taken by him from any financial institution for the purpose\nof purchase of an electric vehicle, as per the provisions of this section.\n(2) The deduction under sub-section (1) shall be subject to the condition that the\nloan has been sanctioned by the financial institution during the period beginning\non the 1st April, 2019 and ending on the 31st March, 2023.\n(3) The deduction under sub-section (1) shall not exceed  `  150000 and shall be\nallowed in computing the total income of the individual for the tax year beginning\non the 1st April, 2019 and subsequent tax years.\n(4) Where a deduction under this section is allowed for any interest referred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(5) For the purposes of this section,—\n( a )\t   “electric vehicle” means a vehicle powered exclusively by an electric motor,\nwhose traction energy is supplied exclusively by traction battery installed\nin the vehicle and has such electric regenerative braking system, which\nduring braking provides for the conversion of vehicle kinetic energy into\nelectrical energy;\n( b )\t   “financial institution” means a banking company to which the Banking\nRegulation Act, 1949 (10 of 1949) applies, or any bank or banking insti­\ntution referred to in section 51 of that Act and includes a non-banking\nfinancial company.\nDeduction in respect of donations to certain funds, charitable institutions, etc.",
+          "edical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings bank account is eligible to be claimed\nas a deduction under section 80TTA, subject to limits on"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model correctly identifies Section 153 of the Income Tax Act, 2025, as the current provision and does not cite section 80TTA or the 1961 Act as current."
+        },
+        "ragas": {
+          "faithfulness": 0.6666666666666666,
+          "answer_relevancy": 0.8781684975971027,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "ha-03",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Under which section is the deduction for contributions to a notified pension scheme (NPS) currently available?",
+      "ground_truth": "Section 124 of the Income-tax Act, 2025 (deduction for employer and assessee contribution to a notified pension scheme). It is NOT section 80CCD of the repealed 1961 Act.",
+      "baseline": {
+        "answer": "The deduction for contributions to a notified pension scheme (NPS) is available under Section 80CCD (1B) of the Income Tax Act [SOURCE 1].",
+        "contexts": [
+          "Bank Deposits of 5 year\nterm, contribution to NPS account (Tier 1 account only),\nNational Savings Certificate, principal repayment of housing\nloan, etc.\nSection\n80CCD (1 B)\n   In addition to deduction claimed under Section 80C.\n   Investment in NPS by any individual is available for claiming\ndeduction under Section 80CCD (1B) of the IT Act.\n   Amount available for deduction under this section is over and\nabove the amount available for claiming deduction under\nSection 80C of IT Act.\nSection 80D\n   Indiv",
+          ".\t \t (1) Where in the case of an assessee, being an individual employed by any\nemployer, if the employer makes any contribution in his account under a\npension scheme notified by the Central Government, the assessee shall be allowed\na deduction in the computation of his total income, of the whole of the amount\ncontributed by such employer as does not exceed—\n( a )\t   14%, where such contribution is made by the employer being the Central\nGovernment or the State Government; and\n( b )\t   10%, where such contrib",
+          "plan formulated in accordance with such\nscheme notified by the Central Government;\n( n )\t   contribution by an individual to any pension fund set up by––\n( i )\t   any Mutual Fund referred to in Schedule VII (Table: Sl. No. 20 or\n21); or\n( iii )\t   the specified company,\nas may be notified by the Central Government;\n( o )\t   subscription to a deposit scheme or contribution to a pension fund, set\nup by the National Housing Bank established under section 3 of the\nNational Housing Bank Act, 1987 (53 of 1987),",
+          "to in section 20(3) of the Pension Fund Regulatory and\nDevelopment Authority Act, 2013 (23 of 2013) of the pension scheme\nnotified by the Central Government, as referred to in section 124—\n( a )\t   for a fixed period of not less than three years; and\n( b )\t   which is as per the scheme as may be notified by the Central\nGovernment for the purposes of this clause;\n( x )\t   contribution made from income chargeable to tax to effect or keep in\nforce a contract for any annuity plan of Life Insurance Corporation",
+          "r employee’s contributions.\n7.  An employee participating in a recognised provident fund shall, in respect of his\nown contributions to his individual account in the fund in the tax year, be entitled\nto a deduction in the computation of his total income of an amount determined as\nper section 123.\nExclusion from total income of accumulated balance\n8.  (1) Subject to the provisions of sub-paragraph (2), the accumulated balance due\nand payable to an employee shall be excluded from the computation of his total\ni"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly cites Section 80CCD of the 1961 Act as the current basis for the deduction, which triggers the fail condition."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7835773698604416,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The deduction for contributions to a notified pension scheme (NPS) is currently available under section 124 of the Income Tax Act, 2025. This section outlines the deductions allowed for contributions made by both the employer and the individual to the pension scheme notified by the Central Government [SOURCE 2].",
+        "contexts": [
+          "such\nindividual in his account under a pension scheme notified or as may be notified by\nthe Central Government.\n(4) The deduction under sub-section (3) shall also be allowed where any payment\nor deposit is made to the account of a minor under the said pension scheme, by",
+          "124.\t \t (1) Where in the case of an assessee, being an individual employed by any\nemployer, if the employer makes any contribution in his account under a\npension scheme notified by the Central Government, the assessee shall be allowed\na deduction in the computation of his total income, of the whole of the amount\ncontributed by such employer as does not exceed—\n( a )\t   14%, where such contribution is made by the employer being the Central\nGovernment or the State Government; and\n( b )\t   10%, where such contribution is made by an employer other than an\nemployer referred to in clause ( a ),\nof his salary in the tax year.\n(2) Where the total income of the assessee is chargeable to tax under section 202(1),\nthe provisions of sub-section (1) shall have effect as if for “10%” referred to in clause\n( b ) of that sub-section, “14%” had been substituted.\n(3) An assessee referred to in sub-section (1), or any other assessee, being an indi­\nvidual, shall be allowed a deduction not exceeding  `  50000, in computation of his\ntotal income of the whole of the amount paid or deposited in the tax year by such\nindividual in his account under a pension scheme notified or as may be notified by\nthe Central Government.\n(4) The deduction under sub-section (3) shall also be allowed where any payment\nor deposit is made to the account of a minor under the said pension scheme, by\nthe assessee, being the parent or guardian of such minor, subject to the condition\nthat the aggregate amount of deduction under sub-section (3) and this sub-section\nshall not exceed  `  50000.\n(5) No deduction under sub-sections (3) and (4) shall be allowed in respect of the\namount on which a deduction has been claimed and allowed under section 123.\n(6) Any amount standing to the credit of the assessee or a minor, in his account or\nthe account of a minor, as the case may be, referred to in sub-sections (1), (3) and\n(4) and paragraph 1( y ) of Schedule XV, in respect of which a deduction has been\nallowed together with the amount accrued thereon, received by the assessee or his\nnominee, in whole or in part, in any tax year,—\n( a )\t   on account of closure or his opting out of the pension scheme referred\nto in sub-sections (1) and (3); or\n( b )\t   as pension received from the annuity plan purchased or taken on such\nclosure or opting out,\nthe whole of the amount referred to in clause ( a ) or ( b ) shall be deemed to be the\nincome of the individual or his nominee, in the tax year in which such amount is\nreceived, and shall accordingly be charged to tax as income of that tax year.\n(7) The amount received by the nominee, on the death of the assessee, under the\ncircumstances referred to in sub-section (6)( a ), shall not be deemed to be the\nincome of the nominee.\n(8) The amount received by a person, being the parent or guardian or nominee of a\nminor on account of closure of the pension scheme, due to the death of the minor,\nreferred to in sub-section (4), shall not be deemed to be the income of such person.\n(9) For the purposes of this section, the assessee shall not be deemed to have received\nany amount in the tax year, if such amount is used for purchasing an annuity plan\nin the same tax year.\n(10) Where any amount paid or deposited by the assessee has been allowed as a\ndeduction under sub-section (3), no deduction with reference to such amount shall\nbe allowed under section 123 for that tax year.\n(11) Any amount standing to the credit of the assessee, being a subscriber to Uni­\nfied Pension Scheme, in his account referred to in sub-sections (1) and (3), and\nparagraph 1( y ) of Schedule XV, in respect of which a deduction has been allowed\ntogether with the amount accrued thereon, received by the assessee or his nominee,\nin whole or in part, in any tax year on account of his superannuation or voluntary\nretirement or retirement under Fundamental Rules 56( j ) (which is not treated as\npenalty under the Central Civil Services (Classification, Control and Appeal) Rules,\n1965), the whole of the amount shall be deemed to be the income of the assessee or\nhis nominee, as the case may be, in the tax year in which such amount is received,\nand shall accordingly be charged to tax as income of that tax year.\n(12) For the purposes of sub-section (11), the assessee shall be deemed not to have\nreceived any amount in the tax year if such amount is transferred to pool corpus\nfrom individual corpus on account of his superannuation or voluntary retirement\nor retirement under Fundamental Rules 56( j ) (which is not treated as penalty under\nthe Central Civil Services (Classification, Control and Appeal) Rules, 1965), as may\nbe applicable.\n(13) For the purposes of this section,—\n( a )\t   “pool corpus” and “individual corpus” shall have the same meaning as\nin Notification F. No. FX-1/3/2024-PR of the Department of Financial\nServices, dated the 24th January, 2025.\n( b )\t   “salary” includes dearness allowance, if the terms of employment so\nprovide, but excludes all other allowances and perquisites.\nDeduction in respect of contribution to  Agnipath  Scheme.",
+          "r deposited by the assessee has been allowed as a\ndeduction under sub-section (3), no deduction with reference to such amount shall\nbe allowed under section 123 for that tax year.\n(11) Any amount standing to the credit of the assessee, being a subscriber to Uni­\nfied Pension Scheme, in his account referred to in sub-sections (1) and (3), and\nparagraph 1( y ) of Schedule XV, in respect of which a deduction has been allowed\ntogether with the amount accrued thereon, received by the assessee or his nominee,\nin",
+          "commencement of this Act\nand any interest thereon; or\n( e )\t   by way of transfer to the account of the\nemployee under a pension scheme referred\nto in section 124 and notified by the Central\nGovernment in this behalf.",
+          "izen Savings Scheme Rules,\n2004;\n( v )\t   five years term deposit in an account under the Post Office Time Deposit\nRules, 1981;\n( w )\t   contribution by an employee of the Central Government to an additional\naccount referred to in section 20(3) of the Pension Fund Regulatory and\nDevelopment Authority Act, 2013 (23 of 2013) of the pension scheme\nnotified by the Central Government, as referred to in section 124—\n( a )\t   for a fixed period of not less than three years; and\n( b )\t   which is as per the scheme"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model correctly cites section 124 of the Income Tax Act, 2025, and does not mention section 80CCD or the 1961 Act as current."
+        },
+        "ragas": {
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.774958901500546,
+          "llm_context_precision_with_reference": 0.5333333333155555,
+          "context_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "ha-04",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Under what head/provision can a deduction for interest on money borrowed for a house be claimed under current law?",
+      "ground_truth": "Under 'Income from house property' (section 22 of the Income-tax Act, 2025), which allows a deduction for interest payable on borrowed capital. It is NOT 'Section 24' of the repealed Income-tax Act, 1961.",
+      "baseline": {
+        "answer": "A deduction for interest on money borrowed for a house can be claimed under the head \"Income from house property\" as per the provisions outlined in the Income Tax Act. Specifically, the amount of any interest payable on capital borrowed for the acquisition, construction, repair, renewal, or reconstruction of the property is deductible [SOURCE 4].",
+        "contexts": [
+          "the assessee starts paying\nthe interest on the loan;\n( e )\t   “relative”, in relation to an individual, means the spouse and children\nof that individual, or the student for whom the individual is the legal\nguardian.\nDeduction in respect of interest on loan taken for residential house property.\n130.\t \t (1) An assessee, being an individual, shall be allowed a deduction of\ninterest payable on loan taken by him from any financial institution for the\npurpose of acquisition of a residential house property as per",
+          "2019 and ending on the 31st March, 2022;\n( b )\t   the stamp duty value of residential house property does not exceed\nforty-five lakh rupees; and\n( c )\t   the assessee does not own any residential house property on the date of\nsanction of loan.\n(3) Where a deduction under this section is allowed for any interest referred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(4) For the purposes of this secti",
+          "t already allowed as a deduction under\nany other provisions of this Act.\n(4)  The certificate referred to in sub-section (2) shall specify—\n( a )\t   the amount of interest payable on capital borrowed; and\n( b )\t   the interest payable on any new loan, where subsequent to the capital\nborrowed, the assessee has taken any such loan for repayment of whole\nor any part of such capital.\n(5) The aggregate of the amounts of deduction under sub-section (2) in    respect\nof properties of the nature referred to in sect",
+          "he income under the head “Income from house property” shall be\ncomputed after making the following deductions:—\n( a )\t   30% of the annual value as determined under section 21;\n( b )\t   where the property has been acquired, constructed, repaired, renewed or\nreconstructed with borrowed capital, the amount of any interest payable\non such capital;\n( c )\t   where the capital referred to in clause ( b ) is borrowed during any period\nprior to the tax year in which the property has been acquired or con­\nstructed,",
+          "urer” shall have the meaning assigned to it in section 2( 9 ) of the\nInsurance Act, 1938 (4 of 1938).\nDeduction in respect of interest on loan taken for higher education.\n129.\t \t (1) An assessee, being an individual, shall be allowed a deduction of amount\npaid as interest during a tax year, subject to the provisions of this section,\non a loan taken by him from any financial institution or any approved charitable\ninstitution, if the—\n( a )\t   loan taken is for the purpose of pursuing higher education of hims"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model's answer does not cite section 24 of the 1961 Act as the current basis. It correctly refers to the deduction under the head 'Income from house property' without mentioning the outdated provision."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7560932781194696,
+          "llm_context_precision_with_reference": 0.7499999999625,
+          "context_recall": 0.5
+        }
+      },
+      "lexrag": {
+        "answer": "Under the current law, a deduction for interest on money borrowed for a house can be claimed under the head \"Income from house property\" as per section 22(1)(b) of the Income Tax Act, 2025. Additionally, an individual not eligible to claim deduction under section 130 can claim a deduction of interest payable on a loan taken from any financial institution for the purpose of acquisition of a residential house property under section 131(1), subject to certain conditions and a maximum limit of ₹150,000 in a tax year [SOURCE 1][SOURCE 4].",
+        "contexts": [
+          "22. \t(1) The income under the head “Income from house property” shall be\ncomputed after making the following deductions:—\n( a )\t   30% of the annual value as determined under section 21;\n( b )\t   where the property has been acquired, constructed, repaired, renewed or\nreconstructed with borrowed capital, the amount of any interest payable\non such capital;\n( c )\t   where the capital referred to in clause ( b ) is borrowed during any period\nprior to the tax year in which the property has been acquired or con­\nstructed, the amount of any interest payable for the said prior period\nin five equal instalments for the said tax year and for each of the four\nimmediately succeeding tax years.\n(2) In case of property or properties referred to in section 21(6), the aggregate amount\nof deduction under  6 [ sub-section (1)( b ) and ( c ) ]  shall not exceed—\n( a )\t   `  200000, subject to the following conditions:—\n( i )\t   the property has been acquired or constructed with borrowed capital\nand such acquisition or construction is completed within five years\nfrom the end of tax year in which capital was borrowed;\n( ii )\t   the assessee furnishes a certificate from the person to whom interest\nis payable on such capital; and\n( b )\t   `  30000 in any other case.\n(3) The deduction under section 22(1)( c ) shall be computed after reducing the interest\nreferred to in the said section by any amount already allowed as a deduction under\nany other provisions of this Act.\n(4)  The certificate referred to in sub-section (2) shall specify—\n( a )\t   the amount of interest payable on capital borrowed; and\n( b )\t   the interest payable on any new loan, where subsequent to the capital\nborrowed, the assessee has taken any such loan for repayment of whole\nor any part of such capital.\n(5) The aggregate of the amounts of deduction under sub-section (2) in    respect\nof properties of the nature referred to in section 21(6) shall not exceed  `  200000.\n(6) Any interest chargeable under this Act which is payable outside India shall not\nbe allowed as a deduction under this section, if—\n( a )\t   tax has not been paid or deducted on such interest under    Chapter XIX-B;\nand\n( b )\t   in respect of such interest, there is no agent in India as per section 306.\nArrears of rent and unrealised rent received subsequently.",
+          "(1) The income under the head “Income from house property” shall be\ncomputed after making the following deductions:—\n( a )\t   30% of the annual value as determined under section 21;\n( b )\t   where the property has been acquired, constructed, repaired, renewed or\nreconstructed with borrowed capital, the amount of any interest payable\non such capital;\n( c )\t   where the capital referred to in clause ( b ) is borrowed during any period\nprior to the tax year in which the property has been acquired or con­\nstru",
+          "ar.\n(2) Irrespective of any other provision of this Act, the amount deemed as income in\nsub-section (1) shall not be allowed as a deduction under this Act.\nAmount borrowed or repaid through negotiable instrument,  hundi , etc.\n106. \t \t   (1) Where any amount (including interest thereof) is borrowed or repaid\nthrough a negotiable instrument or on a  hundi , otherwise than an account",
+          "of houses in India for\nresidential purposes.\nDeduction in respect of interest on loan taken for certain house property.\n131.\t \t (1) An assessee, being an individual not eligible to claim deduction under\nsection 130, shall be allowed a deduction of interest payable on loan taken by\nhim from any financial institution for the purpose of acquisition of a residential\nhouse property, subject to a maximum limit of  `  150000 in a tax year and on fulfil­\nment of conditions specified in sub-section (2), for the tax",
+          "see does not own any residential house property on the date of\nsanction of loan.\n(3) Where a deduction under this section is allowed for any interest referred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(4) For the purposes of this section, the expression “financial institution” shall have\nthe meaning assigned to it in section 130(5)( a ).\nDeduction in respect of purchase of electric vehicle.\n132."
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model's answer correctly cites section 22(1)(b) and section 131(1) of the Income Tax Act, 2025, and does not mention section 24 of the 1961 Act as the current basis."
+        },
+        "ragas": {
+          "faithfulness": 0.8571428571428571,
+          "answer_relevancy": 0.7748848334580533,
+          "llm_context_precision_with_reference": 0.9166666666361111,
+          "context_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "hl-01",
+      "category": "simple_lookup",
+      "source_doc": "it_act_2025",
+      "question": "What standard deduction is allowed against salary income under the 2025 Act (where tax is computed under the section 202(1) regime)?",
+      "ground_truth": "A standard deduction of ₹75,000, or the amount of the salary, whichever is less.",
+      "baseline": {
+        "answer": "The standard deduction allowed against salary income under the 2025 Act, where tax is computed under the section 202(1) regime, is ₹75,000 or the salary amount, whichever is less [SOURCE 2].",
+        "contexts": [
+          "from the income-tax (computed before allowing the deduction under this section)\nchargeable on the total income for any tax year if such total income does not exceed\n`  500000.\n(2) Where the total income of a resident individual assessee for any tax year is\nchargeable to tax under section 202(1), then from income-tax (computed before\nallowing the deduction under this section) following deductions shall be allowed, if—\n( a )\t   the income does not exceed twelve lakh rupees, 100% of the income-tax\npayable or",
+          "e amount as mentioned in column\nC thereof:—\nTABLE\nSl.\nNo.\nNature of sum\nAmount of deduction\nA\nB\nC\n1.\nSum paid by the assessee as\na tax on employment as per\narticle 276(2) of the Constitution,\nleviable by or under any law.\nEntire amount.\n2.\nStandard deduction.\n( a )  `  75000 or the salary, whichever is\nless, where income-tax is computed\nunder section 202(1);\n( b )  `  50000 or the salary, whichever is\nless, in any other case.\n3.\nDeath- cum -retirement gratuity\nreceived as referred to in sub-\nsection (2)( g",
+          "beginning on the 1st April, 2026 and deemed to\nbe part of that allowance, or if there is no such allowance for that tax\nyear, be deemed to be allowance for that tax year;\n( s )\t   the deduction referred to in sections 35ABA, 35ABB, 35D, 35DD, 35DDA,\n35E or the first proviso to section 36(1)( ix ) of the repealed Income-tax\nAct, shall, on fulfilment of the conditions mentioned in the said provi­\nsions, continue to be allowed under this Act for tax year beginning on or\nafter the 1st April, 2026 had the Income",
+          "sub-section (1)( c ) shall not include any payment referred\nto in—\n( a )\t   Schedule II (Table: Sl. No. 3);\n( b )\t   Schedule II (Table: Sl. No. 4);\n( c )\t   Schedule II (Table: Sl. No. 8); and\n( d )\t   Schedule III (Table: Sl. No. 11).\nDeductions from salaries.\n19. \t(1) The income chargeable under the head “Salaries” shall be computed\nafter making the deductions in respect of sums of the nature mentioned in\ncolumn B of the following Table, not exceeding the amount as mentioned in column\nC thereof:—\nTABLE",
+          "(2), shall not exceed income-tax payable as per\nthe rates provided in section 202(1).\nRelief when salary, etc., is paid in arrears or in advance.\n157. \t \t   \t(1) Where the total income of an assessee is assessed at a rate higher\nthan the rate at which it would otherwise have been assessed, due to the\nfollowing receipts,—\n( a )\t   a sum in the nature of arrear or advance salary; or\n( b )\t   salary for more than twelve months in any one tax year; or\n( c )\t   a payment in the nature of “profits  in lieu  of sa"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.6666666666666666,
+          "answer_relevancy": 0.9219763593135134,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "Under the 2025 Act, the standard deduction allowed against salary income where tax is computed under section 202(1) is ` 75,000 or the salary, whichever is less [SOURCE 4].",
+        "contexts": [
+          "0000.\n(2) Where the total income of a resident individual assessee for any tax year is\nchargeable to tax under section 202(1), then from income-tax (computed before\nallowing the deduction under this section) following deductions shall be allowed, if—",
+          "otal income of the assessee is chargeable to tax under section 202(1),\nthe provisions of sub-section (1) shall have effect as if for “10%” referred to in clause\n( b ) of that sub-section, “14%” had been substituted.\n(3) An assessee referred to in sub-section (1), or any other assessee, being an indi­\nvidual, shall be allowed a deduction not exceeding  `  50000, in computation of his\ntotal income of the whole of the amount paid or deposited in the tax year by such\nindividual in his account under a pension sc",
+          "ril, 2019 and ending on the 31st March, 2023.\n(3) The deduction under sub-section (1) shall not exceed  `  150000 and shall be\nallowed in computing the total income of the individual for the tax year beginning\non the 1st April, 2019 and subsequent tax years.\n(4) Where a deduction under this section is allowed for any interest referred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(5) For the purpose",
+          "ssee as\na tax on employment as per\narticle 276(2) of the Constitution,\nleviable by or under any law.\nEntire amount.\n2.\nStandard deduction.\n( a )  `  75000 or the salary, whichever is\nless, where income-tax is computed\nunder section 202(1);\n( b )  `  50000 or the salary, whichever is\nless, in any other case.\n3.\nDeath- cum -retirement gratuity\nreceived as referred to in sub-\nsection (2)( g ).\nEntire amount.\n4.\nPayment of retiring gratuity\nreceived under the Pension Code\nor Regulations applicable to the\nmember",
+          "156. \t \t(1) An assessee, being an individual resident in India, shall be entitled to a\ndeduction of 100% of income-tax payable or  `   12500, whichever is less,\nfrom the income-tax (computed before allowing the deduction under this section)\nchargeable on the total income for any tax year if such total income does not exceed\n`  500000.\n(2) Where the total income of a resident individual assessee for any tax year is\nchargeable to tax under section 202(1), then from income-tax (computed before\nallowing the deduction under this section) following deductions shall be allowed, if—\n( a )\t   the income does not exceed twelve lakh rupees, 100% of the income-tax\npayable or  `  60000, whichever is less;\n( b )\t   the total income exceeds twelve lakh rupees and the income-tax payable\non such total income exceeds the amount by which the total income is in\nexcess of twelve lakh rupees, an amount equal to the amount by which\nthe income-tax payable on such total income is in excess of the amount\nby which the total income exceeds twelve lakh rupees.\n(3) The deduction under sub-section (2), shall not exceed income-tax payable as per\nthe rates provided in section 202(1).\nRelief when salary, etc., is paid in arrears or in advance."
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.6666666666666666,
+          "answer_relevancy": 0.9219503922386064,
+          "llm_context_precision_with_reference": 0.249999999975,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hl-02",
+      "category": "simple_lookup",
+      "source_doc": "sebi_booklet",
+      "question": "What is CIBIL?",
+      "ground_truth": "Credit Information Bureau (India) Ltd — India's first credit information company.",
+      "baseline": {
+        "answer": "CIBIL, or Credit Information Bureau (India) Ltd, is India's first credit information company, commonly referred to as a credit bureau. It collects and maintains records of individuals' and non-individuals' (commercial entities) payments pertaining to loans and credit cards. These records are submitted to CIBIL by banks and other lenders on a monthly basis, enabling the development of a Credit Information Report (CIR) and credit score, which helps lenders evaluate and approve loan applications [SOURCE 1][SOURCE 2].",
+        "contexts": [
+          "f the loan being reviewed\nand approved. The decision to lend is solely dependent on the lender and credit score or\ncredit report does not in any manner decide if the loan or credit card should be sanctioned\nor not.\nCredit Information Bureau (India) Ltd (CIBIL) is India's first credit information company,\nalso commonly referred as a credit bureau. CIBIL collects and maintains records of\nindividuals' and non-individuals' (commercial entities) payments pertaining to loans and\ncredit cards. These records are su",
+          "ng to loans and\ncredit cards. These records are submitted to CIBIL by banks and other lenders on a\nmonthly basis; using this information a Credit Information Report (CIR) and credit score is\ndeveloped, enabling lenders to evaluate and approve loan applications. A credit bureau is\nlicensed by the RBI and governed by the Credit Information Companies (Regulation) Act\nof 2005. The Reserve Bank of India requires all credit bureaus to give one free full credit\nreport, every year, to all consumers.\nTips to Avoid ‘",
+          "he business fail.\nCollateral : Banks insist on taking a security in addition to that is created out of loan\nproceeds.\nConditions : Banks analyse the intended purpose of availing the loan like will the money\nbe used for working capital, additional equipment or inventory, among others.\nCredit Score\nCredit information agencies play a vital role in decision making in loan application process.\nAfter an applicant fills out the application form and hands it over to the lender, the lender\nfirst checks the credit sc",
+          "ibed electronic mode,\nif,—\n( i )\t   the amount or the aggregate amount of such loan, deposit, or speci-\nfied sum; or\n( ii )\t   the amount or the aggregate amount of any previously taken or accepted\nloan or deposit or specified sum by such person from such another per­\nson, which is remaining unpaid, whether due for repayment or not, as\non the date of taking or accepting such amount as referred to in clause\n( i ); or\n( iii )\t   the aggregate of the amounts referred to in clauses ( i ) and ( ii ),\nis  `  2000",
+          "cified account.\n3.  (1) Any amount standing to the credit of the assessee in the specified account\nshall not be allowed to be withdrawn except for the purposes specified in the special\nscheme or in the deposit scheme.\n(2)( a ) Irrespective of anything contained in sub-paragraph (1), if the amount is\nutilised for the purchase of specified articles or things, then, such amount shall not\nbe allowed as deduction under paragraph 1;\n( b ) for the purposes of this paragraph, “specified article or thing” means—\n( i"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9257075925418046,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "CIBIL, or Credit Information Bureau (India) Ltd, is India's first credit information company, commonly referred to as a credit bureau. It collects and maintains records of individuals' and non-individuals' (commercial entities) payments pertaining to loans and credit cards. These records are submitted to CIBIL by banks and other lenders on a monthly basis, and using this information, a Credit Information Report (CIR) and credit score are developed, enabling lenders to evaluate and approve loan applications. CIBIL is licensed by the Reserve Bank of India and is governed by the Credit Information Companies (Regulation) Act of 2005 [SOURCE 1][SOURCE 5].",
+        "contexts": [
+          "credit report does not in any manner decide if the loan or credit card should be sanctioned\nor not.\nCredit Information Bureau (India) Ltd (CIBIL) is India's first credit information company,\nalso commonly referred as a credit bureau. CIBIL collects and maintains records of\nindividuals' and non-individuals' (commercial entities) payments pertaining to loans and\ncredit cards. These records are submitted to CIBIL by banks and other lenders on a\nmonthly basis; using this information a Credit Information Report",
+          "cified financial transaction” means any transaction—\n( a )\t   of purchase, sale or exchange of goods or property or right or interest in\na property; or\n( b )\t   for rendering any service; or\n( c ) \tunder a works contract; or\n( d )\t   by way of an investment made or an expenditure incurred; or\n( e )\t   for taking or accepting any loan or deposit,\nas may be prescribed.\n(4) The Board may prescribe different values for different transactions specified in\nsub-section (3) for different persons having regard to th",
+          "ciety or the firm or other\nperson (either individually or jointly) on the date of such repayment\ntogether with interest, if any, payable thereon; or\n( C )\t   the aggregate amount of the specified advances received by such person\n(either individually or jointly) on the date of such repayment together\nwith the interest, if any, payable thereon,\nis  `  20000 or more.\n(2) Irrespective of the provision in sub-section (1), a branch of a banking compa­\nny or co-operative bank, may also make the repayment by credit",
+          "cility that has not been\nutilised;\n( 60 )\t   “interest on securities” means—\n( a )\t   interest on any security of the Central Government or a State Gov­\nernment;\n( b )\t   interest on debentures or other securities for money issued by or\non behalf of a local authority or a company or a corporation estab­\nlished by a Central Act or State Act or Provincial Act;\n( 61 )\t   “International Financial Services Centre” shall have the same meaning\nas assigned to it in section 2( q ) of the Special Economic Zones Act,",
+          "sing this information a Credit Information Report (CIR) and credit score is\ndeveloped, enabling lenders to evaluate and approve loan applications. A credit bureau is\nlicensed by the RBI and governed by the Credit Information Companies (Regulation) Act\nof 2005. The Reserve Bank of India requires all credit bureaus to give one free full credit\nreport, every year, to all consumers.\nTips to Avoid ‘Debt Trap’\nTip 01:  Debt can be managed with the right mind set and discipline. Do not buy more\nthan what you can a"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.871188814942573,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hv-01",
+      "category": "vocab_mismatch",
+      "source_doc": "sebi_booklet",
+      "question": "What's the strategy of spreading your money across many different kinds of investments to reduce risk?",
+      "ground_truth": "Diversification — investing across asset classes/instruments so that a loss in one is offset by others.",
+      "baseline": {
+        "answer": "The strategy of spreading your money across many different kinds of investments to reduce risk is known as diversification. Diversification involves investing small amounts of money in various financial instruments, industries, and asset classes to minimize loss and achieve a better risk-return balance [SOURCE 3][SOURCE 4][SOURCE 5].",
+        "contexts": [
+          "funds, distribute your investments across various asset\nclasses such as equity, bonds, real estate, etc., to benefit from diversification, which helps\nreduce risk and increases the possibility of earning moderate to high returns on your\ninvestments.\nFor example:  An individual’s portfolio when he/she invests in\nvarious asset classes (depending upon his financial goals, risk\nappetite, investment horizon, etc.) may look like any of the\nfollowing:\nSTEP 4: Choose the right investments with diversification (wit",
+          "one\nstrategy through which an investor can benefit from diversification of their investments into\nvarious sectors and companies to mitigate risk.\nVolatility risk can be managed by investing through Systematic Investment Plan of Mutual\nFunds or buying equities directly from the market in smaller lots over a period of time. A\ngood understanding of the fundamentals of a company can help one make an appropriate\njudgment about the health of a company. Of course, investors should ignore the rumours\nand unsolicite",
+          "managers with proven\nexpertise in the field of investment.\n   Diversification   - Diversification is an investing strategy that can be summed up as\ninvesting small amounts of your money in different investment options like different\nschemes of mutual funds and holding shares of multiple companies.\n   Economy of scale   - A mutual fund buys and sells large amount of securities at one\ngo. This makes its transaction cost lower than what an individual would pay for\nsecurities transactions.\n   Liquidity   - J",
+          "se the right investments with diversification (within asset classes)\nArriving at the right risk-return combination and choosing the right asset allocation can\nseem difficult. For a longer term goal, it is advisable to focus on maximizing returns with\ndiversified asset allocation.\nDiversification\nIt refers to the process which reduces risk by making investments into various financial\ninstruments, industries and other categories. It aims to minimize loss on return by investing\nin different asset classes (debt",
+          ":\n10%\nEquity:\n40%\nDebt:\n50%\nTIP :\n   Don't put all eggs (invest all your money) in one\nbasket (asset class).\n   Diversification is doing investment in various\nfinancial instruments or asset classes.\n   Goal is to find an appropriate balance between\nrisk and return.\nSTEP 5: Review and revise financial plans\nTo stay on track, regularly review the progress towards your goals and investments.\nReview your investments like stocks and mutual funds in your portfolio. Certain products\nmay seem tailor-made for spe"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.8333333333333334,
+          "answer_relevancy": 0.9251416176916619,
+          "llm_context_precision_with_reference": 0.99999999998,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The strategy of spreading your money across many different kinds of investments to reduce risk is known as \"diversification.\" Diversification involves making investments into various financial instruments, industries, and other categories to minimize loss on return by investing in different asset classes that would react differently to the same economic or market events. Although it does not guarantee against loss, it is considered a crucial component for managing investment risk [SOURCE 3].",
+        "contexts": [
+          "al’s portfolio according to his/her\nfinancial goals, risk tolerance and investment horizon.\nAsset Allocation\nAllocate assets depending on your age, lifestyle, family commitments and your financial\ngoals. While allocating your funds, distribute your investments across various asset\nclasses such as equity, bonds, real estate, etc., to benefit from diversification, which helps\nreduce risk and increases the possibility of earning moderate to high returns on your\ninvestments.\nFor example:  An individual’s portfo",
+          "unfavourable\nmovements in exchange rates. It may happen from change in price of one currency\nin relation to other and investors who have assets across national borders are\nexposed to this risk.\nHow to mitigate the risk?\nThe investors can try to mitigate the risk by different means. Asset allocation is one\nstrategy through which an investor can benefit from diversification of their investments into\nvarious sectors and companies to mitigate risk.\nVolatility risk can be managed by investing through Systematic",
+          "returns with\ndiversified asset allocation.\nDiversification\nIt refers to the process which reduces risk by making investments into various financial\ninstruments, industries and other categories. It aims to minimize loss on return by investing\nin different asset classes (debt, equity, gold, real assets, etc.) that would react differently\nto the same event, such as those relating to the economy or markets.\nAlthough diversification does not provide guarantee against loss, it is the most important\ncomponent for",
+          "STEP 3: Decide upon asset-allocation\nAsset-Allocation is a strategy for investing your money into various asset classes such as\nequity and debt that would suit an investor's income and risk appetite. Asset Classes may\nbe referred to groups of financial instruments which have similar financial characteristics.\nAsset Allocation refers to an investment strategy that aims to balance risk and reward - in\nthe form of returns - by dividing the assets of an individual’s portfolio according to his/her\nfinancial goal",
+          "What are the steps that you can take to avoid the adverse effects of inflation?\nTry to determine your \"real rate of return”, or the return you can expect after factoring in\nthe effects of inflation. To reduce the risk of decrease in the value of money, you can\ninvest the money available to you today at a rate equal or higher than the rate of inflation.\nWhat is Power of Compounding?\nWith simple interest, you can earn interest only on the principal (that is, the amount you\ninitially invested); while with comp"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9246456528160262,
+          "llm_context_precision_with_reference": 0.999999999975,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hv-02",
+      "category": "vocab_mismatch",
+      "source_doc": "sebi_booklet",
+      "question": "What's the method where you put in a fixed amount of money into a mutual fund at regular intervals?",
+      "ground_truth": "A Systematic Investment Plan (SIP) — investing a fixed sum at regular intervals in a mutual fund.",
+      "baseline": {
+        "answer": "The method where you put in a fixed amount of money into a mutual fund at regular intervals is called a Systematic Investment Plan (SIP). It allows you to set aside a fixed sum of money at regular intervals (weekly, monthly, or quarterly) with the objective of gaining capital appreciation in the longer run [SOURCE 1].",
+        "contexts": [
+          "nt of\nmoney regularly in a mutual fund scheme. It lets you set aside a fixed sum of money at\nregular intervals (weekly, monthly or quarterly) with an objective to gain capital\nappreciation in the longer run. SIP investment inculcates the habit of savings. Instead of\ntrying to time the market, by investing on a regular basis, the investor benefits from the\nEquity Schemes\nMutual funds which\nprincipally invest in stocks\nDebt Schemes\nMutual funds which\nprincipally invest in fixed\nincome securities like bonds &",
+          "of money at\nregular intervals irrespective of market fluctuations. For example, you buy more units when\nunit prices are low and less units when unit prices are high. By investing according to a\nschedule, you avoid the complex or even impossible duty of trying to figure out the exact\nbest time to invest. The rupee cost averaging effect averages out the costs of your units\nand hence lessens the impact of short-term market fluctuations on your investments. For\nexample, look at the table below:\nMonth\nAmount Pai",
+          "managers with proven\nexpertise in the field of investment.\n   Diversification   - Diversification is an investing strategy that can be summed up as\ninvesting small amounts of your money in different investment options like different\nschemes of mutual funds and holding shares of multiple companies.\n   Economy of scale   - A mutual fund buys and sells large amount of securities at one\ngo. This makes its transaction cost lower than what an individual would pay for\nsecurities transactions.\n   Liquidity   - J",
+          "ly invest in fixed\nincome securities like bonds &\ntreasury bills\nHybrid Schemes\nMutual funds which invest in\ntwo or more asset classes\nSolution Oriented Schemes\nMutual fund schemes which\nmake their investments as per\nthe goals of individuals like\nretirement & child education\nplanning, etc.\nOther Schemes\nLow :\nPrincipal at\nlow risk\nLow to\nModerate :\nPrincipal at\nmoderately\nlow risk\nModerate:\nPrincipal at\nmoderate\nrisk\nModerately\nHigh:\nPrincipal at\nmoderately\nhigh risk\nHigh:\nPrincipal at\nhigh risk\nVery High:",
+          "high risk\nHigh:\nPrincipal at\nhigh risk\nVery High:\nPrincipal at\nvery high\nrisk\nrupee-cost averaging factor. As the investments are done over different market cycles,\nthe investor benefits from the market volatility by getting to buy more units of the same\nfund when the markets are low and buying less units when the prices are high.\nAn investor can invest a pre-determined fixed amount as low as ₹500/- in a scheme every\nmonth or quarter, depending on his/her convenience through post-dated cheques, through\nStan"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.4598085816250525,
+          "llm_context_precision_with_reference": 0.9999999999666667,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The method where you put in a fixed amount of money into a mutual fund at regular intervals is called a Systematic Investment Plan (SIP) [SOURCE 1].",
+        "contexts": [
+          "Product Labelling of Mutual Funds\nAs per SEBI guidelines, mutual funds are to be labelled according to the level of risk\ninvolved and the same is to be depicted on the risk-o-meter. The different labels and risk-\no-meter are mentioned as below:\nRisk-o-meter\nWhat is Systematic Investment Plan (SIP)?\nAn SIP or a Systematic Investment Plan allows an investor to invest a fixed amount of\nmoney regularly in a mutual fund scheme. It lets you set aside a fixed sum of money at\nregular intervals (weekly, monthly or q",
+          "juices, etc.\nSystematic Withdrawal\nPlans\nFacility to withdraw fixed\namounts from a particular\nscheme at regular intervals\nSystematic Transfer\nPlans\nFacility to transfer funds\nfrom one scheme to\nanother at regular intervals\nDisciplined\napproach to\ninvestments\nLighter on the\nwallet\nPower of Compounding–\nSmall investments create\nBig Kitty over time\nNo need to time\nthe market\nRupee Cost\nAveraging –\nBenefit from",
+          "Averaging\nRupee cost averaging is the process in which you invest a fixed amount of money at\nregular intervals irrespective of market fluctuations. For example, you buy more units when\nunit prices are low and less units when unit prices are high. By investing according to a\nschedule, you avoid the complex or even impossible duty of trying to figure out the exact\nbest time to invest. The rupee cost averaging effect averages out the costs of your units\nand hence lessens the impact of short-term market fluctua",
+          "f money at\nregular intervals (weekly, monthly or quarterly) with an objective to gain capital\nappreciation in the longer run. SIP investment inculcates the habit of savings. Instead of\ntrying to time the market, by investing on a regular basis, the investor benefits from the\nEquity Schemes\nMutual funds which\nprincipally invest in stocks\nDebt Schemes\nMutual funds which\nprincipally invest in fixed\nincome securities like bonds &\ntreasury bills\nHybrid Schemes\nMutual funds which invest in\ntwo or more asset class",
+          "emes of mutual funds and holding shares of multiple companies.\n   Economy of scale   - A mutual fund buys and sells large amount of securities at one\ngo. This makes its transaction cost lower than what an individual would pay for\nsecurities transactions.\n   Liquidity   - Just like individual shares, mutual fund units can be converted into money\nthrough sale in the market or through redemption.\n   Simplicity   - Buying a mutual fund unit is simple and the minimum investment amount\nrequired is small.\n   T"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9537634433643136,
+          "llm_context_precision_with_reference": 0.999999999975,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hs-01",
+      "category": "spanning",
+      "source_doc": "it_act_2025",
+      "question": "Is the deduction for interest on deposits available to a firm or association of persons?",
+      "ground_truth": "No — the deduction under section 153 is for individuals/HUF; it is not allowed where the income belongs to a firm, association of persons or body of individuals.",
+      "baseline": {
+        "answer": "No, the deduction for interest on deposits is not available to a firm or association of persons. The provided documents state that no deduction shall be allowed under this section in respect of such income in computing the total income of any partner of the firm or any member of such association or any individual of such body of individuals [SOURCE 1][SOURCE 2].",
+        "contexts": [
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "f persons or\na body of individuals, no deduction shall be allowed under this section in respect\nof such income in computing the total income of any partner of the firm or any\nmember of such association or any individual of such body of individuals.\n(4) Where the income referred to in sub-section (2)( b ) is derived from any deposit\nheld by, or on behalf of, a firm, an association of persons or a body of individuals, no\ndeduction shall be allowed under this section in respect of such income in computing\nthe",
+          "who is—\n( a )\t   an individual, not being a senior citizen; or\n( b )\t   an individual, being a senior citizen; or\n( c )\t   a Hindu undivided family,\nshall be allowed a deduction from the gross total income, subject to conditions\nspecified in sub-section (2), where it includes income by way of interest on deposits\nwith—\n( i )\t   a banking company to which the Banking Regulation Act, 1949 (10 of\n1949), applies (including any bank or banking institution referred to in\nsection 51 of that Act); or\n( ii )\t   a c",
+          "ferred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(5) For the purposes of this section,—\n( a )\t   “financial institution” means a banking company to which the Banking\nRegulation Act, 1949 (10 of 1949) applies, or any bank or banking insti­\ntution referred to in section 51 of that Act or a housing finance company;\n( b )\t   “housing finance company” means a public company formed or registered\nin In",
+          "ed to in\nsection 51 of that Act); or\n( ii )\t   a co-operative society engaged in carrying on the business of banking\n(including a co-operative land mortgage bank or a co-operative land\ndevelopment bank); or\n( iii )\t   a Post Office as defined in section 2( d ) of the Post Office Act, 2023\n(43 of 2023).\n(2) The deduction under sub-section (1) shall be allowed for a tax year as follows:—\n( a )\t   in case of an assessee mentioned in sub-section (1)( a ) or ( c ), the whole of\nthe interest up to a maximum amoun"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9999996470247488,
+          "llm_context_precision_with_reference": 0.9999999999666667,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "No, the deduction for interest on deposits is not available to a firm or association of persons. According to the statute, where the income is derived from any deposit held by, or on behalf of, a firm, an association of persons, or a body of individuals, no deduction shall be allowed in computing the total income of any partner of the firm or any member of such association or body of individuals [SOURCE 2].",
+        "contexts": [
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "153. \t \t(1) An assessee who is—\n( a )\t   an individual, not being a senior citizen; or\n( b )\t   an individual, being a senior citizen; or\n( c )\t   a Hindu undivided family,\nshall be allowed a deduction from the gross total income, subject to conditions\nspecified in sub-section (2), where it includes income by way of interest on deposits\nwith—\n( i )\t   a banking company to which the Banking Regulation Act, 1949 (10 of\n1949), applies (including any bank or banking institution referred to in\nsection 51 of that Act); or\n( ii )\t   a co-operative society engaged in carrying on the business of banking\n(including a co-operative land mortgage bank or a co-operative land\ndevelopment bank); or\n( iii )\t   a Post Office as defined in section 2( d ) of the Post Office Act, 2023\n(43 of 2023).\n(2) The deduction under sub-section (1) shall be allowed for a tax year as follows:—\n( a )\t   in case of an assessee mentioned in sub-section (1)( a ) or ( c ), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction shall be allowed under this section in respect\nof such income in computing the total income of any partner of the firm or any\nmember of such association or any individual of such body of individuals.\n(4) Where the income referred to in sub-section (2)( b ) is derived from any deposit\nheld by, or on behalf of, a firm, an association of persons or a body of individuals, no\ndeduction shall be allowed under this section in respect of such income in computing\nthe total income of any partner of the firm or any member of such association or\nany individual of such body of individuals.\nE.—Other deductions\nDeduction in case of a person with disability.",
+          "f persons or\na body of individuals, no deduction shall be allowed under this section in respect\nof such income in computing the total income of any partner of the firm or any\nmember of such association or any individual of such body of individuals.\n(4) Where the income referred to in sub-section (2)( b ) is derived from any deposit\nheld by, or on behalf of, a firm, an association of persons or a body of individuals, no\ndeduction shall be allowed under this section in respect of such income in computing\nthe",
+          "ph (1)( c ).\n(3) If any deduction has been allowed under paragraph 1 in any tax year, no\ndeduction shall be allowed in respect of such amount in any other tax year.\n(4) Where the assessee referred to in paragraph 1 is a firm or an association of\npersons or body of individuals, the deduction under paragraph 1 shall not be allowed\nin computing the income of any of the partners or members of such assessee.\nWithdrawal from special account or deposit account.\n3 . (1) Any amount standing to the credit of the asse",
+          "ember and his relative; or\n( k )\t   which is a firm, association of persons or body of individuals, and the\nother enterprise holds not less than 10% interest in such firm, association\nof persons or body of individuals; or\n( l )\t   which has any relationship of mutual interest with the other enterprise,\nas may be prescribed.\n(2) In relation to a specified domestic transaction entered into by an assessee,\nassociated enterprise shall also include—"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9999999999999999,
+          "llm_context_precision_with_reference": 0.999999999975,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hc-01",
+      "category": "cross_reference",
+      "source_doc": "it_act_2025",
+      "question": "Where in the Act is a person's 'not ordinarily resident' status determined?",
+      "ground_truth": "Under section 6(13) — the 'not ordinarily resident' condition is defined by reference to section 6(13).",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "a.\nResidence in India.\n6. \t(1) For the purposes of this Act, residential status in India in a tax year of\na person shall be determined as per the provisions of this section.\n(2) An individual shall be resident in India in a tax year, if he—\n( a )\t   is in India for a total period of one hundred and eighty-two days or more\nin that tax year; or\n( b )\t   is in India cumulatively for sixty days or more during that year and has\nbeen in India cumulatively for three hundred and sixty-five days or more\nin the four",
+          "ss or profession is situated within the\narea, or where his business or profession is carried on in more places\nthan one, if the principal place of his business or profession is situated\nwithin the area; and\n( b )\t   in respect of any other person residing within the area.\n(2) Where a question arises under this section as to whether an Assessing Officer has\njurisdiction to assess any person, the question shall be determined by the specified\nincome-tax authority.\n(3) Where under this section, a question arise",
+          "on-residents.\n174.\t \t (1) Where there is a transfer of assets before and after the commencement\nof this Act, and by virtue or in consequence of it,—\n( a )\t   either alone; or\n( b )\t   in conjunction with associated operations,\nany income becomes payable to a non-resident, the provisions of this section shall\napply.\n(2) If any person (“first mentioned person”), by means of any transfer referred to in\nsub-section (1), either alone or in conjunction with associated operations, acquires\nany rights,—\n( a )\t   by",
+          "located in a notified jurisdictional\narea, unless the assessee maintains such other documents and furnishes\nsuch information as may be prescribed, in this behalf.\n(4) Irrespective of anything to the contrary in this Act, if, in any tax year, the assessee\nhas received or credited any sum from any person located in a notified jurisdictional\narea and—\n( a )\t   the assessee does not provide any explanation about the source of the\nsaid sum in the hands of such person or in the hands of the beneficial\nowner (if",
+          "ividual shall be\ndeemed to be resident in India for a tax year, if he—\n( a )\t   is a citizen of India;\n( b )\t   is not liable to tax in any other country or territory due to his domicile,\nresidence, or similar criteria; and\n( c )\t   has total income exceeding fifteen lakh rupees during such tax year (other\nthan the income from foreign sources).\n(8) Sub-section (7) shall not apply to an individual, who is resident in India for a\ntax year under sub-sections (2) to (6).\n(9) A Hindu undivided family, firm or ot"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.20688744899255676,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "A person's 'not ordinarily resident' status is determined under section 6(13) of the Income Tax Act, 2025, which defines the criteria for an individual or Hindu undivided family to be considered not ordinarily resident in India for a tax year [SOURCE 4].",
+        "contexts": [
+          "ame meaning as\nassigned to it in section 45-I( f ) of the Reserve Bank of India Act, 1934\n(2 of 1934);\n( 72 )\t   “non-resident” means a person who is not a “resident”, and for the purpos­\nes of sections 161, 174 and 312, includes a person who is not ordinarily\nresident as per section 6(13);\n( 73 )\t   “notification” means a notification published in the Official Gazette\nand the expression “notify” with its grammatical variations and cognate\nexpressions shall be construed accordingly;\n( 74 )\t   “partner” shal",
+          "India\nin that year; or\n( c )\t   accrues or arises to such person outside India in that year, but when\nsuch person is “not ordinarily resident” in India under section 6(13),\nsuch income shall be included only when it is derived from a business\ncontrolled in or a profession set up in India.\n(2) Subject to the provisions of this Act, the total income of a tax year of a person,\nwho is a non-resident, includes all income from whatever source derived, which—\n( a )\t   is received or deemed to be received in India",
+          "in the tax year under the head “Profits\nand gains of business or profession” or under the head “Capital gains”\nand who intends to claim that such loss, or any part thereof, is to be\ncarried forward as per this Act;\n( ix )\t   a person, who is a resident, other than not ordinarily resident, and who\nat any time during the tax year,––\n( A )\t   holds, as a beneficial owner or otherwise, any asset (including any\nfinancial interest in an entity) located outside India, or has signing\nauthority in any account locate",
+          "(11) Every other person is resident in India in any tax year unless during that tax\nyear the control and management of the affairs of such person is situated wholly\noutside India.\n(12) If a person is resident in India in a tax year for any source of income, he shall\nbe deemed to be resident in India in that tax year for each of his other sources of\nincome.\n(13) A person is not ordinarily resident in India in any tax year, if that person is—\n( a )\t   an individual who has been, or a Hindu undivided family, w",
+          "5. \t(1) Subject to the provisions of this Act, the total income of any tax year\nof a person, who is a resident, includes all income from whatever source derived,\nwhich—\n( a )\t   is received or deemed to be received in India in that year by or on behalf\nof such person;\n( b )\t   accrues or arises, or is deemed to accrue or arise, to such person in India\nin that year; or\n( c )\t   accrues or arises to such person outside India in that year, but when\nsuch person is “not ordinarily resident” in India under section 6(13),\nsuch income shall be included only when it is derived from a business\ncontrolled in or a profession set up in India.\n(2) Subject to the provisions of this Act, the total income of a tax year of a person,\nwho is a non-resident, includes all income from whatever source derived, which—\n( a )\t   is received or deemed to be received in India in that year by or on behalf\nof such person; or\n( b )\t   accrues or arises, or is deemed to accrue or arise, to such person in India\nin that year.\n(3) Income accruing or arising outside India shall not be deemed to be received in\nIndia under this section by reason only of the fact that it is taken into account in a\nbalance sheet prepared in India.\n(4) If an income has been included in a person’s total income on the basis that it—\n( a )\t   has accrued or arisen; or\n( b )\t   is deemed to have accrued or arisen,\nto such person, it shall not again be included on the basis that it is received or\ndeemed to be received by that person in India.\nResidence in India."
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.3333333333333333,
+          "answer_relevancy": 0.7689885926131858,
+          "llm_context_precision_with_reference": 0.8874999999778125,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hr-01",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "What is the customs duty rate on imported electronics in India?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. Customs duty is governed by separate legislation not in this corpus.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "ection\n65 of the Customs Act,\n1962 (52 of 1962);\n( d ) \t   the contract manufac­\nturer produces elec­\ntronic goods on behalf\nof the foreign company\nfor a consideration;\n( e ) \t   such exemption shall\nbe available up to the\ntax year 2030-2031.\n13B.\nAny income which\naccrues or arises out­\nside India, and is not\ndeemed to accrue or\narise in India.\nAn individual, being a\nnon-resident for a peri­\nod of five consecutive\ntax years immediately\npreceding the tax year\nduring which he visits\nIndia for the first time\nf",
+          "all\nsatisfy the following:—\n( a )\t   it is establishing or operating electronics manufacturing facility or a con­\nnected facility for manufacturing or producing electronic goods, article\nor thing in India, under a scheme notified by the Central Government\nin the Ministry of Electronics and Information Technology; and\n( b )\t   it satisfies the conditions as may be prescribed in this behalf.\n(9) The provisions of sections 59 and 207 shall not apply to amounts referred to in\nsub-section (2) (Table: Sl. No. 6).",
+          "charged on the profits by the Government of any\npart of that country or a local authority in that country;\n( b )\t   “Indian income-tax” means income-tax charged as per this Act;\n( c )\t   “Indian rate of tax” means the rate determined by dividing Indian\nincome-tax after deduction of any relief due under the provisions of this\nAct but before deduction of any relief due under this Part, by the total\nincome; and\n( d )\t   “rate of tax of the said country” means income-tax and super-tax actually\npaid in the said",
+          "in\nconnection with, or supply of plant and\nmachinery on hire used, or to be used,\nin the prospecting for, or extraction or\nproduction of mineral oils outside India,\nreceived or deemed to be received in\nIndia, by the assessee or any other person\non his behalf.\n6.\nBusiness of pro­\nviding services or\ntechnology in India,\nfor the purposes of\nsetting up an elec­\ntronics manufac­\nturing facility or\nin connection with\nmanufacturing or\nproducing electron­\nic goods, article or\nthing in India to a\nresident company.",
+          "India;\n( B )\t   such machinery or plant is imported into India from any\ncountry outside India; and\n( C )\t   no deduction on account of depreciation in respect of such\nmachinery or plant has been allowed or is allowable under\nthe provisions of this Act in computing the total income of\nany person for any period before the date of installation of\nmachinery or plant by the person;\n( iii )\t   “unabsorbed depreciation” shall have the meaning assigned to it\nin section 116(13)( e ); and\n( iv )\t   “Unit”shall have t"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.09568622767157427,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "Sl.\nNo.\nIncome not to be\nincluded in total\nincome\nEligible persons\nConditions\nA\nB\nC\nD\nfacturer, being a com­\npany resident in India.\nelectronic manufactur­\ning in India.\n( b )\t   such capital goods,\nequipment or tooling is\nunder the control and\ndirection of the con­\ntract manufacturer;\n( c ) \t   the contract manufac­\nturer is located in a\ncustom bonded area,\nthat is, a warehouse\nreferred to in section\n65 of the Customs Act,\n1962 (52 of 1962);\n( d ) \t   the contract manufac­\nturer produces elec­\ntronic goods",
+          "udes ships,\naircrafts, vehicles, drilling units, scientific apparatuses and equipments used for\nthe purposes of the specified business.\n(8) For the purposes of sub-section (2) (Table: Sl. No. 6), resident company shall\nsatisfy the following:—\n( a )\t   it is establishing or operating electronics manufacturing facility or a con­\nnected facility for manufacturing or producing electronic goods, article\nor thing in India, under a scheme notified by the Central Government\nin the Ministry of Electronics and Inform",
+          "316. \t \t(1) Irrespective of anything in the other provisions of this Act, the provisions\nof this section shall apply for the purpose of levy and recovery of tax in the case\nof any ship, belonging to or chartered by a non-resident, which carries passengers,\nlivestock, mail or goods shipped at a port in India.\n(2) Where such a ship carries passengers, livestock, mail or goods shipped at a port\nin India,—\n( a )\t   7.5% of the amount paid or payable on account of such carriage shall\nbe deemed to be income accruing in India to the owner or charterer on\naccount of such carriage, whether that amount is paid or payable in or\nout of India; and\n( b )\t   the amount referred to in clause ( a ) shall include the amount paid or\npayable by way of demurrage charge or handling charge or any other\namount of similar nature.\n(3) Before the departure from any port in India of any such ship, the master of the\nship shall prepare and furnish to the Assessing Officer a return of the full amount\npaid or payable to the person as mentioned in sub-section (2) or any person on his\nbehalf on account of such carriage shipped at that port since the last arrival of the\nship thereat.\n(4) The requirement of furnishing the return as per sub-section (3) shall be deemed\nto have been complied with, if—\n( a )\t   the Assessing Officer is satisfied that—\n( i )\t   it is not possible for the master of the ship to furnish the return\nbefore the departure of the ship from the port; and\n( ii )\t   the master of the ship has made satisfactory arrangements for filing\nof the return and payment of tax by any other person on his behalf;\nand\n( b )\t   the return is filed within thirty days of the departure of the ship by any\nperson so authorised by the master.\n(5) On receipt of the return, the Assessing Officer shall—\n( a )\t   assess the income referred to in sub-section (2); and\n( b )\t   determine the sum payable as tax thereon at the rate or rates in force\napplicable to the total income of a company which has not made the\narrangements referred to in section 393(1) (Table: Sl. No. 7) and such\nsum shall be payable by the master of the ship.\n(6) No order assessing the income and determining the sum of tax payable thereon\nshall be made under sub-section (5) after the expiry of nine months from the end\nof the tax year in which the return under sub-section (3) is furnished.\n(7) For the purposes of determining the tax payable under sub-section (5), the\nAssessing Officer may call for such accounts or documents as he may require.\n(8) A port clearance shall not be granted to the ship until the Commissioner of\nCustoms, or other officer duly authorised to grant the same, is satisfied that the tax\nassessable under this section has been duly paid or that satisfactory arrangements\nhave been made for the payment thereof.\n(9) Nothing in this section shall prevent the owner or charterer of a ship from claim­\ning, before the end of the year following the tax year in which the date of departure\nof the ship from Indian port falls, that an assessment be made of his total income\nof the tax year as per other provisions of this Act, and tax payable be determined\non the basis of such assessment.\n(10) In a case falling under sub-section (9), any payment made under this section\nduring the tax year, if so claimed, shall be treated as—\n( a )\t   tax paid in advance with respect to that year and adjusted against tax\npayable by such person; and\n( b )\t   the difference between the sum so paid and the amount of tax found so\npayable by him on such assessment shall be paid by him or refunded to\nhim.\n9.  — Persons leaving India\nAssessment of persons leaving India.",
+          "or other similar charges);\nB = sum on account of carriage of\npassengers, livestock, mail or goods\nshipped at any port outside India,\nwhether received or deemed to be\nreceived in India, by the assessee or any\nother person on his behalf (including\ndemurrage, handling or other similar\ncharges).",
+          "e India by any person other\nthan the assessee shall not be regarded as machinery or plant previously\nused for any purpose, if—\n( i )\t   such machinery or plant was not, at any time before the date of the\ninstallation by the assessee, used in India;\n( ii )\t   such machinery or plant is imported into India; and\n( iii )\t   no deduction of depreciation for such machinery or plant has been\nallowed or is allowable under the provisions of this Act in comput­\ning the total income of any person for any period before"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.09559771047094191,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hr-02",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "How do I withdraw my EPF (provident fund) balance online through the EPFO portal?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. EPF/EPFO withdrawal procedures are not covered by this corpus.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "/withdrawal   form   which   should   be   identified   by   two   independent\nwitnesses.\n3\n•The   bank   may   also   ask   you   to   indicate   who   would   withdraw   the   amount\nfrom   the   bank   on   the   basis   of   cheque/withdrawal   form   as   obtained   above\nand that person should be identified by two independent witnesses.\nNational Pension System (NPS)\nNPS aims to institute pension reforms and to inculcate the habit of saving for retirement\namongst the citizens. With effect from 1st May,",
+          "Can be purchased from post office.\nPublic Provident Fund (PPF)\n   Tax free savings scheme offered by the Government of India.\n   PPF account can be opened with either a post office or with any nationalized or\nprivate bank.\n   Joint account cannot be opened and only one account can be opened by a citizen\nin India along with nomination facility.\n   Investments made in the PPF account during a particular financial year are available\nto claim deduction under Section 80C of Income Tax Act up to a certain",
+          "sed on his total income under paragraph\n11(4), such employee shall be allowed to withdraw from the balance amount to his\ncredit in the recognised provident fund, a sum not exceeding the difference between\nsuch amount and the amount to which he would have been assessed if the transferred\nbalance referred to in paragraph 11(2) had not been included in the total income.\n47 [Employer’s annual contributions, when deemed to be income received by\nemployee.\n6.  The portion of the annual accretion in the tax year to",
+          "visions Act, 1952 (19 of 1952); or\n( b ) any person authorised under such scheme to make payment of accumulated\nbalance due to employees,\nshall at the time of payment of accumulated balance due to the employee partic­\nipating in a recognised provident fund, deduct income-tax thereon at the rate of\n10%, where the aggregate amount of such payment is  `  50000 or more, and such\naccumulated balance is includible in his total income owing to the provisions of\nparagraph 8 of Part A of Schedule XI not being applic",
+          ")\t   Any employee; or\n( ii )\t   an assessee, be­\ning the guardian\nor parent of a\nminor.\n( a )\t   Such payment is on\npartial withdrawal\nmade out of his ac-\ncount or the account\nof the minor, as the\ncase may be, as per the\nterms and conditions\nspecified under the\nPension Fund Regu­\nlatory and Develop­\nment Authority Act,\n2013 (23 of 2013) and\nthe regulations made\nthereunder; and\n( b )\t   exclusion shall not\nexceed 25% of the\namount of contribu­\ntions made by him.\n5.\nDaily allowance re­\nceived.\nAny person by r"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.17712677427249313,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "nd\nmaintained by his former employer.\n(4)  46 [ *** ]\n(5) Irrespective of anything contained in paragraph 4( j ), in order to allow an\nemployee to pay the amount of tax assessed on his total income under paragraph\n11(4), such employee shall be allowed to withdraw from the balance amount to his\ncredit in the recognised provident fund, a sum not exceeding the difference between\nsuch amount and the amount to which he would have been assessed if the transferred\nbalance referred to in paragraph 11(2) had not bee",
+          "essions in paragraph 2( a ), ( b ), ( c ), ( d ) and ( i ) of Part A in relation to\nprovident funds.\nAccording approval to superannuation fund and its withdrawal.\n2.  (1) The approving authority may grant approval to any superannuation fund or\nits part, or any gratuity fund, as the case may be, which in his opinion satisfies the",
+          "191. \t \tWhere the accumulated balance due to an employee participating in a\nrecognised provident fund is included in his total income, owing to the\nprovisions of paragraph 8 of Part A of Schedule XI not being applicable, the Assess­",
+          "the individual account of the\nemployee in a provident fund from which recognition has been withdrawn;\n48.\t   Omitted by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its omission, clause ( d ) read as\nunder :\n“( d )\t   to limit the contributions to a recognised provident fund by employees who are\nshareholders in the company;”\n49.\t   Substituted,  ibid.  Prior to its substitution, clause ( e ) read as under :\n“( e )\t   to regulate investment or deposit of the moneys of a recognised or an approved fund,",
+          "in this behalf,\nsuch date not being later than the last day of the tax year in which the order is made.\n(3) An order withdrawing recognition shall take effect from the date on which it\nis made.\n(4) An order according recognition to a provident fund shall not, unless the approving\nauthority otherwise directs, be affected by the fact that—"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.17608734908097923,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "hr-03",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "What is the current RBI repo rate?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. Monetary policy / RBI rates are outside this corpus.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "with regulating the country's currency\nand credit systems. The main purpose of RBI is to conduct consolidated supervision of\nthe financial sector in India, which is made up of commercial banks, financial institutions\nand nonbanking finance companies. It formulates, implements and monitors India's\nmonetary policy. The central bank's management objective is to maintain price stability\nand ensure that credit is flowing to productive economic sectors. RBI acts as a regulator\nand supervisor of the overall bankin",
+          "s a regulator\nand supervisor of the overall banking system and it is also the banker to the Government\nof India. RBI is also the lender of last resort for all commercial banks.\nJ. Grievance Redressal\nFor redressal of any grievance regarding banking industry products/ schemes, please\nrefer to Chapter 12 of this booklet.\nK. Government Schemes in Banking Industry\nFor information on various government schemes in banking industry, please refer to\nChapter 9 of this booklet.\nChapter 5 - Investment in Securities Ma",
+          "ction is carried out in their account. They have been instructed\nto ensure that such messages are enabled to carry the customer's reply too, so that a\ncustomer can report any such fraud immediately.\nI. Reserve Bank of India (RBI)\nReserve Bank of India (RBI), the central bank of India, was established on April 1, 1935,\nunder the Reserve Bank of India Act. The Reserve Bank of India uses monetary policy to\ncreate financial stability in India, and it is charged with regulating the country's currency\nand credit",
+          "rupees\nfor purchase of any\ngoods.\nAny person, being\na buyer.\nRate:  0.1%\n_____\nThreshold limit:\nAs per Note 1.\n( iii )\t   Total income of a\nspecified senior citi­\nzen after giving effect\nto deduction allow­\nable under Chapter\nVIII and rebate al­\nlowable under sec­\ntion 156.\nSpecified bank.\nRate:  Rates in force.\n_____\nThreshold limit:\nAs applicable.\n( iv )\t   Any benefit or per­\nquisite, whether con­\nvertible into money\nor not, arising from\nbusiness or the exer­\ncise of a profession of\nany resident.\nSpecifi",
+          "24 )\t   “rate of exchange” means the rate of exchange determined or recognised\nby the Central Government for the conversion of Indian currency into\nforeign currency or foreign currency into Indian currency;\n( 25 )\t   “royalty” shall have the same meaning as assigned to it in section\n9(6)( b );\n( 26 )\t   “rural branch” means a branch of a scheduled bank or a non-scheduled\nbank situated in a place which has a population of not more than ten\nthousand according to the last preceding census, of which the releva"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.10669232444941552,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "425. \t \t   \t(1) Where in any tax year, an assessee, liable to pay advance tax under\nsection 404, other than the assessee mentioned in sub-section (3), has failed\nto pay such tax, or the advance tax paid by the assessee on its current income on or\nbefore the date specified in column B of the Table below, is less than advance tax\ndue on returned income, as specified in column C, then the assessee shall be liable\nto pay interest on the amount of shortfall of advance tax as specified in column D,\nat the rate of interest specified in column E:—\nTABLE\nSl.\nNo.\nDue date of\nInstalment\nAdvance tax due on\nreturned income\nAmount of Shortfall\nof advance tax being\nadvance tax due as per\ncolumn C, as reduced\nby advance tax already\npaid on or before the date\nspecified in column B\nInterest\npayable on\nshortfall as\nspecified in\ncolumn D\nA\nB\nC\nD\nE\n1.\n15th day of\nJune\n15% of the tax due on\nreturned income.\nShortfall till 15th\nday of June\n3%\n2.\n15th day of\nSeptember.\n45% of the tax due on\nreturned income.\nShortfall till 15th\nday of September\n3%\n3.\n15th day of\nDecember.\n75% of the tax due on\nreturned income.\nShortfall till 15th\nday of December\n3%\n4.\n15th day of\nMarch.\n100% of the tax due\non returned income.\nShortfall till 15th\nday of March\n1%.\n(2) The assessee shall not be liable to pay any interest under sub-section (1), if the\nadvance tax paid by the assessee on the current income,—\n( a )\t   on or before the 15th day of June is 12% or more of the tax due on the\nreturned income;\n( b )\t   on or before the 15th day of September is 36% or more of the tax due\non the returned income.\n(3) An assessee who declares profits and gains as per section 58(2) (Table: Sl. No. 1\nor 3) or, who is liable to pay advance tax under section 404, has failed to pay such\ntax, or the advance tax paid by the assessee on its current income on or before the\n15th day of March is less than the tax due on returned income, shall be liable to\npay simple interest at the rate of 1% on the amount of shortfall from the tax due\non returned income.\n(4) No interest shall be payable under sub-section (1) or (3) in respect of shortfall\nin the payment of tax due on returned income, where,—\n( a )\t   the shortfall is on account of under estimation of, or failure to estimate\nthe following income:—\n( i )\t   capital gains;\n( ii )\t   income as per section 2( 49 )( n ) ;\n( iii )\t   income under the head profits and gains of business or profession\n( b )\t   the assessee has paid in full, the tax payable on the said income had such\nincome been part of total income, in any of the remaining instalments\nof advance tax, if any, or by the 31st day of March of the tax year.\n(5) For the purposes of this section “tax due on the returned income” means the tax\nchargeable on the total income declared in the return of income furnished by the\nassessee for the tax year in which the advance tax is paid or payable, as reduced\nby the amount of—\n( a )\t   any tax deducted or collected at source as per the provisions of Chapter\nXIX-B on any income which is subject to such deduction or collection\nand which is taken into account in computing such total income;\n( b )\t   any relief of tax allowed under section 157;\n( c )\t   any relief of tax allowed under section 159(1) on account of tax paid in\na country outside India;\n( d )\t   any relief of tax allowed under section 159(2) on account of tax paid in\na specified territory outside India referred to in that section;\n( e )\t   any deduction, from the Indian income-tax payable, allowed under section\n160, on account of tax paid in a country outside India; and\n2 [ ( f )\t   any tax credit allowed to be set off as per section 206(2)( e ) to ( h )   and 206(3)\nand (4). ]\n(6) For the purposes of this sub-section, the expression “dividend” shall have the\nmeaning assigned to it in section 2( 40 ), but shall not include sub-clause ( e ) thereof.\nInterest on excess refund.",
+          "317. \t \t(1) Irrespective of anything contained in section 4, when it appears to the\nAssessing Officer that any individual may leave India during the current tax\nyear or shortly after its expiry, with no present intention of returning to India, the\ntotal income of such individual for the period beginning from the first day of that\ncurrent tax year up to the probable date of departure from India (referred to as\nspecified period in this section) shall be chargeable to tax in that current tax year.\n(2) The total income of each completed tax year or part of any tax year included in\nthe specified period shall be chargeable to tax at the rate or rates in force in that\ntax year, and separate assessments shall be made in respect of each such completed\ntax year or part of any tax year.\n(3) The Assessing Officer may estimate the income of such individual for such\nspecified period or any part thereof, where it cannot be readily determined in the\nmanner provided in this Act.\n(4) For the purposes of making an assessment under sub-section (1), the Assessing\nOfficer may serve a notice upon such individual requiring him to furnish within\nsuch time, not being less than seven days, as specified in the notice, a return in\nthe same form and verified in the same manner as a return under section 268(1),\nsetting forth his—\n( a )\t   total income for each completed tax year comprised in such specified\nperiod referred to therein; and\n( b )\t   estimated total income for any part of the tax year comprised in such\nspecified period,\nand the provisions of this Act shall, so far as may be, and subject to the provisions\nof this section, apply as if the notice were a notice issued under section 268(1).\n(5) Irrespective of anything contained in section 268(1) or 280, where the provisions\nof sub-section (1) are applicable, the Assessing Officer may issue any notice under\nsection 268(1) or 280, requiring the furnishing of the return by such individual in\nrespect of any tax chargeable under any other provisions of this Act, within such\nperiod, not being less than seven days, as the Assessing Officer may think proper.\n(6) The tax chargeable under this section shall be in addition to the tax, if any,\nchargeable under any other provisions of this Act.\n10. —Association of persons or body of individuals or artificial\njuridical person formed for a particular event or purpose\nAssessment of association of persons or body of individuals or artificial juridical\nperson formed for a particular event or purpose.",
+          "203. \t \t(1) Irrespective of anything contained in this Act but subject to the provisions\nof Part A, B, E and this Part (other than section 204) of this Chapter, the\nincome-tax payable for a tax year shall be at the rate of 22%, at the option of a\nperson being a co-operative society resident in India, in respect of the total income\nof such person computed in the following manner:—\n( a )\t   without any deduction under—\n( i )\t   Chapter VIII other than the provisions of section 146  26 [ or 150 ] ; or\n( ii )\t   sections specified in section 205(1)( a ) to ( g );\n( b )\t   without set off of any loss carried forward or depreciation from any\nearlier tax year, if such loss or depreciation is attributable to any of the\ndeductions referred to in clause ( a ).\n(2) Where a person fails to satisfy the requirements contained in sub-section (1)\nin any tax year, the option shall become invalid in respect of the said tax year and\nsubsequent tax years and other provisions of the Act shall apply, as if the option had\nnot been exercised for such tax year and for subsequent tax years.\n(3) The loss and depreciation referred to in clause ( b ) of sub-section (1) shall be\ndeemed to have been given full effect to and no further deduction for such loss or\ndepreciation shall be allowed for any subsequent tax year.\n(4) In case of a person, having a Unit in the International Financial Services Centre,\nwhich has exercised option under sub-section (5), the requirements contained in\nsub-section (1) shall be modified to the extent that the deduction under section 147 22\nshall be available to such Unit subject to fulfilment of the conditions contained in\nthe said section.\n(5) The provisions of this section shall not apply unless the option is exercised by\nthe person in the prescribed manner on or before the due date specified under\nsection 263(1) for furnishing the return of income and such option once exercised\nshall apply to subsequent tax years.\n(6) Once the option under this section has been exercised for any tax year, it shall\nnot be subsequently withdrawn for the same or any other tax year.\n26 [ (7) In case of an assessee, being a co-operative society, which has exercised option\nunder sub-section (5), the requirements contained in sub-section (1) shall be modified\nto the extent that the deduction under section 149(2)( d )( ii ) shall be available to such\nassessee as does not exceed the amount of dividend distributed by it to its members at\nleast one month before the due date for filing the return of income under section 263(1). ]\nTax on income of certain new manufacturing co-operative societies.",
+          "209. \t \t(1) The income-tax payable, on the total income of an assessee, being a non-\nresident, which includes income specified in column B of the Table below,\nshall be the aggregate of income-tax computed at the rate specified in the column\nC applied on the corresponding income specified in column B.\nTABLE\nSl.\nNo.\nIncome\nRate of income-tax\npayable\nA\nB\nC\n1.\nFrom interest on—\n( a )\t   bonds of an Indian company issued as per\nsuch scheme as may be notified by the\nCentral Government; or\n( b )\t   bonds of a public sector company sold by the\nGovernment,\nand purchased in foreign currency.\n10%\n2.\nFrom dividends on Global Depository Receipts—\n( a )\t   issued as per such scheme as may be notified\nby the Central Government against the initial\nissue of shares of an Indian company and\npurchased in foreign currency through an\napproved intermediary; or\n10%\nSl.\nNo.\nIncome\nRate of income-tax\npayable\nA\nB\nC\n( b )\t   issued against the shares of a public sector\ncompany sold by the Government and pur­\nchased by him in foreign currency through\nan approved intermediary; or\n( c )\t   issued or re-issued as per a scheme as may be\nnotified by the Central Government, against\nthe existing shares of an Indian company\npurchased in foreign currency through an\napproved intermediary.\n3.\nLong-term capital gains arising from the transfer\nof bonds referred to against serial number 1 or\nGlobal Depository Receipts referred to against\nserial number 2.\n12.5%\n4.\nTotal income as reduced by income referred to\nagainst serial numbers 1 to 3.\nRates in force.\n(2) Where the gross total income of the non-resident—\n( a )\t   consists only of income by way of interest or dividends in respect of—\n( i )\t   bonds referred to in sub-section (1) (Table: Sl. No. 1); or\n( ii )\t   Global Depository Receipts referred to in sub-section (1) (Table:\nSl. No. 2),\nno deduction shall be allowed under sections 28 to 58, 60 and 61 or\nsection 93(1)( a ) or ( e ) or under Chapter VIII;\n( b )\t   includes any income referred to in sub-section (1) (Table: Sl. No. 1) to\n(Table: Sl. No. 3),—\n( i )\t   the gross total income shall be reduced by the such income; and\n( ii )\t   the deduction under Chapter VIII shall be allowed as if the gross\ntotal income so reduced, were the gross total income of the assessee.\n(3) The provisions of section 72(6)   shall not apply for computation of long-term\ncapital gains arising out of the transfer of long-term capital asset being bonds or\nGlobal Depository Receipts referred to in sub-section (1) (Table: Sl. No. 3).\n(4) It shall not be necessary for a non-resident to furnish a return of his income\nunder section 263(1), if—\n( a )\t   his total income during the tax year consisted only of income referred\nto in sub-section (1) (Table: Sl. No. 1) and (Table: Sl. No. 2); and\n( b )\t   the tax deductible at source under the provisions of Chapter XIX-B has\nbeen deducted from such income.\n(5) Where the assessee acquired Global Depository Receipts or bonds in an amal­\ngamated or resulting company by virtue of his holding Global Depository Receipts\nor bonds in the amalgamating or demerged company, as the case may be, as per\nthe provisions of sub-section (1), the provisions of that sub-section shall apply to\nsuch Global Depository Receipts or bonds.\n(6) For the purposes of this section,—\n( a )\t   “approved intermediary” means an intermediary which is approved as\nper a scheme as may be notified by the Central Government; and\n( b )\t   “Global Depository Receipts” shall have the meaning assigned to it in\nsection 193(4)( a ).\nTax on income of Foreign Institutional Investors from securities or capital\ngains arising from their transfer.",
+          "t his accounts audited for\nany tax year or years or furnish the audit report as required under section 63, the Assessing\nOfficer may impose a penalty on such person, which shall be the lesser of—\n( a )\t   0.5% of the total sales, turnover, or gross receipts in business, or the gross receipts\nin profession for such tax year or years; or\n( b )\t   `  150000.”\n11.\t   Omitted by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its omission, section 447 read as\nunder :\n“447.  Penalty for failure to furnish repo"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 0.0,
+          "answer_relevancy": 0.11872090234704669,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      }
+    }
+  ]
+}

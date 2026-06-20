@@ -1,0 +1,197 @@
+{
+  "config": {
+    "generator": "gpt-4o-mini",
+    "judge": "gpt-4o"
+  },
+  "results": [
+    {
+      "id": "sl-01",
+      "category": "simple_lookup",
+      "source_doc": "it_act_2025",
+      "question": "When does the Income-tax Act, 2025 come into force?",
+      "ground_truth": "On 1 April 2026.",
+      "baseline": {
+        "answer": "The Income-tax Act, 2025 shall come into force on the 1st April, 2026 [SOURCE 1].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "tax is the Income Tax\nAct (IT Act), 1961 as amended by subsequent Finance Acts.\nIncome tax has to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncal",
+          "pealed Income-tax Act and in force imme­\ndiately before the commencement of this Act shall be deemed to have\nbeen an election or declaration made, or option exercised, under the\ncorresponding provision of this Act;\n34 [ ( g )\t   where in respect of any proceeding relating to any tax year beginning before\nthe 1st April, 2026,—\n( i )\t   a refund falls due on or after such date; or\n( ii )\t   default is made on or after such date, in the payment of any sum due\nunder such proceeding,\nthe provisions of the repeal",
+          "g provision,\nand shall continue in force accordingly; and\n( v )\t   where a search has been initiated under section 132 or requisition is\nmade under section 132A prior to the commencement of this Act, the\nprovisions of repealed Income-tax Act, shall continue to apply to any\nproceedings connected in respect of such search or requisition, as the\ncase may be, as if this Act has not been enacted.\n(3) Where any reference is made in this Act to any tax year commencing on\nthe 1st April, 2025 or to any earlier tax y",
+          "beginning on the 1st April, 2026 and deemed to\nbe part of that allowance, or if there is no such allowance for that tax\nyear, be deemed to be allowance for that tax year;\n( s )\t   the deduction referred to in sections 35ABA, 35ABB, 35D, 35DD, 35DDA,\n35E or the first proviso to section 36(1)( ix ) of the repealed Income-tax\nAct, shall, on fulfilment of the conditions mentioned in the said provi­\nsions, continue to be allowed under this Act for tax year beginning on or\nafter the 1st April, 2026 had the Income"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9903944453161777,
+          "llm_context_precision_with_reference": 0.7555555555303703,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The Income-tax Act, 2025 shall come into force on the 1st April, 2026, unless otherwise provided in the Act [SOURCE 1].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "pril,\n2026.\nDefinitions.\n2. \tIn this Act, unless the context otherwise requires,—\n( 1 )\t   “accountant” shall have the meaning assigned to it in section 515(3)( b );\n( 2 )\t   “Additional Commissioner” means a person appointed to be an Additional\nCommissioner of Income-tax under section 237(1);\n( 3 )\t   “Additional Director” means a person appointed to be an Additional\nDirector of Income-tax under section 237(1);\n( 4 )\t   “advance tax” means the advance tax payable as per Chapter XIX-C;\n( 5 )\t   “agricultura",
+          "ayable as per Chapter XIX-C;\n( 5 )\t   “agricultural income” means—\n( a )\t   any rent or revenue derived from a land which is situated in\nIndia and is used for agricultural purposes;\n( b )\t   any income derived from such land by—\n( i )\t   agriculture; or\n( ii )\t   the performance by a cultivator or receiver of rent-in-kind of\nany process ordinarily employed by a cultivator or receiver of\nrent-in-kind to render the produce raised or received by him\nfit to be taken to market; or\n( iii )\t   the sale by a cultiv",
+          "aken to market; or\n( iii )\t   the sale by a cultivator or receiver of rent-in-kind of the produce\nraised or received by him, in respect of which no process has\nbeen performed other than a process of the nature described\nin item ( ii );",
+          "( c )\t   any income derived from any building owned and occupied by the\nreceiver of the rent or revenue of any such land, or occupied by\nthe cultivator or the receiver of rent-in-kind, of any such land with\nrespect to which, or the produce of which, any process mentioned\nin sub-clause ( b )( ii ) and ( iii ) is carried on, where such building—\n( i )\t   is on or in the immediate vicinity of such land and that land\nis assessed to land revenue in India, or is subject to a local\nrate assessed and collected by o"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9903979584634731,
+          "llm_context_precision_with_reference": 0.99999999995,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "sl-02",
+      "category": "simple_lookup",
+      "source_doc": "sebi_booklet",
+      "question": "How much of my bank deposits does government deposit insurance cover, per customer, in a single bank?",
+      "ground_truth": "Up to ₹5 lakhs per customer in that particular bank.",
+      "baseline": {
+        "answer": "The government deposit insurance scheme ensures that all deposits are insured by the Government up to a limit of ₹5 lakhs per customer in that particular bank [SOURCE 1].",
+        "contexts": [
+          "eferred more for\ntheir liquidity and safety than for the returns. It is also possible to get loans from banks\nagainst fixed deposits up to 75 to 90 % of the deposit amount.\nCentral Government deposit insurance scheme ensures that all deposits are insured by\nthe Government up to a limit of ₹5 lakhs per customer in that particular bank. So, even in\ncase of a failure of a bank, depositors are assured that the Government will step in and\nreturn up to ₹5 lakhs of their savings in that bank. For complete details",
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "rnment deposit schemes,\npublic deposits issued by companies, etc.\nA. Why to keep money in banks?\nDrawbacks of keeping cash at home are mentioned as below:\n•\nUnsafe   – Money can be stolen or lost due to natural calamities\n•\nLoss of growth opportunities   - Loss of interest income\n•\nNo/Low credit eligibility   - Deposit in banks creates eligibility for taking loans\nTherefore, it is beneficial to keep money in banks rather than at home in cash.\nB. Banking\nCommercial banks are regulated financial institutions",
+          "count opened:\n   Zero balance account\n   RuPay debit card\n*\nOverdraft is a facility available to bank customers wherein they can take a short term\nloan from bank to meet their urgent requirements with promise to pay back the same\namount in the timelines agreed between the bank and the customer.\nB. Basic Insurance Schemes Run by Government of India\n1. Pradhan Mantri Suraksha Bima Yojana\n   Provides accidental insurance cover to bank account holders in the age group of 18\nto 70 years.\n   A fixed annual pr",
+          "ercial banks are regulated financial institutions as\nthey deal with public money and trust. Commercial\nbanks in India are regulated by Reserve Bank of India.\nBanks are required to go through mandatory inspection\nand audits at various intervals and are also audited by\nthe Reserve Bank of India every year.\nBank deposits are comparatively lower risk investments. Banks offer various types of\ndeposits, depending on the needs of the customers. Bank deposits are preferred more for\ntheir liquidity and safety than f"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.703483223829127,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "where,—\n( A )\t   “card game and other game of any sort” includes any game show,\nan entertainment programme on television or electronic mode, in\nwhich people compete to win prizes or any other similar game;\n( B )\t   “Keyman insurance policy” shall have the meaning assigned to it\nin Schedule II (Note 1);\n( C )\t   “lottery” includes winnings from prizes awarded to any person by\ndraw of lots or by chance or in any other manner, under any scheme\nor arrangement, called by any name;\n( 50 )\t   “Income Computation a",
+          "alled by any name;\n( 50 )\t   “Income Computation and Disclosure Standards” means such standards\nas may be notified under section 276(2);\n( 51 )\t   “Income-tax Officer” means a person appointed to be an Income-tax\nOfficer under section 237(1);\n( 52 )\t   “India” means the territory of India as referred to in article 1 of the\nConstitution, its territorial waters, seabed and sub-soil underlying such\nwaters, continental shelf, exclusive economic zone or any other maritime\nzone as referred to in the Territorial W",
+          "maritime\nzone as referred to in the Territorial Waters, Continental Shelf, Exclusive\nEconomic Zone and Other Maritime Zones Act, 1976 (80 of 1976), and\nthe air space above its territory and territorial waters;\n( 53 )\t   “Indian company” means a company formed and registered under the\nCompanies Act, 2013 (18 of 2013) and includes—\n( a )\t   company formed and registered under any law relating to companies\nformerly or currently in force in any part of India; or\n( b )\t   corporation established by or under a C",
+          "r\n( b )\t   corporation established by or under a Central Act or State Act or\nProvincial Act; or\n( c )\t   institution or association or body which is declared by the Board\nto be a company under clause ( 28 ),\nthe registered or principal office of which is in India;\n( 54 )\t   “Indian currency” shall have the same meaning as assigned to it in\nsection 2( q ) of the Foreign Exchange Management Act, 1999 (42 of\n1999);\n( 55 )\t   “infrastructure capital company” means a company which makes invest­\nments by acquirin",
+          "ns a company which makes invest­\nments by acquiring shares or providing long-term finance to—\n( a )\t   any enterprise or undertaking wholly engaged in the business\nreferred to in section 80-IA(4) or 80-IAB(1) of the Income-tax Act,\n1961 (43 of 1961); or\n( b )\t   an undertaking developing and building—\n( i )\t   a housing project referred to in section 80-IB(10) of the\nIncome-tax Act, 1961 (43 of 1961); or\n( ii )\t   a project for constructing a hotel of not less than three star\ncategory as classified by the C"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "sl-03",
+      "category": "simple_lookup",
+      "source_doc": "it_act_2025",
+      "question": "What is the overall cap on the deduction for life-insurance premia, provident-fund and similar investments under the 2025 Act?",
+      "ground_truth": "₹1,50,000 in the tax year (the aggregate of the qualifying sums in Schedule XV).",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "TION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of a Hindu undivided family, on life of any member of\nthe Hind",
+          "“investments” include securities, stocks and shares;\n( b )\t   “life insurance business” means life insurance business as defined in\nsection 2( 11 ) of the Insurance Act, 1938 (4 of 1938).\n(2) References to the Insurance Act, 1938 (4 of 1938) in this Schedule regarding\nthe Life Insurance Corporation of India shall be treated as references to that Act or\nsection 43 of the Life Insurance Corporation Act, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBU",
+          "or all such\npolicies (in any of\nthe tax years dur­\ning the term of all\nof such policies) is\n<  `  5,00,000;\n( b )\t   the conditions of aggregate premium of\n`   2,50,000 and  `   5,00,000 mentioned in\nclause ( a ) shall not apply to any sum received\nunder a life Insurance policy issued on or\nafter the 1st April, 2025, by the International\nFinancial Services Centre Insurance Office;\n( c )\t   the following sums shall not be eligible for\nexclusion from total income:––\n( i )\t   any sum received under section 127",
+          "policy;\nand ≤ 10% for other\npolicies; and\n( B )\t   aggregate of pre­\nmium for all such\npolicies (in any of\nthe tax years during\nthe term of all of\nsuch policies) is ≤\n`   2,50,000.\nOther than unit linked\ninsurance policy:—\nPremium to sum assured\nratio is ≤ 15% for special\npolicy; and ≤ 10% for\nother policies.\n5.\nOn or after the 1st\nApril, 2023.\nUnit linked insurance\npolicy:—\n( a )\t   premium to sum\nassured ratio is ≤\n15% for special\npolicy; and ≤ 10%\nfor other policies;\nand\nSl.\nNo.\nIncome not to be\nincluded",
+          "under the Life\nInsurance Corporation Act, 1956\n(31 of 1956); or\n( iv )\t   the Unit Trust of India; or\n( v )\t   any company or co-operative society\ncarrying on the business of insurance;\nor\n( vi )\t   such other institution, association or\nbody or class of institutions, associ­\nations or bodies which the Central\nGovernment may, for reasons to be\nrecorded in writing, notified in this\nbehalf before the 1st April, 2020;\n( b )\t   interest income credited or paid—\n( i )\t   by a co-operative society other than\na co"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "(4) Any salary, bonus, commission or remuneration, by whatever name called, due\nto, or received by, a partner of a firm from the firm shall not be regarded as salary\nfor the purposes of this section.\nIncome from salary.\n16.\t \t   For the purposes of this Part, “salary” includes—\n( a )\t   wages;\n( b )\t   any annuity or pension;\n( c )\t   any gratuity;\n( d )\t   any fees or commission;\n( e )\t   perquisites;\n( f )\t   profits  in lieu  of, or in addition to, any salary or wages;\n( g )\t   any advance of salary;\n( h",
+          "lary or wages;\n( g )\t   any advance of salary;\n( h )\t   any payment received by an employee in respect of any period of leave\nnot availed of by him;\n( i )\t   the annual accretion to the balance at the credit of an employee par­\nticipating in a recognised provident fund, to the extent to which it is\nchargeable to tax as per paragraph 6 of Part A of Schedule XI;\n( j )\t   the aggregate of all sums that are comprised in the transferred balance\nas referred to in paragraph 11(2) of Part A of Schedule XI of an emp",
+          "paragraph 11(2) of Part A of Schedule XI of an employee\nparticipating in a recognised provident fund, to the extent to which it is\nchargeable to tax under sub-paragraphs (4) and (5) thereof;\n( k )\t   the contribution made by the Central Government or any other employer\nin any tax year, to the account of an employee under a pension scheme\nreferred to in section 124; and\n( l )\t   the contribution made by the Central Government in any tax year, to the\nAgniveer  Corpus Fund account of an individual enrolled in",
+          "Corpus Fund account of an individual enrolled in the  Agnipath\nScheme referred to in section 125.\nPerquisite.\n17.\t \t   (1) For the purposes of this Part, “perquisite” includes—\n( a )\t   the value of rent-free accommodation provided to the assessee by his\nemployer computed in such manner as may be prescribed;\n( b )\t   the value of any accommodation, computed in such manner as may be\nprescribed, provided to the assessee by his employer at a concessional\nrate which is in excess of rent recoverable from or pay",
+          "which is in excess of rent recoverable from or payable by the\nassessee;\n( c )\t   the value of any benefit or amenity granted or provided free of cost or\nat concessional rate in the following cases:—\n( i )\t   by a company to an employee, who is a director thereof or who has"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      }
+    }
+  ]
+}

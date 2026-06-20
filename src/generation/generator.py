@@ -3,7 +3,7 @@ import re
 import time
 
 from src.data.chunking import Chunk
-from src.generation.prompts import build_prompt
+from src.generation.prompts import build_prompt, build_currency_aware_prompt
 from src.providers.base import LLMProvider
 
 logger = logging.getLogger(__name__)
@@ -16,8 +16,11 @@ class Generator:
         self.temperature = cfg["generation"]["temperature"]
         logger.info("Generator ready — provider: %s", type(llm).__name__)
 
-    def generate(self, query: str, chunks: list[tuple[Chunk, float]]) -> dict:
-        messages = build_prompt(query, chunks)
+    def generate(self, query: str, chunks: list[tuple[Chunk, float]],
+                 currency_aware: bool = False) -> dict:
+        # currency_aware (LexRAG-only): annotate sources with D1 authority/currency tags
+        # and instruct the model to prefer authoritative+current law on points of law.
+        messages = (build_currency_aware_prompt if currency_aware else build_prompt)(query, chunks)
 
         start = time.time()
         answer = self.llm.generate(

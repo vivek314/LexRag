@@ -1,0 +1,58 @@
+================================================================
+LEXRAG — INTERVIEW QUESTIONS BANK
+================================================================
+
+----------------------------------------------------------------
+CHUNKING
+----------------------------------------------------------------
+1. Why not just use LangChain's RecursiveCharacterTextSplitter?
+2. What happens when a legal argument spans pages 12-14 and you chunk at page boundaries?
+3. How do you handle tables and headers in legal PDFs?
+4. What is the trade-off between chunk_size=256 vs chunk_size=1024?
+5. What does overlap=50 do and why do we need it?
+6. Explain the parent-child document pattern and why it helps legal retrieval.
+7. Why does NaiveChunker produce fewer chunks than PageAwareChunker on the same document?
+
+----------------------------------------------------------------
+FAISS / VECTOR SEARCH
+----------------------------------------------------------------
+8.  What is the difference between L2 distance and cosine similarity for retrieval?
+9.  How does IndexIVFFlat work? What are nlist and nprobe?
+10. What is HNSW? Why is it faster than IVF at query time?
+11. Why do we normalize vectors before using IndexFlatIP?
+12. FAISS is in-memory — what happens when your dataset doesn't fit in RAM?
+13. You have 10 million documents. How do you scale this FAISS setup?
+14. A new document arrives after the index is built — how do you add it without rebuilding?
+15. How do you handle multi-tenant search (different users, different document sets)?
+16. IndexFlatIP vs IndexIVFFlat — what do you lose when you switch?
+17. What is the recall@K trade-off in approximate nearest neighbor search?
+18. How do you persist a FAISS index to disk and reload it?
+19. Your search latency is 800ms. How do you debug and fix it?
+20. What is the difference between bi-encoder (FAISS) and cross-encoder (re-ranker)?
+
+----------------------------------------------------------------
+EMBEDDING
+----------------------------------------------------------------
+21. Why text-embedding-3-small over ada-002? What are the trade-offs?
+22. What does dimensionality mean in embeddings? Does higher = better?
+23. Why batch embeddings instead of one call per chunk?
+24. How does the embedding cache work and what is the cache key strategy?
+25. What happens if two different chunks have the same MD5 hash? (hash collision)
+
+----------------------------------------------------------------
+RETRIEVAL (to be filled as we build Phase 3)
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+GENERATION (to be filled as we build Phase 4)
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+EVALUATION (to be filled as we build Phase 5)
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SYSTEM DESIGN
+----------------------------------------------------------------
+(to be filled as we build Phase 6)
+================================================================

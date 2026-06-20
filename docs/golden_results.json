@@ -1,0 +1,1205 @@
+{
+  "config": {
+    "generator": "gpt-4o-mini",
+    "judge": "gpt-4o"
+  },
+  "results": [
+    {
+      "id": "sl-01",
+      "category": "simple_lookup",
+      "source_doc": "it_act_2025",
+      "question": "When does the Income-tax Act, 2025 come into force?",
+      "ground_truth": "On 1 April 2026.",
+      "baseline": {
+        "answer": "The Income-tax Act, 2025 shall come into force on the 1st April, 2026 [SOURCE 1].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "tax is the Income Tax\nAct (IT Act), 1961 as amended by subsequent Finance Acts.\nIncome tax has to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncal",
+          "pealed Income-tax Act and in force imme­\ndiately before the commencement of this Act shall be deemed to have\nbeen an election or declaration made, or option exercised, under the\ncorresponding provision of this Act;\n34 [ ( g )\t   where in respect of any proceeding relating to any tax year beginning before\nthe 1st April, 2026,—\n( i )\t   a refund falls due on or after such date; or\n( ii )\t   default is made on or after such date, in the payment of any sum due\nunder such proceeding,\nthe provisions of the repeal",
+          "g provision,\nand shall continue in force accordingly; and\n( v )\t   where a search has been initiated under section 132 or requisition is\nmade under section 132A prior to the commencement of this Act, the\nprovisions of repealed Income-tax Act, shall continue to apply to any\nproceedings connected in respect of such search or requisition, as the\ncase may be, as if this Act has not been enacted.\n(3) Where any reference is made in this Act to any tax year commencing on\nthe 1st April, 2025 or to any earlier tax y",
+          "beginning on the 1st April, 2026 and deemed to\nbe part of that allowance, or if there is no such allowance for that tax\nyear, be deemed to be allowance for that tax year;\n( s )\t   the deduction referred to in sections 35ABA, 35ABB, 35D, 35DD, 35DDA,\n35E or the first proviso to section 36(1)( ix ) of the repealed Income-tax\nAct, shall, on fulfilment of the conditions mentioned in the said provi­\nsions, continue to be allowed under this Act for tax year beginning on or\nafter the 1st April, 2026 had the Income"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9903944453161777,
+          "llm_context_precision_with_reference": 0.7555555555303703,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The Income-tax Act, 2025 shall come into force on the 1st April, 2026 [SOURCE 1].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "the repealed Income-tax Act standing on the\nlast day of the tax year beginning on 1st April, 2025 shall be added to the\namount credited to the provision for bad and doubtful debts accounts\nreferred to in the corresponding provisions of this Act for the tax year\nbeginning on the 1st April, 2026 and deemed to be part of amount credited\nto the provision for bad and doubtful debts accounts, or if there is no\nsuch amount credited for that tax year, be deemed to be amount credited\nfor that tax year;\n( u )\t   any",
+          "( r )\t   where any allowance or part thereof, under section 32(2) or 35(4) of the\nrepealed Income-tax Act, is to be carried forward to tax year beginning\non the 1st April, 2026, had the Income-tax Act, 1961 (43 of 1961) not\nbeen repealed, then, the allowance or part thereof shall be added to the\namount of capital allowances referred to corresponding provisions of\nthis Act for the tax year beginning on the 1st April, 2026 and deemed to\nbe part of that allowance, or if there is no such allowance for that tax",
+          "enal­\nty, reference, revision and appeals) in respect of any tax year beginning\nbefore the 1st April, 2026 and such proceedings shall be carried out as\nper the procedure specified in the repealed Income-tax Act;\n( d )\t   any proceeding for the imposition of a penalty in respect of any tax\nyear beginning before the 1st April, 2026, may be initiated and any such\npenalty may be imposed under the repealed Income-tax Act, as if this\nAct had not been enacted;\n( e )\t   any proceeding pending on the commencement of",
+          "of this Act, as the case may be in\nsuch tax years; ]\n( m )\t   any amount of loss under the source or head of income specified in\ncolumn B of the Table given below and referred to in the section of the\nrepealed Income-tax Act specified in column C of the said Table, brought\nforward for the tax year beginning before the 1st April, 2026 had the\nIncome-tax Act, 1961 (43 of 1961) not been repealed, shall be set off\nand carried forward against the income computed under this Act, in the\nmanner provided in the resp"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.9903944453161777,
+          "llm_context_precision_with_reference": 0.8041666666465626,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "sl-02",
+      "category": "simple_lookup",
+      "source_doc": "sebi_booklet",
+      "question": "How much of my bank deposits does government deposit insurance cover, per customer, in a single bank?",
+      "ground_truth": "Up to ₹5 lakhs per customer in that particular bank.",
+      "baseline": {
+        "answer": "The government deposit insurance scheme ensures that all deposits are insured by the Government up to a limit of ₹5 lakhs per customer in that particular bank [SOURCE 1].",
+        "contexts": [
+          "eferred more for\ntheir liquidity and safety than for the returns. It is also possible to get loans from banks\nagainst fixed deposits up to 75 to 90 % of the deposit amount.\nCentral Government deposit insurance scheme ensures that all deposits are insured by\nthe Government up to a limit of ₹5 lakhs per customer in that particular bank. So, even in\ncase of a failure of a bank, depositors are assured that the Government will step in and\nreturn up to ₹5 lakhs of their savings in that bank. For complete details",
+          "), the whole of\nthe interest up to a maximum amount of  `  10000 on deposits in a savings\naccount, excluding time deposits;\n( b )\t   in case of an assessee mentioned in sub-section (1)( b ), the whole of the\ninterest up to a maximum amount of  `  50000 on deposits in any account,\nincluding time deposits.\n(3) Where the income referred to in sub-section (2)( a ) is derived from any deposit\nin a savings account held by, or on behalf of, a firm, an association of persons or\na body of individuals, no deduction s",
+          "rnment deposit schemes,\npublic deposits issued by companies, etc.\nA. Why to keep money in banks?\nDrawbacks of keeping cash at home are mentioned as below:\n•\nUnsafe   – Money can be stolen or lost due to natural calamities\n•\nLoss of growth opportunities   - Loss of interest income\n•\nNo/Low credit eligibility   - Deposit in banks creates eligibility for taking loans\nTherefore, it is beneficial to keep money in banks rather than at home in cash.\nB. Banking\nCommercial banks are regulated financial institutions",
+          "count opened:\n   Zero balance account\n   RuPay debit card\n*\nOverdraft is a facility available to bank customers wherein they can take a short term\nloan from bank to meet their urgent requirements with promise to pay back the same\namount in the timelines agreed between the bank and the customer.\nB. Basic Insurance Schemes Run by Government of India\n1. Pradhan Mantri Suraksha Bima Yojana\n   Provides accidental insurance cover to bank account holders in the age group of 18\nto 70 years.\n   A fixed annual pr",
+          "ercial banks are regulated financial institutions as\nthey deal with public money and trust. Commercial\nbanks in India are regulated by Reserve Bank of India.\nBanks are required to go through mandatory inspection\nand audits at various intervals and are also audited by\nthe Reserve Bank of India every year.\nBank deposits are comparatively lower risk investments. Banks offer various types of\ndeposits, depending on the needs of the customers. Bank deposits are preferred more for\ntheir liquidity and safety than f"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7651802867368234,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The government deposit insurance scheme covers deposits up to a limit of ₹5 lakhs per customer in a single bank [SOURCE 1][SOURCE 2].",
+        "contexts": [
+          "Reserve Bank of India every year.\nBank deposits are comparatively lower risk investments. Banks offer various types of\ndeposits, depending on the needs of the customers. Bank deposits are preferred more for\ntheir liquidity and safety than for the returns. It is also possible to get loans from banks\nagainst fixed deposits up to 75 to 90 % of the deposit amount.\nCentral Government deposit insurance scheme ensures that all deposits are insured by\nthe Government up to a limit of ₹5 lakhs per customer in that pa",
+          "up to a limit of ₹5 lakhs per customer in that particular bank. So, even in\ncase of a failure of a bank, depositors are assured that the Government will step in and\nreturn up to ₹5 lakhs of their savings in that bank. For complete details on the scheme,\none can refer the website of Reserve Bank of India, from time to time.\nC. Account Opening Process — Know Your Client (KYC) Norms\nFor opening any type of bank account, customers need\nto undergo the process of complying with KYC norms.\nKYC Stands for \"Know Yo",
+          "*\nOverdraft is a facility available to bank customers wherein they can take a short term\nloan from bank to meet their urgent requirements with promise to pay back the same\namount in the timelines agreed between the bank and the customer.\nB. Basic Insurance Schemes Run by Government of India\n1. Pradhan Mantri Suraksha Bima Yojana\n   Provides accidental insurance cover to bank account holders in the age group of 18\nto 70 years.\n   A fixed annual premium is deducted from the bank account of the insured throu",
+          "of 1974);\n( ii )\t   in respect of deposits under any scheme\nframed by the Central Government and\nnotified by it in this behalf;\n( iii )\t   in respect of deposits (other than time\ndeposits made on or after the 1st July,\n1995) with a banking company;\n83 [ ( iv )\t   on the compensation amount awarded\nby a Motor Accidents Claims Tribunal—\n( A )\t to an individual; or\n( B )\t to a person other than an individ­\nual, where the aggregate interest\non such compensation does not\nexceed  `  50,000 during the tax\nyear; ]",
+          "o conditions).\n   Overdraft facility up to a certain amount. This facility is available against one\naccount per household.\n   Mobile banking facility for checking balance and transferring funds with ease\nacross India.\n   Interest earned on the deposits.\n   Not mandated to have a minimum balance in the account.\n   Direct Benefit Transfer for beneficiaries of government schemes.\n   Easy access to pension and insurance products.\n•   To get a cheque book, the individual will have to fulfil minimum balance"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.7913259609363213,
+          "llm_context_precision_with_reference": 0.99999999995,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "sl-03",
+      "category": "simple_lookup",
+      "source_doc": "it_act_2025",
+      "question": "What is the overall cap on the deduction for life-insurance premia, provident-fund and similar investments under the 2025 Act?",
+      "ground_truth": "₹1,50,000 in the tax year (the aggregate of the qualifying sums in Schedule XV).",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "TION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of a Hindu undivided family, on life of any member of\nthe Hind",
+          "“investments” include securities, stocks and shares;\n( b )\t   “life insurance business” means life insurance business as defined in\nsection 2( 11 ) of the Insurance Act, 1938 (4 of 1938).\n(2) References to the Insurance Act, 1938 (4 of 1938) in this Schedule regarding\nthe Life Insurance Corporation of India shall be treated as references to that Act or\nsection 43 of the Life Insurance Corporation Act, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBU",
+          "or all such\npolicies (in any of\nthe tax years dur­\ning the term of all\nof such policies) is\n<  `  5,00,000;\n( b )\t   the conditions of aggregate premium of\n`   2,50,000 and  `   5,00,000 mentioned in\nclause ( a ) shall not apply to any sum received\nunder a life Insurance policy issued on or\nafter the 1st April, 2025, by the International\nFinancial Services Centre Insurance Office;\n( c )\t   the following sums shall not be eligible for\nexclusion from total income:––\n( i )\t   any sum received under section 127",
+          "policy;\nand ≤ 10% for other\npolicies; and\n( B )\t   aggregate of pre­\nmium for all such\npolicies (in any of\nthe tax years during\nthe term of all of\nsuch policies) is ≤\n`   2,50,000.\nOther than unit linked\ninsurance policy:—\nPremium to sum assured\nratio is ≤ 15% for special\npolicy; and ≤ 10% for\nother policies.\n5.\nOn or after the 1st\nApril, 2023.\nUnit linked insurance\npolicy:—\n( a )\t   premium to sum\nassured ratio is ≤\n15% for special\npolicy; and ≤ 10%\nfor other policies;\nand\nSl.\nNo.\nIncome not to be\nincluded",
+          "under the Life\nInsurance Corporation Act, 1956\n(31 of 1956); or\n( iv )\t   the Unit Trust of India; or\n( v )\t   any company or co-operative society\ncarrying on the business of insurance;\nor\n( vi )\t   such other institution, association or\nbody or class of institutions, associ­\nations or bodies which the Central\nGovernment may, for reasons to be\nrecorded in writing, notified in this\nbehalf before the 1st April, 2020;\n( b )\t   interest income credited or paid—\n( i )\t   by a co-operative society other than\na co"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "t, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of",
+          "ses of this Chapter, the expression “gross total income” means the\ntotal income computed as per the provisions of this Act, before making deduction\nunder this Chapter.\nB.—Deductions in respect of certain payments\nDeduction for life insurance premia, deferred annuity, contributions to pro-\nvident fund, etc.\n123.\t \t An individual or a Hindu undivided family, shall be allowed a deduction\nof the whole of the amount paid or deposited in the tax year, being the aggre­\ngate of the sums enumerated in Schedule XV, a",
+          "ies (in any of\nthe tax years dur­\ning the term of all\nof such policies) is\n<  `  5,00,000;\n( b )\t   the conditions of aggregate premium of\n`   2,50,000 and  `   5,00,000 mentioned in\nclause ( a ) shall not apply to any sum received\nunder a life Insurance policy issued on or\nafter the 1st April, 2025, by the International\nFinancial Services Centre Insurance Office;\n( c )\t   the following sums shall not be eligible for\nexclusion from total income:––\n( i )\t   any sum received under section 127(4);\nand\n( ii )",
+          "the years as \"Previous Year\" and\n\"Assessment Year\". The year in which income is earned is called the previous year and\nthe year in which it is charged to tax is called the assessment year.\nDeductions allowed under Income Tax Act\nSection\nKey features\nSection 80C\n   Deduction for money invested in life insurance, provident fund,\nELSS schemes of mutual fund, Special Bank Deposits of 5 year\nterm, contribution to NPS account (Tier 1 account only),\nNational Savings Certificate, principal repayment of housing\nlo",
+          "and matching contributions of the Central\nGovernment along with interest on both these contributions are held.\nDeduction in respect of health insurance premia.\n126.\t \t (1) An assessee, being an individual or a Hindu undivided family, shall be\nallowed a deduction of a sum as specified in sub-sections (2) to (8), payment\nof which is made by any mode as specified in sub-section (9), out of his income\nchargeable to tax in the tax year.\n(2) In the case of an assessee, being an individual, the sum referred to i"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "vm-01",
+      "category": "vocab_mismatch",
+      "source_doc": "it_act_2025",
+      "question": "How many days do I have to stay in India in a year to count as a resident for tax?",
+      "ground_truth": "182 days or more in the tax year (this is one of two alternative tests for residence).",
+      "baseline": {
+        "answer": "You must stay in India for a total period of one hundred and eighty-two days or more in that tax year, or for sixty days or more during that year and have been in India cumulatively for three hundred and sixty-five days or more in the four preceding years to be considered a resident for tax purposes [SOURCE 1].",
+        "contexts": [
+          "a.\nResidence in India.\n6. \t(1) For the purposes of this Act, residential status in India in a tax year of\na person shall be determined as per the provisions of this section.\n(2) An individual shall be resident in India in a tax year, if he—\n( a )\t   is in India for a total period of one hundred and eighty-two days or more\nin that tax year; or\n( b )\t   is in India cumulatively for sixty days or more during that year and has\nbeen in India cumulatively for three hundred and sixty-five days or more\nin the four",
+          "ividual shall be\ndeemed to be resident in India for a tax year, if he—\n( a )\t   is a citizen of India;\n( b )\t   is not liable to tax in any other country or territory due to his domicile,\nresidence, or similar criteria; and\n( c )\t   has total income exceeding fifteen lakh rupees during such tax year (other\nthan the income from foreign sources).\n(8) Sub-section (7) shall not apply to an individual, who is resident in India for a\ntax year under sub-sections (2) to (6).\n(9) A Hindu undivided family, firm or ot",
+          "nt in India in that tax year for each of his other sources of\nincome.\n(13) A person is not ordinarily resident in India in any tax year, if that person is—\n( a )\t   an individual who has been, or a Hindu undivided family, whose manager\nhas been—\n( i )\t   a non-resident in India in nine out of the ten tax years preceding\nthat year; or\n( ii )\t   in India cumulatively for seven hundred and twenty-nine days or\nless in seven tax years preceding that year; or\n( b )\t   a citizen of India or a person of Indian orig",
+          ") to (6).\n(9) A Hindu undivided family, firm or other association of persons shall be resident\nin India in any tax year unless the control and management of its affairs is situated\nwholly outside India during such tax year.\n(10)( a ) A company is said to be a resident in India in any tax year, if—\n( i )\t   it is an Indian company; or\n( ii )\t   its place of effective management is in India in that tax year;\n( b ) for the purposes of this sub-section, “place of effective management” means a\nplace where key ma",
+          ")\t   a citizen of India or a person of Indian origin,—\n( i )\t   whose total income excluding income from foreign sources exceeds\nfifteen lakh rupees during the tax year, as mentioned in sub-section\n(5); and\n( ii )\t   who has been in India cumulatively for one hundred and twenty\ndays or more but less than one hundred and eighty-two days during\nthe tax year; or\n( c )\t   a citizen of India who is deemed to be resident in India under sub-section\n(7).\n(14) For the purposes of this section, “income from foreign s"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7935354237238103,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "To be considered a resident for tax purposes in India, you must stay in India for a total period of one hundred and eighty-two days or more in that tax year [SOURCE 2]. Alternatively, you can also be considered a resident if you are in India cumulatively for sixty days or more during that year and have been in India cumulatively for three hundred and sixty-five days or more in the four years preceding that tax year [SOURCE 3].",
+        "contexts": [
+          "mentioned in sub-section\n(5); and\n( ii )\t   who has been in India cumulatively for one hundred and twenty\ndays or more but less than one hundred and eighty-two days during\nthe tax year; or\n( c )\t   a citizen of India who is deemed to be resident in India under sub-section\n(7).\n(14) For the purposes of this section, “income from foreign sources” means the\nincome, which accrues or arises outside India (except income derived from a\nbusiness controlled in or a profession set up in India) and which is not deemed",
+          "r, if he—\n( a )\t   is in India for a total period of one hundred and eighty-two days or more\nin that tax year; or",
+          "( b )\t   is in India cumulatively for sixty days or more during that year and has\nbeen in India cumulatively for three hundred and sixty-five days or more\nin the four years preceding such tax year.\n(3) The provisions of sub-section (2)( b ) shall not apply in the case of an individual\nwho is a citizen of India and leaves India in any tax year—\n( a )\t   as a member of the crew of an Indian ship, as defined in section 3(18)\nof the Merchant Shipping Act, 1958 (44 of 1958); or\n( b )\t   for the purposes of emplo",
+          "idual who has been, or a Hindu undivided family, whose manager\nhas been—\n( i )\t   a non-resident in India in nine out of the ten tax years preceding\nthat year; or\n( ii )\t   in India cumulatively for seven hundred and twenty-nine days or\nless in seven tax years preceding that year; or\n( b )\t   a citizen of India or a person of Indian origin,—\n( i )\t   whose total income excluding income from foreign sources exceeds\nfifteen lakh rupees during the tax year, as mentioned in sub-section\n(5); and\n( ii )\t   who ha",
+          "Sl.\nNo.\nIncome not to be\nincluded in total\nincome\nEligible persons\nConditions\nA\nB\nC\nD\ncome of the employer\nchargeable under this\nAct.\n4.\nAny income charge­\nable under the head\n“Salaries”, received or\ndue as remuneration\nfor services rendered\nin connection with\nhis employment on a\nforeign ship.\nAny individual being a\nnon-resident, not being\na citizen of India.\nThe total stay of such in­\ndividual in India does not\nexceed in the aggregate a\nperiod of ninety days in the\ntax year.\n5.\nAny remuneration re­\nceived"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.3333333333333333,
+          "answer_relevancy": 0.7780384321896839,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "vm-02",
+      "category": "vocab_mismatch",
+      "source_doc": "sebi_booklet",
+      "question": "What's the idea where you earn returns on your past returns, not just on the money you originally put in?",
+      "ground_truth": "The power of compounding: you earn interest on the principal as well as on previously earned interest.",
+      "baseline": {
+        "answer": "The idea where you earn returns on your past returns, not just on the money you originally put in, is referred to as \"compounding interest.\" With compounding interest, you earn interest on the principal as well as on previously earned interest, leading to an increase in the total amount over time [SOURCE 4].",
+        "contexts": [
+          "investment over a period of time.\nSafety\nReturn\nLiquidilty\nFor example , if the present market value is higher than the value at the time of investment,\nit is called appreciation or gain. In case the market value is lower than the value at the\ntime of investment, it is called depreciation or loss.\nD. Returns from Investment\nReturns from Investment can be described as money made by an investor on his/ her\ninvestment. The returns can be in two ways as explained below:\nRegular Income\n•   Equity Investment :",
+          "with which you can en-\ncash or liquidate your investment at fair value. In the above example, it will be\nabout how soon will you get your money back if you need it immediately?\niii.\nReturn : What is the return you will get on your investments? It could be in the form\nof income, appreciation of capital invested or both. Income means an investment's\nearnings in the form of interest or dividend payment. Capital appreciation means\nthe increase in market value of investment over a period of time.\nSafety\nReturn\nL",
+          "vestors, rather than any\nactual profit earned. The perpetuation of the returns that a Ponzi scheme advertises and\npays requires an ever-increasing flow of money from investors to keep the scheme going.\nThe Ponzi scheme usually attract new investors by offering returns that other investments\ncannot guarantee, in the form of short-term returns that are either abnormally high or\nunusually consistent. As more investors become involved, the likelihood of the scheme\ncoming to the attention of authorities increase",
+          "the principal (that is, the amount you\ninitially invested); while with compounding interest, you earn interest on the principal as\nwell as, previously earned interest.\nLet us understand the magic of compounding with the help of an example.\nYear\nPrincipal\nRate of\nreturn\nReturn earned\nMaturity\nvalue\n1\n1 ,000\n9%\n90\n1,090\n2\n1 ,090\n(1000+ interest earned of  90)\n9%\n98\n1,188\n3\n1,188\n(1,000+interest earned 90+98)\n9%\n295\n1295\n10\n2,172\n9%\n195\n2,367*\n20\n5,142\n9%\n463\n5,604\n40\n28,816\n9%\n2,593\n31,409\n*Principal amount",
+          "ed below:\nRegular Income\n•   Equity Investment :  You get dividend when you buy and hold equity shares of a\ncompany and units of equity mutual fund.\n•   Fixed Income Investment :  In debt securities, you receive fixed interest on interest\nbearing Investments\nCapital Appreciation\n•  When the value of initial investment increases over a period of time and the investor\nbenefits by selling part or whole of the investment at the increased value , it is called\nCapital Appreciation.\nExample of Capital Appreciation"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.9424370430750859,
+          "llm_context_precision_with_reference": 0.249999999975,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The idea where you earn returns on your past returns, not just on the money you originally put in, is known as compounding interest. With compounding interest, you earn interest on both the principal and previously earned interest, leading to an increase in the total amount over time. This is illustrated in the example where an initial investment grows significantly due to the reinvestment of returns earned each year [SOURCE 1][SOURCE 3].",
+        "contexts": [
+          "1,409\n*Principal amount is changing at the end of every year on account of addition of return\nearned for that year to the principal. As principal is increasing every year, the return earned\non increased principal also is increasing.\nThe above example shows how an initial investment of ₹1,000/- grows to ₹31,409/- over\na period of 40 years. When the return is reinvested, you earn a return on the previously\nearned return and so on.  Whereas in case of simple interest, the principle amount remains\nat ₹1,000/- o",
+          "or liquidate your investment at fair value. In the above example, it will be\nabout how soon will you get your money back if you need it immediately?\niii.\nReturn : What is the return you will get on your investments? It could be in the form\nof income, appreciation of capital invested or both. Income means an investment's\nearnings in the form of interest or dividend payment. Capital appreciation means\nthe increase in market value of investment over a period of time.\nSafety\nReturn\nLiquidilty",
+          "he amount you\ninitially invested); while with compounding interest, you earn interest on the principal as\nwell as, previously earned interest.\nLet us understand the magic of compounding with the help of an example.\nYear\nPrincipal\nRate of\nreturn\nReturn earned\nMaturity\nvalue\n1\n1 ,000\n9%\n90\n1,090\n2\n1 ,090\n(1000+ interest earned of  90)\n9%\n98\n1,188\n3\n1,188\n(1,000+interest earned 90+98)\n9%\n295\n1295\n10\n2,172\n9%\n195\n2,367*\n20\n5,142\n9%\n463\n5,604\n40\n28,816\n9%\n2,593\n31,409\n*Principal amount is changing at the end of",
+          "For example , if the present market value is higher than the value at the time of investment,\nit is called appreciation or gain. In case the market value is lower than the value at the\ntime of investment, it is called depreciation or loss.\nD. Returns from Investment\nReturns from Investment can be described as money made by an investor on his/ her\ninvestment. The returns can be in two ways as explained below:\nRegular Income\n•   Equity Investment :  You get dividend when you buy and hold equity shares of a\nco",
+          "stment.\ni.\nSafety : This is about how well protected the\nprincipal and return on the investment is. For\ninstance, if you lend ₹100/- to someone, will it\nbe repaid on time? Or, is your capital of ₹100/-\nsafe? Safety means your money invested is\nprotected and there is every possibility that on\nthe agreed date, or maybe even before, it\nwould be returned whenever needed.\nii.\nLiquidity : This pillar of investment is the degree of ease with which you can en-\ncash or liquidate your investment at fair value. In the"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.9525196005253828,
+          "llm_context_precision_with_reference": 0.8333333332916666,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "vm-03",
+      "category": "vocab_mismatch",
+      "source_doc": "sebi_booklet",
+      "question": "If I pass away while my term plan is still active, what does my family actually get?",
+      "ground_truth": "The nominees receive the Sum Assured that was selected when the plan was purchased.",
+      "baseline": {
+        "answer": "If you pass away while your term plan is still active, your nominees will receive the \"Sum Assured\" that you had selected while purchasing the plan [SOURCE 1].",
+        "contexts": [
+          "ed will be financially compensated along with other details related to the\ninsurance policy.\nThe insurance policies are generally classified into the following:\nScheme and Key Features\nLife Insurance - Term Insurance\n-   In event of your unfortunate demise during the policy term, your nominees will receive\nthe “Sum Assured”   which you had selected while purchasing the plan.\n-   Active for a fixed period of time (popularly referred to as the \"term of the policy\").\nLife Insurance - Endowment Insurance\n-   A",
+          "is alive on such date irrespective that the\npolicy of insurance provides only for the return of premiums paid\n(with or without any interest thereon) in the event of such person\ndying before the said stipulated date;\n( ii )\t   a policy of insurance effected by an individual or a member of a\nHindu undivided family for the benefit of a minor with the object\nof enabling the minor, after he has attained majority to secure\ninsurance on his own life by adopting the policy and on his being\nalive on a date (after su",
+          "ndivided family, on life of any member of\nthe Hindu undivided family,\nsubject to paragraph 2;\n( b )\t   sum paid under a deferred annuity contract other than the annuity plan\nreferred to in clause ( l ) on life of the individual, spouse of the individual\nand any child of the individual, and such contract does not contain an\noption to receive cash payment  in lieu  of the annuity;\n( c )\t   sum deducted from salary payable by or on behalf of the Government\nto any individual for securing deferred annuity or mak",
+          "ny child of the individual;\n( ii )\t   in the case of a Hindu undivided family, in the name of any member\nthereof;\n( l )\t   sum paid to effect or to keep in force a contract for annuity plan of the\nLife Insurance Corporation or any other insurer notified by the Central\nGovernment;\n( m )\t   subscription to any units of any Mutual Fund referred to in serial number\n20 or 21 of the Table in Schedule VII or from the Administrator or the\nspecified company under any plan formulated in accordance with such\nscheme no",
+          "in section 92(2)( c ), so far as may be,\nan amount as per section 29(1)( e );\n( c )\t   for income of the nature referred to in section 92(2)( f ) and ( g ), so far\nas may be, an amount as per section 28(1)( a ), ( b ), ( d ), section 33, and\nsubject to the provisions of section 28(2);\n( d )\t   for income in the nature of family pension (a regular monthly amount\npayable by the employer to a family member of an employee upon the\ndeath of such employee),—\n( i )\t   an amount equal to one-third of such income or"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8771746601596379,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "If you pass away while your term plan is still active, your nominees will receive the “Sum Assured” that you had selected while purchasing the plan [SOURCE 1].",
+        "contexts": [
+          "fe Insurance - Term Insurance\n-   In event of your unfortunate demise during the policy term, your nominees will receive\nthe “Sum Assured”   which you had selected while purchasing the plan.\n-   Active for a fixed period of time (popularly referred to as the \"term of the policy\").\nLife Insurance - Endowment Insurance\n-   A life insurance contract designed to pay a lump sum amount after a specific term (on\nthe maturity of the policy) or on death of the policy holder (insured).\n-   Typical maturities of insur",
+          "holder (insured).\n-   Typical maturities of insurance policies are ten, fifteen or twenty years up to a certain\nage limit. Some policies also pay out in the case of critical illness.\nLife Insurance - Whole Life\n-   Type of life insurance policy which stays active as long as you pay the premiums.\nLife Insurance – Unit Linked insurance\n-   Combination of insurance and an investment vehicle.\n-   A portion of the premium paid by the policyholder is utilized to provide insurance\ncoverage to the policyholder and",
+          "understand and get comfortable with the risks, costs and liquidity of your\ninvestments.\n   Don't dip into your retirement savings:  Don't touch this pool of savings pre—\nretirement. If you spend money from your retirement kitty to fulfil your present\nneeds, you will lose out big in the long run. The corpus for your retirement will be\ninadequate.\nEstate Planning\nEstate planning refers to planning during one's lifetime,\nearmarking one's assets to beneficiaries, typically family\nmembers, loved ones and instit",
+          "ving for retirement at\nage 25, so that you wish to retire by 60, you can invest over 35 years.\n   Plan wisely : Set aside some money for medical expenditure and emergency\nneeds after retirement. Allocate your savings towards important financial goals\nsuch as children's education and marriage.\n   Track and review your plan:  The financial plan has to be reviewed at regular\nintervals to make sure that the plan meets its objectives. Also, you need to",
+          "s, typically family\nmembers, loved ones and institutions, so that they can\nbe used/ claimed after one's demise with ease, and\nwithout any significant cost. Making a \"Will\" is an\nessential part of estate planning. Following are the\nconstituents of estate planning:\nWill\nIt is a written legal declaration of desires to distribute assets of the deceased after his or\nher demise. This way one can transfer assets to loved ones, according to his or her\npreferences. By making a Will, one can avoid any feud among bene"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8771746601596379,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "sp-01",
+      "category": "spanning",
+      "source_doc": "sebi_booklet",
+      "question": "In the rupee-cost-averaging example, what was the total amount invested, the total units bought, and the average price per unit?",
+      "ground_truth": "₹24,000 invested over twelve months, 466 units bought, average price ₹51.50 per unit.",
+      "baseline": {
+        "answer": "In the rupee-cost-averaging example, the total amount invested was ₹24,000/-, the total units bought were 466 units, and the average price per unit was ₹51.50/- (i.e. ₹24,000/466 = ₹51.50/-) [SOURCE 3].",
+        "contexts": [
+          "of money at\nregular intervals irrespective of market fluctuations. For example, you buy more units when\nunit prices are low and less units when unit prices are high. By investing according to a\nschedule, you avoid the complex or even impossible duty of trying to figure out the exact\nbest time to invest. The rupee cost averaging effect averages out the costs of your units\nand hence lessens the impact of short-term market fluctuations on your investments. For\nexample, look at the table below:\nMonth\nAmount Pai",
+          "to double your money simply by dividing\nthe number 72 by the interest rate. So let's say your\nparents give you ₹200/- for your birthday and you plan\nto invest it. If you put the money into an account that\nearns 6 percent (6%) interest a year, how long will it\ntake to grow to ₹400/-/?\n72 / 6% interest = 12 years\nSo in 12 years, your money will have doubled to ₹400/-.\nRupee Cost Averaging\nRupee cost averaging is the process in which you invest a fixed amount of money at\nregular intervals irrespective of mark",
+          "24,000\n466 units\nFrom the above, it can be seen that with a total investment of ₹24,000/- over a period of\ntwelve months, an investor received 466 units of Mutual fund. The average price per unit\ncomes to ₹51.50/- (i.e. ₹24,000/466 = ₹51.50/-).\nChapter 3 - Financial Planning\nA. Financial Planning\nFinancial planning is the process of estimating financial needs of a person and\nimplementing a comprehensive plan to meet those financial needs during his or her\nlifetime through investment. For instance, birth of",
+          "r units in segregated\nportfolio;\nA = cost of acquisition of unit\nor units in the total portfolio;\nB = Net Asset Value of the asset\ntransferred to the segregated\nportfolio; and\nC = Net Asset Value of the total\nportfolio immediately before\nsegregation of portfolios.\nSl. No.\nDescription of the capital asset\nCost of acquisition\nA\nB\nC\n12.\nCapital asset being original units held\nby the unit holder in the main portfolio.\nThe cost of acquisition of such\noriginal units as reduced by the\namount as so arrived at under",
+          "high risk\nHigh:\nPrincipal at\nhigh risk\nVery High:\nPrincipal at\nvery high\nrisk\nrupee-cost averaging factor. As the investments are done over different market cycles,\nthe investor benefits from the market volatility by getting to buy more units of the same\nfund when the markets are low and buying less units when the prices are high.\nAn investor can invest a pre-determined fixed amount as low as ₹500/- in a scheme every\nmonth or quarter, depending on his/her convenience through post-dated cheques, through\nStan"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9422628841044559,
+          "llm_context_precision_with_reference": 0.3333333333,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "In the rupee-cost-averaging example, the total amount invested was ₹24,000, the total units bought were 466 units, and the average price per unit was ₹51.50 (i.e., ₹24,000/466) [SOURCE 3].",
+        "contexts": [
+          "Averaging\nRupee cost averaging is the process in which you invest a fixed amount of money at\nregular intervals irrespective of market fluctuations. For example, you buy more units when\nunit prices are low and less units when unit prices are high. By investing according to a\nschedule, you avoid the complex or even impossible duty of trying to figure out the exact\nbest time to invest. The rupee cost averaging effect averages out the costs of your units\nand hence lessens the impact of short-term market fluctua",
+          "rupee-cost averaging factor. As the investments are done over different market cycles,\nthe investor benefits from the market volatility by getting to buy more units of the same\nfund when the markets are low and buying less units when the prices are high.\nAn investor can invest a pre-determined fixed amount as low as ₹500/- in a scheme every\nmonth or quarter, depending on his/her convenience through post-dated cheques, through\nStanding instruction (SI) facility or through ECS (Electronic Clearing Service) fa",
+          "Jul\n2000\n40.00\n50\nAug\n2000\n47.62\n42\nSep\n2000\n45.45\n44\nOct\n2000\n62.50\n32\nNov\n2000\n55.55\n36\nDec\n2000\n50.00\n40\nTotal\n24,000\n466 units\nFrom the above, it can be seen that with a total investment of ₹24,000/- over a period of\ntwelve months, an investor received 466 units of Mutual fund. The average price per unit\ncomes to ₹51.50/- (i.e. ₹24,000/466 = ₹51.50/-).",
+          "ce lessens the impact of short-term market fluctuations on your investments. For\nexample, look at the table below:\nMonth\nAmount Paid\nCost per unit\nNumber of units bought\n(Amount paid / Cost)\nJan\n2000\n50.00\n40\nFeb\n2000\n41.67\n48\nMar\n2000\n47.62\n42\nApr\n2000\n58.82\n34\nMay\n2000\n71.42\n28\nJun\n2000\n66.67\n30\nDivide the rule number (72) by the annual\ninterest rate (R) to find out the approximate time\n(T) required for doubling your money.",
+          "The Rule of 72\nMathematicians say that you can find out how long it\nwill take you to double your money simply by dividing\nthe number 72 by the interest rate. So let's say your\nparents give you ₹200/- for your birthday and you plan\nto invest it. If you put the money into an account that\nearns 6 percent (6%) interest a year, how long will it\ntake to grow to ₹400/-/?\n72 / 6% interest = 12 years\nSo in 12 years, your money will have doubled to ₹400/-.\nRupee Cost Averaging\nRupee cost averaging is the process in w"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9422628841044559,
+          "llm_context_precision_with_reference": 0.3333333333,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "sp-02",
+      "category": "spanning",
+      "source_doc": "it_act_2025",
+      "question": "What are the two alternative tests for an individual to be treated as resident in India in a tax year?",
+      "ground_truth": "Either (a) 182 days or more in India in that tax year; OR (b) 60 days or more in that year together with 365 days or more in India across the four preceding tax years.",
+      "baseline": {
+        "answer": "An individual shall be treated as a resident in India in a tax year if he meets either of the following two alternative tests:\n\n1. The individual is in India for a total period of one hundred and eighty-two days or more in that tax year.\n2. The individual is in India cumulatively for sixty days or more during that year and has been in India cumulatively for three hundred and sixty-five days or more in the four years preceding that year [SOURCE 3].",
+        "contexts": [
+          "ividual shall be\ndeemed to be resident in India for a tax year, if he—\n( a )\t   is a citizen of India;\n( b )\t   is not liable to tax in any other country or territory due to his domicile,\nresidence, or similar criteria; and\n( c )\t   has total income exceeding fifteen lakh rupees during such tax year (other\nthan the income from foreign sources).\n(8) Sub-section (7) shall not apply to an individual, who is resident in India for a\ntax year under sub-sections (2) to (6).\n(9) A Hindu undivided family, firm or ot",
+          "nt in India in that tax year for each of his other sources of\nincome.\n(13) A person is not ordinarily resident in India in any tax year, if that person is—\n( a )\t   an individual who has been, or a Hindu undivided family, whose manager\nhas been—\n( i )\t   a non-resident in India in nine out of the ten tax years preceding\nthat year; or\n( ii )\t   in India cumulatively for seven hundred and twenty-nine days or\nless in seven tax years preceding that year; or\n( b )\t   a citizen of India or a person of Indian orig",
+          "a.\nResidence in India.\n6. \t(1) For the purposes of this Act, residential status in India in a tax year of\na person shall be determined as per the provisions of this section.\n(2) An individual shall be resident in India in a tax year, if he—\n( a )\t   is in India for a total period of one hundred and eighty-two days or more\nin that tax year; or\n( b )\t   is in India cumulatively for sixty days or more during that year and has\nbeen in India cumulatively for three hundred and sixty-five days or more\nin the four",
+          ") to (6).\n(9) A Hindu undivided family, firm or other association of persons shall be resident\nin India in any tax year unless the control and management of its affairs is situated\nwholly outside India during such tax year.\n(10)( a ) A company is said to be a resident in India in any tax year, if—\n( i )\t   it is an Indian company; or\n( ii )\t   its place of effective management is in India in that tax year;\n( b ) for the purposes of this sub-section, “place of effective management” means a\nplace where key ma",
+          "ecomes resi­\ndent.— Where a non-resident Indian in any tax year,—\n( a )\t   becomes assessable as a resident in India in respect of total income in a subsequent\nyear; and\n( b )\t   furnishes a declaration in writing to the Assessing Officer along with his return of\nincome under section 263 for the tax year for which he is so assessable, to the effect\nthat provisions of sections 212 to 218 shall continue to apply to him in relation to\nthe investment income derived from any foreign exchange asset referred to in"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.8201421548053518,
+          "llm_context_precision_with_reference": 0.3333333333,
+          "context_recall": null
+        }
+      },
+      "lexrag": {
+        "answer": "An individual shall be treated as a resident in India in a tax year if he meets either of the following two alternative tests:\n\n1. The individual is in India for a total period of 182 days or more during the tax year; or\n2. The individual is in India for a total period of 60 days or more during the tax year and has been in India for 365 days or more during the four years preceding that tax year [SOURCE 4].",
+        "contexts": [
+          "bject to such conditions, as may be prescribed.\n(7) Irrespective of the provisions of sub-sections (2) to (6), an individual shall be\ndeemed to be resident in India for a tax year, if he—\n( a )\t   is a citizen of India;\n( b )\t   is not liable to tax in any other country or territory due to his domicile,\nresidence, or similar criteria; and\n( c )\t   has total income exceeding fifteen lakh rupees during such tax year (other\nthan the income from foreign sources).\n(8) Sub-section (7) shall not apply to an indivi",
+          ".\n(8) Sub-section (7) shall not apply to an individual, who is resident in India for a\ntax year under sub-sections (2) to (6).\n(9) A Hindu undivided family, firm or other association of persons shall be resident\nin India in any tax year unless the control and management of its affairs is situated\nwholly outside India during such tax year.\n(10)( a ) A company is said to be a resident in India in any tax year, if—\n( i )\t   it is an Indian company; or\n( ii )\t   its place of effective management is in India in",
+          "(11) Every other person is resident in India in any tax year unless during that tax\nyear the control and management of the affairs of such person is situated wholly\noutside India.\n(12) If a person is resident in India in a tax year for any source of income, he shall\nbe deemed to be resident in India in that tax year for each of his other sources of\nincome.\n(13) A person is not ordinarily resident in India in any tax year, if that person is—\n( a )\t   an individual who has been, or a Hindu undivided family, w",
+          "on the basis that it—\n( a )\t   has accrued or arisen; or\n( b )\t   is deemed to have accrued or arisen,\nto such person, it shall not again be included on the basis that it is received or\ndeemed to be received by that person in India.\nResidence in India.\n6. \t(1) For the purposes of this Act, residential status in India in a tax year of\na person shall be determined as per the provisions of this section.\n(2) An individual shall be resident in India in a tax year, if he—\n( a )\t   is in India for a total period",
+          "collection and recovery; and\n( e )\t   special provisions relating to avoidance of tax,\nshall apply with such exceptions, modifications and adaptations as specified in that\nnotification for such tax year.\n(2) Where the determination regarding foreign company to be resident in India has\nbeen made in the assessment proceedings for any tax year, then, the provisions of\nsub-section (1) shall also apply to any other tax year succeeding such tax year, which\nends on or before the date of completion of such asses"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.8272310198623124,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "sp-03",
+      "category": "spanning",
+      "source_doc": "it_act_2025",
+      "question": "Under the 2025 Act, when is income from a building near agricultural land NOT treated as agricultural income?",
+      "ground_truth": "When the building or land is used for a non-agricultural purpose (such as letting for residence, or for any business or profession), or where the income arises from the transfer of certain specified land — these are excluded from agricultural income.",
+      "baseline": {
+        "answer": "Income from a building near agricultural land is not treated as agricultural income if it arises from the use of such building for any purpose other than agricultural purposes, including letting [SOURCE 3].",
+        "contexts": [
+          "ayable as per Chapter XIX-C;\n( 5 )\t   “agricultural income” means—\n( a )\t   any rent or revenue derived from a land which is situated in\nIndia and is used for agricultural purposes;\n( b )\t   any income derived from such land by—\n( i )\t   agriculture; or\n( ii )\t   the performance by a cultivator or receiver of rent-in-kind of\nany process ordinarily employed by a cultivator or receiver of\nrent-in-kind to render the produce raised or received by him\nfit to be taken to market; or\n( iii )\t   the sale by a cultiv",
+          "ome\nfrom the total income is to\nthe extent such income does\nnot exceed  `  1,500 in respect\nof each minor child whose\nincome is so includible.\n18.\nAny income charge­\nable under the head\n“Capital gains” aris­\ning from the transfer\nof agricultural land.\nAn individual or a Hin­\ndu undivided family.\n( a )\t   Such land is situated in\nany area referred to in\nsection 2( 22 )( iii );\n( b )\t   such land, during the\nperiod of two years\nimmediately preced­\ning the date of transfer,\nwas being used for ag­\nricultural pu",
+          "iii )( A ) or ( B ); and\n( ii )\t   is required as a dwelling house, or as a store-house, or other\nout-building, by the receiver of the rent or revenue or the\ncultivator, or the receiver of rent-in-kind, by reason of his\nconnection with the land;\n( d )\t   any income derived from saplings or seedlings grown in a nursery,\nbut shall not include—\n( i )\t   the income derived from any building or land referred to in sub-\nclause ( c ) arising from the use of such building or land for any\npurpose (including letting",
+          "building or both referred to in clause ( a ); or\n( c )\t   the reconstituted plot or land, as the case may be, received by the assessee  in lieu\nof land or building or both referred to in clause ( a ) in accordance with the Scheme,\nif such plot or land, as the case may be, so received is transferred within two years\nfrom the end of the financial year in which the possession of such plot or land was\nhanded over to him. ]\nSCHEDULE IV\n[ See  section 11]\nINCOME NOT TO BE INCLUDED IN TOTAL INCOME OF ELIGIBLE NON-",
+          "der the\nhead “Income from\nhouse property”,\n“Capital gains” or\n“Income from other\nsources” or from a\ntrade or business.\nAny local authority.\nIncome from trade or busi­\nness is eligible for exclusion\nfrom total income if such\nincome accrues or arises\nfrom the supply of—\n( a )\t   a commodity or ser­\nvice (not being water\nor electricity) within\nits own jurisdictional\narea; or\n( b )\t   water or electrici­\nty within or outside\nits own jurisdictional\narea.\n23.\nAny income of a re­\nsearch association.\nA research ass"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.796554690477777,
+          "llm_context_precision_with_reference": 0.3333333333,
+          "context_recall": null
+        }
+      },
+      "lexrag": {
+        "answer": "Income from a building near agricultural land is NOT treated as agricultural income if it arises from the use of such building for any purpose other than agriculture, including letting for residential purposes or for the purpose of any business or profession [SOURCE 2].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "the land;\n( d )\t   any income derived from saplings or seedlings grown in a nursery,\nbut shall not include—\n( i )\t   the income derived from any building or land referred to in sub-\nclause ( c ) arising from the use of such building or land for any\npurpose (including letting for residential purpose or for the purpose\nof any business or profession) other than agriculture falling under\nsub-clause ( a ) or ( b ); or\n( ii )\t   any income arising from the transfer of any land referred to in\nclause ( 22 )( iii )",
+          "ayable as per Chapter XIX-C;\n( 5 )\t   “agricultural income” means—\n( a )\t   any rent or revenue derived from a land which is situated in\nIndia and is used for agricultural purposes;\n( b )\t   any income derived from such land by—\n( i )\t   agriculture; or\n( ii )\t   the performance by a cultivator or receiver of rent-in-kind of\nany process ordinarily employed by a cultivator or receiver of\nrent-in-kind to render the produce raised or received by him\nfit to be taken to market; or\n( iii )\t   the sale by a cultiv",
+          "( c )\t   any income derived from any building owned and occupied by the\nreceiver of the rent or revenue of any such land, or occupied by\nthe cultivator or the receiver of rent-in-kind, of any such land with\nrespect to which, or the produce of which, any process mentioned\nin sub-clause ( b )( ii ) and ( iii ) is carried on, where such building—\n( i )\t   is on or in the immediate vicinity of such land and that land\nis assessed to land revenue in India, or is subject to a local\nrate assessed and collected by o",
+          "e income under sub-section (1) shall include—"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7956036972412829,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "cr-01",
+      "category": "cross_reference",
+      "source_doc": "it_act_2025",
+      "question": "What is the meaning of 'accountant' in the Income-tax Act, 2025?",
+      "ground_truth": "It is not defined in section 2 itself; it carries the meaning assigned to it in section 515(3)(b).",
+      "baseline": {
+        "answer": "In the Income-tax Act, 2025, the term \"accountant\" means a chartered accountant as defined in section 2(1)(b) of the Chartered Accountants Act, 1949, who holds a valid certificate of practice under section 6(1) of that Act, but does not include certain persons except for representing the assessee under sub-section (1) [SOURCE 1].",
+        "contexts": [
+          "s of section 288(2)( vii ) of the Income-tax\nAct, 1961 (43 of 1961); or\n( ix )\t   any other person as may be prescribed;\n( b )\t   “accountant” means a chartered accountant as defined in section\n2(1)( b ) of the Chartered Accountants Act, 1949 (38 of 1949), who holds\na valid certificate of practice under section 6(1) of that Act, but does not\ninclude [except for representing the assessee under sub-section (1)],—\n( i )\t   in case of an assessee, being a company, a person who is not eligible\nfor appointment as",
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "pril,\n2026.\nDefinitions.\n2. \tIn this Act, unless the context otherwise requires,—\n( 1 )\t   “accountant” shall have the meaning assigned to it in section 515(3)( b );\n( 2 )\t   “Additional Commissioner” means a person appointed to be an Additional\nCommissioner of Income-tax under section 237(1);\n( 3 )\t   “Additional Director” means a person appointed to be an Additional\nDirector of Income-tax under section 237(1);\n( 4 )\t   “advance tax” means the advance tax payable as per Chapter XIX-C;\n( 5 )\t   “agricultura",
+          "ners\nor accountants practising before income-tax authorities and for the con­\nstitution of and the procedure to be followed by the authority referred\nto in section 515(5);\n( za )\t   the issue of certificate verifying the payment of tax by assessees;\n( zb )\t   any other matter which by this Act is to be, or may be, prescribed.\n(3) In cases falling under sub-section (2)( b ), where the income liable to tax cannot\nbe definitely ascertained, or can be ascertained only with an amount of trouble and\nexpense to th",
+          "tax is the Income Tax\nAct (IT Act), 1961 as amended by subsequent Finance Acts.\nIncome tax has to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncal"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.9725576539103665,
+          "llm_context_precision_with_reference": 0.3333333333,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "In the Income-tax Act, 2025, the term \"accountant\" means a chartered accountant as defined in section 2(1)(b) of the Chartered Accountants Act, 1949, who holds a valid certificate of practice under section 6(1) of that Act. However, it does not include certain persons as specified in the Act [SOURCE 3].",
+        "contexts": [
+          "pril,\n2026.\nDefinitions.\n2. \tIn this Act, unless the context otherwise requires,—\n( 1 )\t   “accountant” shall have the meaning assigned to it in section 515(3)( b );\n( 2 )\t   “Additional Commissioner” means a person appointed to be an Additional\nCommissioner of Income-tax under section 237(1);\n( 3 )\t   “Additional Director” means a person appointed to be an Additional\nDirector of Income-tax under section 237(1);\n( 4 )\t   “advance tax” means the advance tax payable as per Chapter XIX-C;\n( 5 )\t   “agricultura",
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "ve in accord­\nance with the provisions of section 288(2)( vii ) of the Income-tax\nAct, 1961 (43 of 1961); or\n( ix )\t   any other person as may be prescribed;\n( b )\t   “accountant” means a chartered accountant as defined in section\n2(1)( b ) of the Chartered Accountants Act, 1949 (38 of 1949), who holds\na valid certificate of practice under section 6(1) of that Act, but does not\ninclude [except for representing the assessee under sub-section (1)],—\n( i )\t   in case of an assessee, being a company, a person w",
+          "92.\t   Substituted by the Finance Act, 2026, w.e.f.  1-10-2026 . Prior to its substitution, clause ( c )\nread as under :\n“( c )   the provisions of clause ( a ) shall not apply—\n( i )\t   to a person who is required to deduct tax under provisions of section 393(1) [Table:\nSl. Nos. 2( i ), 3( i ) and 6( ii )];\n( ii )\t   to a person referred to in section 393(4) [Table: Sl. No. 12.C( a )]; and\n( iii )\t   a person notified in this regard by the Central Government.”\n( b )\t   income-tax paid outside India by way",
+          "ed by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its substitution, clause ( c ) read\nas under :\n‘( c ) for the purposes of this section, “due date” means the date of the financial year succeed­\ning the relevant tax year as mentioned in the corresponding entry of column C of the Table\nbelow in respect of the persons mentioned in column B of the said Table:"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.9728875572357211,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "cr-02",
+      "category": "cross_reference",
+      "source_doc": "it_act_2025",
+      "question": "Where is the actual list of investments that qualify for the section 123 deduction?",
+      "ground_truth": "In Schedule XV (headed 'See section 123'), which enumerates life-insurance premia, provident-fund contributions, subscription to certain equity shares, etc.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "TION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of a Hindu undivided family, on life of any member of\nthe Hind",
+          "be eligible for\ndeduction in that year, and so on for the succeeding tax years; and\n( c ) the provisions of this sub-section shall be subject to the provisions of sections\n112(3) and 113(4).\n(12) For the purposes of this section,—\n( a )\t   “assets” mean—\n( i )\t   tangible assets, being buildings, machinery, plant or furniture;\n( ii )\t   intangible assets being—\n( A )\t   know-how; or\n( B )\t   patents; or\n( C )\t   copyrights; or\n( D )\t   trademarks; or\n( E )\t   licences; or\n( F )\t   franchises; or\n( G )\t   a",
+          "No. 1), no deduction shall be allowed to it under sections\n28 to 58, 60 and 61 or section 93(1)( a ) or ( e )   or under Chapter VIII;\n( b )\t   includes any income referred to in sub-section (1) (Table: Sl. No. 1) to\n(Table: Sl. No. 5),—\n( i )\t   the gross total income shall be reduced by the amount of such\nincome; and\n( ii )\t   the deduction under Chapter VIII shall be allowed as if the gross\ntotal income as so reduced, were the gross total income of the\nspecified fund or Foreign Institutional Investor.\n(5",
+          "“investments” include securities, stocks and shares;\n( b )\t   “life insurance business” means life insurance business as defined in\nsection 2( 11 ) of the Insurance Act, 1938 (4 of 1938).\n(2) References to the Insurance Act, 1938 (4 of 1938) in this Schedule regarding\nthe Life Insurance Corporation of India shall be treated as references to that Act or\nsection 43 of the Life Insurance Corporation Act, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBU",
+          "finance for industrial\ndevelopment in India and which is eligible for deduction under section\n32( e );\n( 9 )\t   deposits with or investment in any bonds issued by a public company\nformed and registered in India with the main object of carrying on the\nbusiness of providing long-term finance for construction or purchase of\nhouses in India for residential purposes and which is eligible for deduc­\ntion under section 32( e );\n( 10 )\t   deposits with or investment in any bonds issued by a public company\nformed a"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": null,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.7499999999625,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "ngs Certificate, principal repayment of housing\nloan, etc.\nSection\n80CCD (1 B)\n   In addition to deduction claimed under Section 80C.\n   Investment in NPS by any individual is available for claiming\ndeduction under Section 80CCD (1B) of the IT Act.\n   Amount available for deduction under this section is over and\nabove the amount available for claiming deduction under\nSection 80C of IT Act.\nSection 80D\n   Individuals are eligible to claim deductions for medical insurance\navailed for self, spouse, depende",
+          "Sl.\nNo.\nSpecified circumstances\nDetermination of actual cost\nA\nB\nC\n9.\nWhere an asset is used in business\nafter it ceases to be used for\nscientific research related to\nthat business and a deduction is\nallowable under section 33(3).\nActual cost of asset as reduced by\ndeduction allowed for the capital asset\nunder section 45(1)( a )( i ) or under\nsection 35(1)( iv ) of the Income-tax Act,\n1961 (43 of 1961).\n10.\nWhere the assessee had acquired\nan asset outside India, as a non-\nresident, and the asset is brought",
+          "deduction allowed\nunder section 46 in respect\nof a capital asset becomes\ndeemed income as per sec-\ntion 46(9)( b ).\n( b )\t   Actual cost of the asset as reduced\nby the depreciation,—\n( i )\t   that would have been allow­\nable had the asset been used\nfor the purpose of business\nsince date of acquisition; and\n( ii )\t   calculated at the rate in\nforce.\n13.\nWhere any amount is paid or\npayable as interest in connection\nwith the acquisition of an asset.\nActual cost shall not include so much of\nsuch amount as is re",
+          "sed stock exchange\napproved by the Securities and\nExchange Board of India.\nActual cost of the asset, as if there was\nno corporatisation.\n12.\n( a )\t   Where deduction under\nsection 46 was allowed or\nallowable in respect of the\ncapital asset—\n( i )\t   to the assessee; or\n( ii )\t   to any person and\nthe assessee acquires\nor receives such asset\nthrough special modes\nof acquisition from\nsuch person.\n( a )\t   Actual cost shall be deemed to be\nnil .\n( b )\t   Where deduction allowed\nunder section 46 in respect\nof a",
+          "edical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings bank account is eligible to be claimed\nas a deduction under section 80TTA, subject to limits on"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "cr-03",
+      "category": "cross_reference",
+      "source_doc": "it_act_2025",
+      "question": "How is 'advance tax' defined in the Act, and where are its substantive rules?",
+      "ground_truth": "'Advance tax' means the advance tax payable as per Chapter XIX-C; the definition in section 2 points to that chapter for the rules.",
+      "baseline": {
+        "answer": "Advance tax is defined as tax payable during any financial year in respect of the current income of the assessee, as per the provisions of the Act [SOURCE 4]. The substantive rules regarding advance tax payments, including the percentages and due dates for instalments, are outlined in the provisions that specify the amounts to be paid on or before certain dates: 15th September, 15th December, and 15th March [SOURCE 1].",
+        "contexts": [
+          "% of such advance tax.\n2.\nOn or before the\n15th September.\nNot less than 45% of such advance tax, as reduced by the\namount, if any, paid in the earlier instalment.\n3.\nOn or before the\n15th December.\nNot less than 75% of such advance tax, as reduced by the\namount or amounts, if any, paid in the earlier instalment\nor instalments.\n4.\nOn or before the\n15th March.\nThe whole amount of such advance tax, as reduced by the\namount or amounts, if any, paid in the earlier instalment\nor instalments.\n(2)   An assessee, w",
+          "], [Table: Sl. No. 5( iii )] and\n(Table: Sl. No. 7) or in section 393(3)(Table: Sl. No. 1), (Table:\nSl. No. 2) and (Table: Sl. No. 3),\nmeans the rate or rates of income-tax specified in this behalf in the\nFinance Act of the relevant year;\n( b )\t   computing the advance tax payable under Chapter XIX-C in a\ncase falling under section 207 or 194(1) (Table: Sl. No. 1) or 194(1)\n(Table: Sl. No. 6) or 214 or 307 or 308 or 311 the rate or rates\nspecified in the said respective section, or the rate or rates of\ninco",
+          "income” of a tax year means the total\nincome of the assessee which would be chargeable to tax for such tax year.\n(3)   The provisions of sub-section (1) shall not apply to an individual resident in\nIndia, who—\n( a )\t   does not have any income chargeable under the head “Profits and gains\nof business or profession”; and\n( b )\t   is of the age of sixty years or more at any time during the tax year.\nConditions of liability to pay advance tax.\n404. \t \tAdvance tax shall be payable by the assessee during a finan",
+          "such customer; or\n( B )\t   any sum referred to in section 393(1) [Table: Sl. No. 6( iii ) 3 ].\n96 [ ( f )\t   supply of manpower to a person to work under his supervision,\ncontrol or direction. ]\nC.—Advance payment of tax\nLiability for payment of advance tax.\n403. \t \t   \t(1) Advance tax shall be payable during any financial year in respect of the\ncurrent income of the assessee, as per the provisions of this Part.\n(2)   For the purposes of this Part, “current income” of a tax year means the total\nincome of t",
+          "s specified in section 408.\n(2) A person who pays any instalment or instalments of advance tax under sub-sec­\ntion (1), may increase or reduce the amount of advance tax payable in the remain­\ning instalment or instalments to accord with specified sum and the advance tax\npayable thereon, and make payment of the said tax in the remaining instalment or\ninstalments accordingly.\n(3) For the purposes of this section, the expression “specified sum” means current\nincome as estimated by the assessee.\nPayment of adva"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6698854862806836,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.5
+        }
+      },
+      "lexrag": {
+        "answer": "In the Act, \"advance tax\" is defined as the advance tax payable as per Chapter XIX-C [SOURCE 1]. The substantive rules regarding advance tax are outlined in sections 404, 405, 408, and 409 [SOURCE 2][SOURCE 4][SOURCE 5].",
+        "contexts": [
+          "pril,\n2026.\nDefinitions.\n2. \tIn this Act, unless the context otherwise requires,—\n( 1 )\t   “accountant” shall have the meaning assigned to it in section 515(3)( b );\n( 2 )\t   “Additional Commissioner” means a person appointed to be an Additional\nCommissioner of Income-tax under section 237(1);\n( 3 )\t   “Additional Director” means a person appointed to be an Additional\nDirector of Income-tax under section 237(1);\n( 4 )\t   “advance tax” means the advance tax payable as per Chapter XIX-C;\n( 5 )\t   “agricultura",
+          "advance tax under section 404\n(whether or not he has been previously assessed by way of regular assessment)\nshall, on his own accord, pay advance tax on the specified sum, calculated in the\nmanner laid down in section 405, at the appropriate percentage, on or before the\ndue date of each instalment, as specified in section 408.\n(2) A person who pays any instalment or instalments of advance tax under sub-sec­\ntion (1), may increase or reduce the amount of advance tax payable in the remain­\ning instalment or",
+          "shall be,—\n( a )\t   the amount of tax, if any, already paid as advance tax;\n( b )\t   any tax deducted or collected at source;\n50.\t   Substituted by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its substitution, clause ( e ) read\nas under :\n“( e )\t   any tax credit claimed to be set off as per the provisions of section 206(1)( m ) to ( p )",
+          "rch.\nThe whole amount of such advance tax, as reduced by the\namount or amounts, if any, paid in the earlier instalment\nor instalments.\n(2)   An assessee, who declares profits and gains as per the provisions of section 58(2)\n(Table: Sl. No. 1 or 3), shall pay the whole amount of advance tax on the current\nincome, calculated in the manner laid down in section 405 during each financial\nyear, on or before the 15th March.\n(3)   Any amount paid by way of advance tax on or before the 31st March, shall be\ntreated a",
+          "ax on or before the 31st March, shall be\ntreated as advance tax paid during the financial year ending on that day for all the\npurposes of this Act.\nWhen assessee is deemed to be in default.\n409.\t \t A person shall be deemed to be an assessee in default, if such person—\n( a )\t   does not pay on the date specified in section 408, any instalment of the\nadvance tax that he is required to pay by an order of the Assessing Officer\nunder section 407(1) and (4) ;  or\n( b )\t   does not send to the Assessing Officer an"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": null,
+          "kind": "none",
+          "detail": ""
+        },
+        "ragas": {
+          "faithfulness": 0.4,
+          "answer_relevancy": 0.9490590179568016,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "rf-01",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "What is the US federal standard deduction for the 2026 tax year?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. The corpus covers Indian income tax and SEBI investor education, not US / IRS law.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "beginning on the 1st April, 2026 and deemed to\nbe part of that allowance, or if there is no such allowance for that tax\nyear, be deemed to be allowance for that tax year;\n( s )\t   the deduction referred to in sections 35ABA, 35ABB, 35D, 35DD, 35DDA,\n35E or the first proviso to section 36(1)( ix ) of the repealed Income-tax\nAct, shall, on fulfilment of the conditions mentioned in the said provi­\nsions, continue to be allowed under this Act for tax year beginning on or\nafter the 1st April, 2026 had the Income",
+          "by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its substitution, sub-section\n(2) read as under :\n“(2) The deduction shall be allowed—\n( a )\t   for ten consecutive tax years beginning from the relevant tax year in the case of an\nentity mentioned in sub-section (1)( a );\n( b )\t   for ten consecutive tax years out of fifteen years beginning from the relevant tax\nthe tax year beginning on the 1st April, 2026; and\n( b )\t   in the case of an entity mentioned in sub-section (1)( b ), for twenty conse-\ncuti",
+          "e amount as mentioned in column\nC thereof:—\nTABLE\nSl.\nNo.\nNature of sum\nAmount of deduction\nA\nB\nC\n1.\nSum paid by the assessee as\na tax on employment as per\narticle 276(2) of the Constitution,\nleviable by or under any law.\nEntire amount.\n2.\nStandard deduction.\n( a )  `  75000 or the salary, whichever is\nless, where income-tax is computed\nunder section 202(1);\n( b )  `  50000 or the salary, whichever is\nless, in any other case.\n3.\nDeath- cum -retirement gratuity\nreceived as referred to in sub-\nsection (2)( g",
+          "ier tax year), the\naggregate amount of deduction shall not exceed—\nA – B,\nwhere,—\nA = the limit specified by the Central Government, by notification; and\nB = the aggregate amount of payment or payments which was\nreceived in any one or more earlier tax years and allowed as an ex­\nemption or a deduction (whether whole or part) from total income\nof any such tax year or years;\n( g )\t   the death- cum -retirement gratuity referred to in sub-section (1) (Table:\nSl. No. 3) shall be as—\n( A )\t   received under the",
+          "n 80LA of the Income-tax Act, 1961\n(43 of 1961), the deduction shall be allowed,—\n( a )\t   for an entity mentioned in sub-section (1)( a ),—\n( i )\t   for twenty consecutive tax years beginning from the relevant tax year;\nand\n( ii )\t   in a case, where the tenth year, out of the period of ten consecutive\nyears of deduction allowed under section 80LA(1) of the said Act has\nended on the 31st March, 2025, for further ten consecutive years from\n13.\t   Substituted by the Finance Act, 2026, w.e.f.  1-4-2026 . Prio"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "nsecutive tax years beginning from the relevant tax year;\nand\n( ii )\t   in a case, where the tenth year, out of the period of ten consecutive\nyears of deduction allowed under section 80LA(1) of the said Act has\nended on the 31st March, 2025, for further ten consecutive years from\n13.\t   Substituted by the Finance Act, 2026, w.e.f.  1-4-2026 . Prior to its substitution, sub-section\n(2) read as under :\n“(2) The deduction shall be allowed—\n( a )\t   for ten consecutive tax years beginning from the relevant tax",
+          "ril, 2019 and ending on the 31st March, 2023.\n(3) The deduction under sub-section (1) shall not exceed  `  150000 and shall be\nallowed in computing the total income of the individual for the tax year beginning\non the 1st April, 2019 and subsequent tax years.\n(4) Where a deduction under this section is allowed for any interest referred to in\nsub-section (1), deduction shall not be allowed in respect of such interest under any\nother provision of this Act for the same or any other tax year.\n(5) For the purpose",
+          ", 2026,––\n( i )\t   such tax credit shall be carried forward and set off in a tax year, when tax\npayable on the total income computed as per the provisions of this Act\nexceeds the minimum alternate tax computed as per provisions of sub-\nsection (1);\n( ii )\t   such set off in respect of brought forward tax credit shall be allowed for any\ntax year to the extent of the difference between the tax liability on the total\nincome computed as per the other provisions of this Act and the minimum\nalternate tax for that",
+          "the option under section 200(5) or section\n201(2) for a tax year, beginning on or after the 1st April, 2026.\n( b ) Where any amount of credit, in respect of tax paid, was allowed to be carried forward\nto the assessee under the provisions of section 115JAA of the Income-tax Act, 1961\n(43 of 1961), as on 31st March, 2026,––\n35.\t   Sub-sections (3), (4) and (5) substituted for sub-section (3) by the Finance Act, 2026, w.e.f.\n1-4-2026 . Prior to its substitution, sub-section (3) read as under :\n“(3) Save as ot",
+          "the tax year beginning on the 1st April, 2026; and\n( b )\t   in the case of an entity mentioned in sub-section (1)( b ), for twenty conse-\ncutive tax years out of twenty-five years beginning from the relevant tax\nyear, at the option of an assessee. ]\n(3) The income referred to in sub-section (1) shall be the income from—\n( a )\t   an Offshore Banking Unit located in a Special Economic Zone; or\n( b )\t   the business activities referred to in section 6(1) of the Banking Regu­\nlation Act, 1949 (10 of 1949), with"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": null
+        }
+      }
+    },
+    {
+      "id": "rf-02",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "How do I file my monthly GST returns in India?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. GST is governed by separate indirect-tax legislation not present in this corpus, which covers direct income tax and investor education.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "Number or Aadhaar number along with demographic information or\nbiometric information of an individual is submitted to the income-tax\nauthority or such other authority or agency as may be prescribed for its\nverification and such authority or agency verifies the correctness, or the\nlack thereof, on the basis of information available with it.\nB.—Filing of return of income\nReturn of income.\n263 .\t \t(1)( a ) Every person as mentioned below shall, for a tax year, on or before the\ndue date, furnish a return of hi",
+          "asses of\npersons, from the obligation to file a return of income under this section, subject\nto the conditions specified therein.\n(4) Any person who has not furnished a return within the time allowed to him\nunder sub-section (1), may furnish the return for any tax year at any time within\nnine months from the end of the relevant tax year, or before the completion of the\nassessment, whichever is earlier.\n45 [ (5) If any person, having furnished a return under sub-section (1) or (4), discovers\nany omission or",
+          "dent in India, shall,\nfor every reporting accounting year, in respect of the international group of which\nit is a constituent, furnish a report, to the prescribed income-tax authority within\ntwelve months from the end of the said reporting accounting year, in such form and\nmanner, as may be prescribed.\n(3) In sub-sections (2) and (4), the report in respect of an international group shall\ninclude—\n( a )\t   the aggregate information in respect of the amount of revenue, profit or\nloss before income-tax, amount",
+          "sident in India, notify\nthe prescribed income-tax authority in the form and manner, on or before such\ndate, as may be prescribed,—\n( a )\t   whether it is the alternate reporting entity of the international group; or\n( b )\t   the details of the parent entity or the alternate reporting entity, if any, of\nthe international group, and the country or territory of which the said\nentities are resident.\n(2) Every parent entity or the alternate reporting entity, resident in India, shall,\nfor every reporting accounti",
+          "63. \t(1) Every person, carrying on the business or profession fulfilling any of the\nconditions specified in column B of the Table below, shall get his accounts\nof the tax year audited by an accountant, before the specified date.\nTABLE\nSl.\nNo.\nConditions for getting books of account audited\nA\nB\n1.\nEvery person—\n( a )\t   carrying on business shall, if his total sales, turnover or gross\nreceipts, as the case may be, in business exceed or exceeds one\ncrore rupees in any tax year, subject to the provisions of cl"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "in cases other\nthan those mentioned  at\nserial numbers 4, 5, 6\nand 7.\n( i )\t   By the managing director of the company;\n( ii )\t   where there is no managing director, or the\nmanaging director is not able to verify the\nreturn due to any unavoidable reason, by\nany director of the company or any other\nperson as may be prescribed for verifying\nthe return.\n4.\nA company not being\nresident in India.\nBy any person holding a valid power of attorney\nfrom the company to do so.\n5.\nA company which is\nbeing wound up by\no",
+          "r, if he—\n( a )\t   is in India for a total period of one hundred and eighty-two days or more\nin that tax year; or",
+          "( b )\t   is in India cumulatively for sixty days or more during that year and has\nbeen in India cumulatively for three hundred and sixty-five days or more\nin the four years preceding such tax year.\n(3) The provisions of sub-section (2)( b ) shall not apply in the case of an individual\nwho is a citizen of India and leaves India in any tax year—\n( a )\t   as a member of the crew of an Indian ship, as defined in section 3(18)\nof the Merchant Shipping Act, 1958 (44 of 1958); or\n( b )\t   for the purposes of emplo",
+          "t, having a liaison office in India set up as\nper the guidelines issued by the Reserve Bank of India under the Foreign\nExchange Management Act, 1999 (42 of 1999), shall, in respect of its activities in\na tax year, prepare and deliver to the Assessing Officer having jurisdiction, a state­\nment, in such form and containing such particulars within such period, as may be\nprescribed.",
+          "ational group, and the country or territory of which the said\nentities are resident.\n(2) Every parent entity or the alternate reporting entity, resident in India, shall,\nfor every reporting accounting year, in respect of the international group of which\nit is a constituent, furnish a report, to the prescribed income-tax authority within\ntwelve months from the end of the said reporting accounting year, in such form and\nmanner, as may be prescribed.\n(3) In sub-sections (2) and (4), the report in respect of an"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "rf-03",
+      "category": "refusal",
+      "source_doc": null,
+      "question": "What is the stamp duty rate for registering a flat in Telangana?",
+      "ground_truth": "NOT_IN_CORPUS — correct behavior is refusal. State stamp duty is outside this corpus.",
+      "baseline": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "(28 of 2005);\n( 105 )\t   “stamp duty value” means the value adopted or assessed or assessable\nby any authority of the Central Government or State Government for\nthe payment of stamp duty in respect of an immovable property, where\nthe expression “assessable” shall mean the value which any authority of\nthat Government would have adopted or assessed as if it were referred\nto such authority for the purposes of payment of stamp duty, irrespective\nof anything to the contrary contained in any other law in force;",
+          ";\n( ii )\t   any immovable property—\n( A )\t   without consideration, the stamp duty value of which\nexceeds  `  50000, the stamp duty value of such property;\n( B )\t   for a consideration, the stamp duty value of such property\nthat exceeds such consideration, if this excess amount is\nmore than the higher of the following amounts:—\n( I )\t   `  50000; or\n( II )\t   10% of the consideration;\n( iii )\t   any property, other than immovable property,—\n( A )\t   without consideration, the aggregate fair market value of",
+          "d the date of registration are not the same,\nthe stamp duty value on the date of agreement shall apply, provided the\nconsideration, in whole or in part, has been paid in specified banking\nor online mode as defined in section 66( 32 ) on or before the date of\nagreement for transfer of such immovable property;\n( b )\t   if the stamp duty value of immovable property is disputed by the asses­\nsee on the grounds mentioned in section 78(2), the Assessing Officer\nmay refer the valuation of such property to a Valuat",
+          "tamp duty\nvalue as on date of agreement may be taken to be the full value of consideration\nunder sub-section (1).\n(4) The provisions of sub-section (3) shall apply only in a case where the amount\nof consideration or a part thereof has been received by specified banking or online\nmode on or before the date of agreement for transfer of such asset.\n(5) For the determination of the stamp duty value under sub-section (1), the provi­\nsions of section 78(2) and (3)shall apply.\nBusiness of prospecting for mineral o",
+          "public sector company or a University estab­\nlished by law or a college affiliated to such University or a\nlocal authority or a co-operative society; or\n( iv )\t   stamp duty, registration fee and other expenses for the purpose of\ntransfer of such house property to the assessee;\n( b )\t   not include any payment towards or by way of—\n( i )\t   the admission fee, cost of share and initial deposit which a share­\nholder of a company or a member of a co-operative society has to\npay for becoming such shareholder o"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      },
+      "lexrag": {
+        "answer": "The provided documents do not contain this information.",
+        "contexts": [
+          "e purpose of payment of stamp duty, registration fees or\nother similar taxes or fees shall not be regarded as assignment\nof values to individual assets or liabilities;\n( 104 )\t   “Special Economic Zone” shall have the same meaning as assigned to it\nin section 2( za ) of the Special Economic Zones Act, 2005 (28 of 2005);\n( 105 )\t   “stamp duty value” means the value adopted or assessed or assessable\nby any authority of the Central Government or State Government for\nthe payment of stamp duty in respect of an",
+          "d 110% of the consideration received or accrued and in such a case, the con­\nsideration received or accrued shall be deemed to be the full value of consideration.\n(3) If the date of agreement fixing the value of consideration for transfer of asset\nand date of registration for transfer of such asset are different, then the stamp duty\nvalue as on date of agreement may be taken to be the full value of consideration\nunder sub-section (1).",
+          "individual; or\n( i )\t   from such class of persons and subject to such conditions, as may be\nprescribed.\n(4) For the purposes of sub-section (2)( m )( ii ),—\n( a )\t   if the date of agreement fixing the amount of consideration for the trans­\nfer of immovable property and the date of registration are not the same,\nthe stamp duty value on the date of agreement shall apply, provided the\nconsideration, in whole or in part, has been paid in specified banking\nor online mode as defined in section 66( 32 ) on or be",
+          "m the transfer of a capital\nasset, being land or building or both, is less than the stamp duty value, then,\nfor the purposes of section 72, the stamp duty value shall be deemed to be the full\nvalue of the consideration received or accruing as a result of such transfer, subject\nto the following:—\n( a )\t   the stamp duty value on the date of agreement may be taken as the full\nvalue of consideration, if—\n( i )\t   the date of the agreement fixing the consideration and the date of\nregistration for the transfer o",
+          "ideration, the stamp duty value of which\nexceeds  `  50000, the stamp duty value of such property;\n( B )\t   for a consideration, the stamp duty value of such property\nthat exceeds such consideration, if this excess amount is\nmore than the higher of the following amounts:—\n( I )\t   `  50000; or\n( II )\t   10% of the consideration;\n( iii )\t   any property, other than immovable property,—\n( A )\t   without consideration, the aggregate fair market value of\nwhich exceeds  `  50000, the whole of the aggregate fair"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "refusal_gate",
+          "detail": "declined"
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "sa-01",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Under which section can an individual claim a deduction for life-insurance premiums, PPF and ELSS investments?",
+      "ground_truth": "Under section 123 of the Income-tax Act, 2025 (qualifying items listed in Schedule XV), capped at ₹1,50,000. It is NOT section 80C — '80C' belonged to the repealed Income-tax Act, 1961 and does not exist in the 2025 Act.",
+      "baseline": {
+        "answer": "An individual can claim a deduction for life insurance premiums, contributions to the Provident Fund (PPF), and Equity Linked Savings Scheme (ELSS) investments under Section 80C of the Income Tax Act [SOURCE 2].",
+        "contexts": [
+          "TION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of a Hindu undivided family, on life of any member of\nthe Hind",
+          "under\nSection 80C of IT Act.\nSection 80D\n   Individuals are eligible to claim deductions for medical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings b",
+          "“investments” include securities, stocks and shares;\n( b )\t   “life insurance business” means life insurance business as defined in\nsection 2( 11 ) of the Insurance Act, 1938 (4 of 1938).\n(2) References to the Insurance Act, 1938 (4 of 1938) in this Schedule regarding\nthe Life Insurance Corporation of India shall be treated as references to that Act or\nsection 43 of the Life Insurance Corporation Act, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBU",
+          "d from the total income of that tax year\nunder Schedule II (Table: Sl. No. 2), the sum exceeding the aggregate\nof the premium paid, during the term of such life insurance policy, and\nnot claimed as a deduction under this Act, computed in such manner,\nas may be prescribed;\n( m )\t   where any person receives in any tax year, from any person or per-\nsons—\n( i )\t   any sum of money without consideration, the total of which exceeds\n`  50000, the whole of such sum;\n( ii )\t   any immovable property—\n( A )\t   witho",
+          "Bank Deposits of 5 year\nterm, contribution to NPS account (Tier 1 account only),\nNational Savings Certificate, principal repayment of housing\nloan, etc.\nSection\n80CCD (1 B)\n   In addition to deduction claimed under Section 80C.\n   Investment in NPS by any individual is available for claiming\ndeduction under Section 80CCD (1B) of the IT Act.\n   Amount available for deduction under this section is over and\nabove the amount available for claiming deduction under\nSection 80C of IT Act.\nSection 80D\n   Indiv"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "sebi_booklet"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly cites Section 80C of the Income Tax Act as the current basis for deductions, which is the repealed provision from the 1961 Act, not the 2025 Act."
+        },
+        "ragas": {
+          "faithfulness": 0.6666666666666666,
+          "answer_relevancy": 0.6401948191265036,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "An individual can claim a deduction for life insurance premiums, PPF, and ELSS investments under Section 80C of the Income Tax Act [SOURCE 3].",
+        "contexts": [
+          "ngs Certificate, principal repayment of housing\nloan, etc.\nSection\n80CCD (1 B)\n   In addition to deduction claimed under Section 80C.\n   Investment in NPS by any individual is available for claiming\ndeduction under Section 80CCD (1B) of the IT Act.\n   Amount available for deduction under this section is over and\nabove the amount available for claiming deduction under\nSection 80C of IT Act.\nSection 80D\n   Individuals are eligible to claim deductions for medical insurance\navailed for self, spouse, depende",
+          "t, 1956 (31 of 1956).\nSCHEDULE XV\n[ See  section 123]\nDEDUCTION IN RESPECT OF LIFE INSURANCE PREMIA,\nCONTRIBUTION TO PROVIDENT FUND, SUBSCRIPTION\nTO CERTAIN EQUITY SHARES, ETC.\nSums qualifying as deduction.\n1.  For any tax year, the following amounts shall qualify as deduction for the purpose\nof section 123—\n( a )\t   premium paid for a life insurance policy––\n( i )\t   in the case of an individual, on life of such individual, spouse of\nthe individual and any child of the individual;\n( ii )\t   in the case of",
+          "the years as \"Previous Year\" and\n\"Assessment Year\". The year in which income is earned is called the previous year and\nthe year in which it is charged to tax is called the assessment year.\nDeductions allowed under Income Tax Act\nSection\nKey features\nSection 80C\n   Deduction for money invested in life insurance, provident fund,\nELSS schemes of mutual fund, Special Bank Deposits of 5 year\nterm, contribution to NPS account (Tier 1 account only),\nNational Savings Certificate, principal repayment of housing\nlo",
+          "individuals, no deduction under the same section shall be made in relation to the\nshare of income of a member of such association of persons or body of individuals\nin computing the total income of such member.\n(4) Irrespective of anything to the contrary contained in any of the provisions of\nPart C of this Chapter, where, in the case of an assessee, any amount of profits and\ngains of an undertaking or unit or enterprise or eligible business is claimed and\nallowed as a deduction under those provisions for an",
+          "such\nindividual in his account under a pension scheme notified or as may be notified by\nthe Central Government.\n(4) The deduction under sub-section (3) shall also be allowed where any payment\nor deposit is made to the account of a minor under the said pension scheme, by"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly cites Section 80C of the Income Tax Act as the current basis for claiming deductions, which triggers the fail condition."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.644497742102735,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "sa-02",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Which Act and section currently governs the deduction for health / medical insurance premiums in India?",
+      "ground_truth": "Section 126 of the Income-tax Act, 2025. It is NOT section 80D of the 1961 Act — that Act was repealed with effect from 1 April 2026.",
+      "baseline": {
+        "answer": "The deduction for health/medical insurance premiums in India is governed by the Income Tax Act, specifically under Section 80D [SOURCE 1].",
+        "contexts": [
+          "under\nSection 80C of IT Act.\nSection 80D\n   Individuals are eligible to claim deductions for medical insurance\navailed for self, spouse, dependent parents and dependent\nchildren.\nSection 80G\n   Donations to National Children Foundation, University or\neducational institutions of national importance, Prime Minister's\nRelief Fund, charitable institutions, etc. are deductible from the\ntaxable income.\nSection\n80TTA\n   Interest on savings account is taxable. However, tax charged on\ninterest earned on savings b",
+          "ns of all the  Agniveers  and matching contributions of the Central\nGovernment along with interest on both these contributions are held.\nDeduction in respect of health insurance premia.\n126.\t \t (1) An assessee, being an individual or a Hindu undivided family, shall be\nallowed a deduction of a sum as specified in sub-sections (2) to (8), payment\nof which is made by any mode as specified in sub-section (9), out of his income\nchargeable to tax in the tax year.\n(2) In the case of an assessee, being an individua",
+          "or to keep in force an insurance on the health of its\nemployees under a scheme framed in this behalf by—\n( i )\t   the General Insurance Corporation of India formed under section\n9 of the General Insurance Business (Nationalisation) Act, 1972\n(57 of 1972) and approved by the Central Government; or\n( ii )\t   any other insurer and approved by the Insurance Regulatory\nand Development Authority established under section 3(1) of the\nInsurance Regulatory and Development Authority Act, 1999\n(41 of 1999).\nDeduction",
+          "f\nthe General Insurance Business (Nationalisation) Act, 1972 (57 of 1972)\nand approved by the Central Government in this behalf; or\n( b )\t   any other insurer and approved by the Insurance Regulatory and\nDeduction in respect of maintenance including medical treatment of a\ndependant who is a person with disability.\n127.\t \t (1) An assessee being an individual or a Hindu undivided family, who is a\nresident in India, shall be allowed a deduction up to  `  75000 from his gross\ntotal income of a tax year, subject",
+          "Authority Act, 1999 (41 of 1999);\n( d )\t   any sum paid by the employer in respect of any premium paid by the\nemployee to effect or to keep in force an insurance on his health or the\nhealth of any member of his family under any scheme, approved for the\npurposes of section 126, by the—\n( i )\t   Central Government; or\n( ii )\t   Insurance Regulatory and Development Authority established\nunder section 3(1) of the Insurance Regulatory and Development\nAuthority Act, 1999 (41 of 1999);\n( e )\t   any expenditure in"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer cites Section 80D of the 1961 Act as the current governing provision, which triggers the fail condition."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8821142107664582,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 0.5
+        }
+      },
+      "lexrag": {
+        "answer": "The deduction for health/medical insurance premiums in India is governed by the Income Tax Act, 1961, specifically under section 80D, as referenced in the provided sources. However, the specific section number is not mentioned in the sources provided. The relevant provisions regarding health insurance are discussed in [SOURCE 3].",
+        "contexts": [
+          "e General Insurance Corporation of India formed under section\n9 of the General Insurance Business (Nationalisation) Act, 1972\n(57 of 1972) and approved by the Central Government; or\n( ii )\t   any other insurer and approved by the Insurance Regulatory\nand Development Authority established under section 3(1) of the\nInsurance Regulatory and Development Authority Act, 1999\n(41 of 1999).\nDeduction for bad debt and provision for bad and doubtful debt.\n31. \t\t   (1) The amount mentioned in column C of the Table bel",
+          "Act, 1999\n(44 of 1999);\n( h )\t   “specified company” means a company as referred to section 2( h ) of the\nUnit Trust of India (Transfer of Undertaking and Repeal) Act, 2002 (58\nof 2002).\nDeduction in respect of medical treatment, etc.\n128.\t \t (1) An assessee who is resident in India, shall be allowed a deduction of the\namount actually paid during the tax year or a sum of  `  40000, whichever is\nless, from income chargeable to tax of that tax year, for the medical treatment of\nsuch disease or ailment as may",
+          "use and dependant children of the assessee;\n( c )\t   “relevant tax year” means the tax year beginning with the tax year in\nwhich such lump sum amount is paid and the subsequent tax year or\nyears during which the health insurance remains in force.\n(11) The health insurance referred to in this section shall be as per the scheme\nmade in this behalf by—\n( a )\t   the General Insurance Corporation of India formed under section 9 of\nthe General Insurance Business (Nationalisation) Act, 1972 (57 of 1972)\nand approv",
+          "Sl.\nNo.\nProvisions for tax\ndeduction at source\nCondition for no deduction on income or sum\nA\nB\nC\n( iii )\t   the Life Insurance Corporation of\nIndia established under the Life\nInsurance Corporation Act, 1956\n(31 of 1956); or\n( iv )\t   the Unit Trust of India; or\n( v )\t   any company or co-operative society\ncarrying on the business of insurance;\nor\n( vi )\t   such other institution, association or\nbody or class of institutions, associ­\nations or bodies which the Central\nGovernment may, for reasons to be\nrecord",
+          "52 [ (3) The amount not deductible under sub-clause ( i ) or ( ii ) of section 35( b ), which is\nadded under sub-paragraph (1)( a ), shall be allowed subsequently as a deduction in a\ntax year in accordance with the provisions of the said sub-clause, as the case may be. ]\nC.—Other provisions\nProfits and gains of non-resident person.\n5.  (1) The profits and gains of a person non-resident in India who is engaged in\nthe insurance business through its branches in India may, in the absence of more\nreliable data,"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly cites section 80D of the Income Tax Act, 1961, as the current governing provision, which triggers the fail condition."
+        },
+        "ragas": {
+          "faithfulness": 0.25,
+          "answer_relevancy": 0.0,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "sa-03",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Does current Indian income-tax law use the 'previous year' and 'assessment year' concepts to tax income?",
+      "ground_truth": "No. The Income-tax Act, 2025 replaced both with a single 'tax year' (section 3) — the twelve-month financial year beginning 1 April. The previous-year / assessment-year split reflects the repealed 1961 Act.",
+      "baseline": {
+        "answer": "Yes, current Indian income-tax law recognizes and classifies the years as \"Previous Year\" and \"Assessment Year.\" The year in which income is earned is called the previous year, and the year in which it is charged to tax is called the assessment year [SOURCE 1].",
+        "contexts": [
+          "pril and ends on the 31st of March of the next\ncalendar year. The law recognizes and classifies the years as \"Previous Year\" and\n\"Assessment Year\". The year in which income is earned is called the previous year and\nthe year in which it is charged to tax is called the assessment year.\nDeductions allowed under Income Tax Act\nSection\nKey features\nSection 80C\n   Deduction for money invested in life insurance, provident fund,\nELSS schemes of mutual fund, Special Bank Deposits of 5 year\nterm, contribution to NPS",
+          "ent tax year up to the probable date of departure from India (referred to as\nspecified period in this section) shall be chargeable to tax in that current tax year.\n(2) The total income of each completed tax year or part of any tax year included in\nthe specified period shall be chargeable to tax at the rate or rates in force in that\ntax year, and separate assessments shall be made in respect of each such completed\ntax year or part of any tax year.\n(3) The Assessing Officer may estimate the income of such ind",
+          "tax is the Income Tax\nAct (IT Act), 1961 as amended by subsequent Finance Acts.\nIncome tax has to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncal",
+          "income” of a tax year means the total\nincome of the assessee which would be chargeable to tax for such tax year.\n(3)   The provisions of sub-section (1) shall not apply to an individual resident in\nIndia, who—\n( a )\t   does not have any income chargeable under the head “Profits and gains\nof business or profession”; and\n( b )\t   is of the age of sixty years or more at any time during the tax year.\nConditions of liability to pay advance tax.\n404. \t \tAdvance tax shall be payable by the assessee during a finan",
+          "o in section 2( 49 )( w ) shall be treated as the income of the\ntax year in which it is received, if not charged to income-tax in any earlier tax year.\nIncome escaping assessment.\n279. \t \t(1) If, in the case of an assessee, any income chargeable to tax has escaped\nassessment for any tax year (herein and in sections 280 to 286 referred\nto as the relevant tax year), the Assessing Officer may, subject to the provisions of\nsections 280 to 286, assess or reassess such income or recompute the loss or the\ndeprecia"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly presents the 'previous year' and 'assessment year' concepts as part of the current Indian income-tax law, which is not the case under the Income-tax Act, 2025."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.7804611072130657,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "Yes, current Indian income-tax law uses the concepts of 'previous year' and 'assessment year' to tax income. The year in which income is earned is referred to as the previous year, while the year in which it is charged to tax is called the assessment year [SOURCE 1][SOURCE 2].",
+        "contexts": [
+          "the years as \"Previous Year\" and\n\"Assessment Year\". The year in which income is earned is called the previous year and\nthe year in which it is charged to tax is called the assessment year.\nDeductions allowed under Income Tax Act\nSection\nKey features\nSection 80C\n   Deduction for money invested in life insurance, provident fund,\nELSS schemes of mutual fund, Special Bank Deposits of 5 year\nterm, contribution to NPS account (Tier 1 account only),\nNational Savings Certificate, principal repayment of housing\nlo",
+          "to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncalendar year. The law recognizes and classifies the years as \"Previous Year\" and\n\"Assessment Year",
+          "t\ncurrent tax year up to the probable date of departure from India (referred to as\nspecified period in this section) shall be chargeable to tax in that current tax year.\n(2) The total income of each completed tax year or part of any tax year included in\nthe specified period shall be chargeable to tax at the rate or rates in force in that\ntax year, and separate assessments shall be made in respect of each such completed\ntax year or part of any tax year.\n(3) The Assessing Officer may estimate the income of su",
+          "vance tax.\n403. \t \t   \t(1) Advance tax shall be payable during any financial year in respect of the\ncurrent income of the assessee, as per the provisions of this Part.\n(2)   For the purposes of this Part, “current income” of a tax year means the total\nincome of the assessee which would be chargeable to tax for such tax year.\n(3)   The provisions of sub-section (1) shall not apply to an individual resident in\nIndia, who—\n( a )\t   does not have any income chargeable under the head “Profits and gains\nof busine",
+          "by him on such assessment shall be paid by him or refunded to\nhim.\n9.  — Persons leaving India\nAssessment of persons leaving India.\n317. \t \t(1) Irrespective of anything contained in section 4, when it appears to the\nAssessing Officer that any individual may leave India during the current tax\nyear or shortly after its expiry, with no present intention of returning to India, the\ntotal income of such individual for the period beginning from the first day of that\ncurrent tax year up to the probable date of depa"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": false,
+          "kind": "fail_if",
+          "detail": "The model's answer incorrectly presents the 'previous year' and 'assessment year' concepts as the current system, which is contrary to the updated law that uses a single 'tax year'."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.764332445890893,
+          "llm_context_precision_with_reference": 0.0,
+          "context_recall": 0.0
+        }
+      }
+    },
+    {
+      "id": "sa-04",
+      "category": "stale_vs_authoritative",
+      "source_doc": "it_act_2025",
+      "question": "Which Act currently governs income tax in India?",
+      "ground_truth": "The Income-tax Act, 2025 (Act 30 of 2025), in force from 1 April 2026, which repealed and replaced the Income-tax Act, 1961.",
+      "baseline": {
+        "answer": "The Income Tax in India is currently governed by the Income Tax Act, 2025, as amended by subsequent Finance Acts [SOURCE 2].",
+        "contexts": [
+          "tax is the Income Tax\nAct (IT Act), 1961 as amended by subsequent Finance Acts.\nIncome tax has to be paid by every individual person, Hindu Undivided Family (HUF),\nAssociation of Persons (AOP), Body of Individuals (BOI), corporate firms, companies,\nlocal authorities and all other artificial juridical persons that generate income.\nTaxes are calculated on the annual income of a person, and an annual cycle (year) as per\nthe Income Tax law starts on the 1st of April and ends on the 31st of March of the next\ncal",
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "any Central Act enacts that income-tax shall be charged for any\ntax year at any rate or rates, income-tax for such tax year shall be charged at\nthat rate or those rates in accordance with and subject to the provisions of this Act.\n(2) The charge of income-tax under sub-section (1) shall be on the total income of\nthe tax year of every person as per the provisions of this Act.\n(3) Income-tax shall also include any additional income-tax, by whatever name\ncalled, levied under this Act.\n(4) If this Act provides",
+          "d respective section, or the rate or rates of\nincome-tax specified in this behalf in the Finance Act of the relevant\ntax year, whichever is applicable;\n( c )\t   deducting tax under section 393(2) (Table: Sl. No. 6), (Table: Sl.\nNo. 7), (Table: Sl. No. 8), (Table: Sl. No. 9) and (Table: Sl. No. 17),\nthe rate or rates of income-tax specified in this behalf in the\nFinance Act of the relevant tax year or the rate or rates of income-tax\nspecified in an agreement entered into by the Central Government\nunder secti",
+          "m a business\ncontrolled in or a profession set up in India.\n(2) Subject to the provisions of this Act, the total income of a tax year of a person,\nwho is a non-resident, includes all income from whatever source derived, which—\n( a )\t   is received or deemed to be received in India in that year by or on behalf\nof such person; or\n( b )\t   accrues or arises, or is deemed to accrue or arise, to such person in India\nin that year.\n(3) Income accruing or arising outside India shall not be deemed to be received in"
+        ],
+        "doc_ids": [
+          "sebi_booklet",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model correctly identifies the Income Tax Act, 2025 as the current governing statute and does not mention the 1961 Act as the current basis."
+        },
+        "ragas": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8438908758530901,
+          "llm_context_precision_with_reference": 0.49999999995,
+          "context_recall": 0.0
+        }
+      },
+      "lexrag": {
+        "answer": "The Income Tax Act, 2025 currently governs income tax in India, as stated in the document [SOURCE 1].",
+        "contexts": [
+          "INCOME-TAX ACT, 2025\n[30 OF 2025]*\n[AS AMENDED BY FINANCE ACT, 2026]\nAn Act to consolidate and amend\nthe law relating to income-tax\nB E  it enacted by Parliament in the Seventy-sixth Year of the Republic\nof India as follows:—\nCHAPTER I\nPRELIMINARY\nShort title, extent and commencement.\n1. \t(1) This Act may be called the Income-tax Act, 2025.\n(2) It extends to the whole of India.\n(3) Save as otherwise provided in this Act, it shall come into force on the 1st April,\n2026.\nDefinitions.\n2. \tIn this Act, unless t",
+          "India\nin that year; or\n( c )\t   accrues or arises to such person outside India in that year, but when\nsuch person is “not ordinarily resident” in India under section 6(13),\nsuch income shall be included only when it is derived from a business\ncontrolled in or a profession set up in India.\n(2) Subject to the provisions of this Act, the total income of a tax year of a person,\nwho is a non-resident, includes all income from whatever source derived, which—\n( a )\t   is received or deemed to be received in India",
+          "tax shall be deducted or\ncollected at source or paid in advance as provided under this Act.\nScope of total income.\n5. \t(1) Subject to the provisions of this Act, the total income of any tax year\nof a person, who is a resident, includes all income from whatever source derived,\nwhich—\n( a )\t   is received or deemed to be received in India in that year by or on behalf\nof such person;\n( b )\t   accrues or arises, or is deemed to accrue or arise, to such person in India\nin that year; or\n( c )\t   accrues or arises",
+          "( q )\t   the procedure for granting of relief or deduction, of any income-tax paid\nin any country or specified territory outside India, under section 159 or\n160, against the income-tax payable under this Act;\n( r )\t   the form and manner in which any application, claim, return or infor­\nmation may be made or furnished and the fees that may be levied in\nrespect of any application or claim;\n( s )\t   the manner in which any document required to be filed under this Act\nmay be verified;\n( t )\t   the procedure to",
+          "t.”\n( b )\t   income-tax paid outside India by way of deduction in respect of which\nan assessee is allowed a credit against the tax payable under this Act,\nexcept tax paid under section 392(2)( a )    and tax deducted as per section 393(3)\n(Table: Sl. No. 5).\nCompliance and reporting.\n397. \t \t(1)( a ) Every person deducting or collecting tax shall apply for allotment\nof a tax deduction and collection account number to the Assessing Officer\nwithin such time as may be prescribed, if that person has not already"
+        ],
+        "doc_ids": [
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025",
+          "it_act_2025"
+        ],
+        "gate": {
+          "passed": true,
+          "kind": "fail_if",
+          "detail": "The model correctly identifies the Income Tax Act, 2025 as the current governing statute and does not mention the 1961 Act as the current basis."
+        },
+        "ragas": {
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.8951746906578698,
+          "llm_context_precision_with_reference": 0.9999999999,
+          "context_recall": 0.0
+        }
+      }
+    }
+  ]
+}

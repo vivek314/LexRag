@@ -20,7 +20,7 @@ data:
     max_retries: 3            # Retry attempts on failure
     retry_backoff: 2.0        # Exponential backoff multiplier
     min_pages: 2              # Skip PDFs shorter than this
-    max_pages: 200            # Skip PDFs longer than this (avoid huge docs)
+    max_pages: 700            # Skip PDFs longer than this; raised to fit the 686-page Income-tax Act, 2025
 
   # Text cleaning
   cleaning:
@@ -78,6 +78,13 @@ retrieval:
   rerank_top_k: 5             # Final chunks after cross-encoder re-ranking
   hyde_enabled: true          # Use Hypothetical Document Embedding
   neighbor_pages: 1           # Pages to expand left/right after retrieval
+  currency_aware: true        # D1: surface authoritative+current statute ahead of stale explainer chunks
+  hybrid_enabled: true        # RRF dense+BM25 fusion, now safe with explainer-aware selection below
+  rrf_k: 60                   # Reciprocal Rank Fusion constant (standard default)
+  ref_resolve_depth: 1        # Cross-reference DFS hops: 1 = pull directly-cited sections only (precise)
+  rerank_pool_n: 15           # Rerank this many before the currency-aware top-k cut
+  explainer_weight: 0.35      # D1 explainer-aware fusion: relevance weight for stale-explainer chunks
+                              # (vs 1.0 for statute) when a result set mixes both, on points of law
 
   # Cross-encoder re-ranker
   reranker:
