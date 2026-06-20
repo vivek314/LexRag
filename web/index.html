@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LexRAG — RAG that knows which law is current</title>
+<style>
+  :root{
+    --bg:#0a0e14; --bg2:#0f1620; --card:#141d2b; --line:#1f2c3d;
+    --txt:#e6edf3; --mut:#8b9bb0; --acc:#5eead4; --acc2:#7c9cff;
+    --bad:#ff6b6b; --good:#4ade80; --warn:#fbbf24;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--acc2);text-decoration:none}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(34px,6vw,56px);line-height:1.05;letter-spacing:-1.5px;font-weight:800}
+  h2{font-size:clamp(24px,4vw,34px);letter-spacing:-0.6px;margin-bottom:10px}
+  h3{font-size:18px;margin:18px 0 6px;color:var(--acc)}
+  p{color:var(--mut);margin:10px 0}
+  .lead{font-size:19px;color:#c7d3e0;max-width:760px}
+  .tag{display:inline-block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:14px}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06121a;font-weight:700;padding:13px 24px;border-radius:10px;border:0;cursor:pointer;font-size:15px}
+  .btn:hover{filter:brightness(1.08)}
+  .ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .hero{padding:90px 0 70px;background:radial-gradient(900px 420px at 75% -10%,rgba(124,156,255,.13),transparent),radial-gradient(700px 380px at 10% 10%,rgba(94,234,212,.10),transparent)}
+  .pill{display:inline-flex;gap:8px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--mut);margin-bottom:22px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 10px var(--good)}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  .num{font-variant-numeric:tabular-nums;font-weight:700}
+  .win{color:var(--good)} .lose{color:var(--bad)} .mut{color:var(--mut)}
+  .vs{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+  .vs .card{flex:1;min-width:240px}
+  .big{font-size:46px;font-weight:800;letter-spacing:-1px}
+  code{background:#0c1420;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:13px;color:var(--acc)}
+  .diagram{background:var(--bg2);border:1px dashed var(--line);border-radius:14px;padding:22px 18px;text-align:center}
+  .diagram img{max-width:100%;border-radius:10px}
+  .flow{display:flex;flex-direction:column;gap:18px}
+  .band{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;position:relative;padding-top:18px}
+  .blab{position:absolute;top:-4px;left:0;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mut)}
+  .node{display:inline-flex;flex-direction:column;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--txt);line-height:1.25}
+  .node small{font-weight:400;color:var(--mut);font-size:11px}
+  .node.src{border-color:#f59e0b55} .node.src2{border-color:#06b6d455}
+  .node.proc{border-color:#8b5cf655} .node.store{border-color:#22d3ee55}
+  .node.out{border-color:#22c55e66;color:var(--good)}
+  .ar{color:var(--acc);font-weight:700}
+  /* chat */
+  #chat{background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  #log{height:360px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:85%;padding:11px 14px;border-radius:12px;font-size:15px;white-space:pre-wrap}
+  .me{align-self:flex-end;background:linear-gradient(135deg,var(--acc2),#6b7cff);color:#06121a;font-weight:500}
+  .bot{align-self:flex-start;background:var(--card);border:1px solid var(--line)}
+  .bot .src{margin-top:8px;font-size:12px;color:var(--mut);border-top:1px solid var(--line);padding-top:7px}
+  .row{display:flex;gap:10px;padding:14px;border-top:1px solid var(--line)}
+  #q{flex:1;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:12px 14px;font-size:15px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .chip{background:var(--card);border:1px solid var(--line);color:var(--mut);border-radius:999px;padding:7px 13px;font-size:13px;cursor:pointer}
+  .chip:hover{border-color:var(--acc);color:var(--txt)}
+  .note{font-size:13px;color:var(--mut);background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:8px;padding:12px 14px;margin-top:18px}
+  .foot{padding:40px 0;color:var(--mut);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="pill"><span class="dot"></span> Live demo · free open-source models</div>
+    <h1>RAG that knows<br/>which law is <span style="color:var(--acc)">still in force</span>.</h1>
+    <p class="lead" style="margin-top:18px">Ask about Indian income tax and LexRAG answers from the <b>current</b> Income-tax Act, 2025 — instead of confidently quoting a section that was repealed. On stale-law traps, naive RAG is right <b>25%</b> of the time; LexRAG, <b>100%</b>.</p>
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn" href="#try">Try the chatbot ↓</a>
+      <a class="btn ghost" href="https://github.com/vivek314/LexRag" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <span class="tag">The problem</span>
+  <h2>The same question, two answers — one of them illegal-to-rely-on.</h2>
+  <p class="lead">India replaced the Income-tax Act, 1961 with the <b>Income-tax Act, 2025</b> (in force 1 Apr 2026). Section numbers everyone memorised changed. But the internet — and most documents an assistant ingests — still describe the old law.</p>
+  <div class="vs">
+    <div class="card"><h3 class="lose">❌ Stale source (2020 booklet)</h3><p>“Claim your life-insurance & PPF deduction under <b>Section 80C</b> of the Income Tax Act, 1961.”</p><p class="mut">Confident. Well-written. <b>Wrong as current law.</b></p></div>
+    <div class="card"><h3 class="win">✓ Authoritative source (2025 Act)</h3><p>The deduction is under <b>Section 123</b>, read with Schedule XV, capped at ₹1,50,000.</p><p class="mut">“80C” returns <b>zero</b> operative hits in the 2025 Act.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">Why naive RAG fails here</span>
+  <h2>Retrieval has no idea what’s out of date.</h2>
+  <div class="grid g3" style="margin-top:18px">
+    <div class="card"><h3>Grabs the nearest text</h3><p>A plain-English query (“life insurance deduction”) lexically matches the friendly old booklet better than dense legalese — so it retrieves <b>80C</b> and answers 80C.</p></div>
+    <div class="card"><h3>No notion of authority</h3><p>Booklet vs statute look identical to an embedding. Nothing tells the model one is repealed education and the other is governing law.</p></div>
+    <div class="card"><h3>Exact tokens get blurred</h3><p>Vector search smears rare anchors like “Schedule XV” or “Section 123”; pure dense retrieval misses the very thing that makes the answer correct.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">Why “better” RAG still fails</span>
+  <h2>Faithfulness ≠ correctness.</h2>
+  <p class="lead">Most RAG quality scores (e.g. RAGAS faithfulness) only check that the answer is <i>grounded in the retrieved text</i>. A system that retrieves the stale booklet and answers “80C” scores <b>0.9+ on faithfulness</b> — perfectly grounded, in the wrong source. The headline number flatters a confidently-wrong system.</p>
+  <div class="note">That’s why we score a separate <b>correctness gate</b>: did the answer cite a repealed Act/section as current? Faithfulness can’t catch that; the gate can.</div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">Our solution — high level</span>
+  <h2>Currency-aware retrieval: prefer authoritative &amp; current, on points of law.</h2>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>Provenance on every chunk</h3><p>Each chunk is tagged: statute → <code>authoritative · in-force 2026</code>; booklet → <code>explanatory · 2020</code>.</p></div>
+    <div class="card"><h3>Authority-weighted selection</h3><p>When a stale explainer and the statute both match, the statute leads — but only on points of law. Booklet-only questions (compounding, SIPs) still answer from the booklet.</p></div>
+    <div class="card"><h3>Hybrid dense + keyword (RRF)</h3><p>BM25 nails exact anchors (“Schedule XV”, section numbers) that embeddings blur; fused with dense recall.</p></div>
+    <div class="card"><h3>Currency-aware generation</h3><p>The model is told the statute governs and must never present a repealed section as current — and to decline cleanly when the answer isn’t in the documents.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">Our solution — low level</span>
+  <h2>The pipeline, end to end.</h2>
+  <p>Query-expansion (old→new terms) → HyDE → Weaviate hybrid (BM25 + Jina vectors + RRF) → currency-aware selection → cross-reference resolution → grounded generation with refusal.</p>
+  <div class="diagram" id="diagram">
+    <div class="flow">
+      <div class="band"><span class="blab">Ingest (offline)</span>
+        <span class="node src">IT-Act 2025<small>authoritative</small></span>
+        <span class="node src2">SEBI Booklet<small>explanatory</small></span>
+        <span class="ar">→</span>
+        <span class="node proc">Chunk + D1 tags</span>
+        <span class="ar">→</span>
+        <span class="node store">Weaviate Cloud<small>BM25 + Jina + RRF</small></span>
+      </div>
+      <div class="band"><span class="blab">Query (online)</span>
+        <span class="node">User query</span><span class="ar">→</span>
+        <span class="node">Expand <small>old→new</small></span><span class="ar">→</span>
+        <span class="node proc">HyDE <small>Groq</small></span><span class="ar">→</span>
+        <span class="node store">Hybrid search</span><span class="ar">→</span>
+        <span class="node">Currency select <small>D1</small></span><span class="ar">→</span>
+        <span class="node proc">Generate <small>Groq</small></span><span class="ar">→</span>
+        <span class="node out">Answer / refuse</span>
+      </div>
+    </div>
+    <a class="btn ghost" style="margin-top:16px" href="https://excalidraw.com/#json=MVhG4HXtVG_qJrQGdV0QC,hmReX3hj0B3WTozO09ZF8w" target="_blank">Open interactive diagram (Excalidraw) ↗</a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="tag">Results</span>
+  <h2>Measured — and validated on held-out data.</h2>
+  <div class="vs">
+    <div class="card" style="text-align:center"><p class="mut">Stale-law correctness</p><div class="big"><span class="lose">25%</span> → <span class="win">100%</span></div><p class="mut">naive RAG → LexRAG · held on a fresh held-out set it was never tuned on</p></div>
+    <div class="card" style="text-align:center"><p class="mut">Retrieval precision</p><div class="big"><span class="mut">0.41</span> → <span class="win">0.61</span></div><p class="mut">+49% — less irrelevant context in the prompt</p></div>
+  </div>
+  <table>
+    <thead><tr><th>Category</th><th>Naive baseline</th><th>LexRAG</th></tr></thead>
+    <tbody>
+      <tr><td>Stale-vs-current law (correctness gate)</td><td class="num lose">0.25</td><td class="num win">1.00</td></tr>
+      <tr><td>Cross-reference (precision)</td><td class="num mut">0.40</td><td class="num win">0.88</td></tr>
+      <tr><td>Vocabulary mismatch (precision)</td><td class="num mut">0.80</td><td class="num win">0.97</td></tr>
+      <tr><td>Spanning (recall)</td><td class="num mut">0.88</td><td class="num win">1.00</td></tr>
+      <tr><td>Simple lookup / refusal</td><td class="num mut">tie</td><td class="num mut">tie</td></tr>
+    </tbody>
+  </table>
+  <p class="mut" style="margin-top:10px">32 cases (19 tuning + 13 held-out). Correctness gate judged by GPT-4o (cross-validated against Gemini); grounding metrics by RAGAS.</p>
+</div></section>
+
+<section id="try"><div class="wrap">
+  <span class="tag">Try it</span>
+  <h2>Ask LexRAG.</h2>
+  <p>It answers <b>only</b> from two documents: the <b>Income-tax Act, 2025</b> and the <b>SEBI investor-education booklet</b>. Ask about Indian income-tax deductions, residence, definitions, or basic investing concepts. Off-topic questions are declined.</p>
+  <div id="chat" style="margin-top:18px">
+    <div id="log"></div>
+    <div class="row">
+      <input id="q" placeholder="e.g. Which section gives the health-insurance deduction?" autocomplete="off"/>
+      <button class="btn" id="send">Ask</button>
+    </div>
+  </div>
+  <div class="chips">
+    <span class="chip">Which section gives the deduction for life-insurance premiums and PPF?</span>
+    <span class="chip">Does current law use “previous year” and “assessment year”?</span>
+    <span class="chip">How many days make me a resident for tax?</span>
+    <span class="chip">What is a Systematic Investment Plan?</span>
+    <span class="chip">What’s the US federal standard deduction?</span>
+  </div>
+  <div class="note"><b>About this demo:</b> the benchmark numbers above were measured with GPT-4o-mini + a CrossEncoder reranker. This <b>live demo runs free open-source infrastructure</b> — Groq (Llama 3.3) for generation, Jina embeddings + Weaviate hybrid search — so quality is a notch below the benchmarked stack, but the currency-aware behaviour is the same.</div>
+</div></section>
+
+<div class="foot wrap">
+  LexRAG · <a href="https://github.com/vivek314/LexRag" target="_blank">github.com/vivek314/LexRag</a> · built to show that legal RAG must know what’s <i>current</i>, not just what’s <i>grounded</i>.
+</div>
+
+<script>
+const log=document.getElementById('log'), q=document.getElementById('q'), send=document.getElementById('send');
+function add(cls,text,src){const d=document.createElement('div');d.className='msg '+cls;d.textContent=text;
+  if(src&&src.length){const s=document.createElement('div');s.className='src';
+    s.textContent='Sources: '+src.map(x=>x.doc_id+(x.section_id?(' §'+x.section_id):'')+(x.page?(' p'+x.page):'')).join(' · ');d.appendChild(s);}
+  log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+async function ask(text){
+  if(!text.trim())return; add('me',text); q.value=''; send.disabled=true;
+  const t=add('bot','…thinking');
+  try{
+    const r=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:text})});
+    const j=await r.json(); t.textContent=j.answer||'(no answer)';
+    if(j.sources&&j.sources.length&&!j.refused){const s=document.createElement('div');s.className='src';
+      s.textContent='Sources: '+j.sources.map(x=>x.doc_id+(x.section_id?(' §'+x.section_id):'')+(x.page?(' p'+x.page):'')).join(' · ');t.appendChild(s);}
+  }catch(e){t.textContent='Error reaching the model. Please try again.';}
+  send.disabled=false; q.focus();
+}
+send.onclick=()=>ask(q.value);
+q.addEventListener('keydown',e=>{if(e.key==='Enter')ask(q.value)});
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>ask(c.textContent));
+add('bot','Hi — I’m LexRAG. I answer from the Income-tax Act 2025 and the SEBI booklet. Try a question below.');
+</script>
+</body>
+</html>
