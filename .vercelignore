@@ -1,0 +1,16 @@
+.env
+venv/
+data/
+input data/
+docs/
+tests/
+logs/
+configs/
+__pycache__/
+*.pdf
+*.log
+*.faiss
+*.pkl
+*.npy
+requirements-dev.txt
+*.md
